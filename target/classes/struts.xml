@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+	<package name="basicstruts" extends="struts-default">
+
+
+		<action name="useraction" class="action.UserAction" method="Create">
+			<result name="Success">/success.jsp</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>
+		<action name="userread" class="action.UserAction" method="Read">
+			<result name="Success">/success.jsp</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>
+
+
+<action name="accessories"><result>/accessories.jsp</result></action>
+<action name="contact"><result>/contact.jsp</result></action>
+<action name="details"><result>/details.jsp</result></action>
+<action name="footer"><result>/footer.jsp</result></action>
+<action name="handbags"><result>/handbags.jsp</result></action>
+<action name="header"><result>/header.jsp</result></action>
+<action name="index"><result>/index.jsp</result></action>
+<action name="sale"><result>/sale.jsp</result></action>
+<action name="service"><result>/service.jsp</result></action>
+<action name="shoes"><result>/shoes.jsp</result></action>
+<action name="success"><result>/success.jsp</result></action>
+<action name="userinfo"><result>/userinfo.jsp</result></action>
+<action name="wallets"><result>/wallets.jsp</result></action>
+		
+	</package>
+</struts>
