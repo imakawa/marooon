@@ -2,7 +2,9 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head></head>
+<head>
+<link href="css/tmp_footer.css" rel="stylesheet" type="text/css" media="all" />
+</head>
 <body>
 	<div class="footer_bg">
 		<div class="wrap">

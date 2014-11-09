@@ -1,60 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>全球购 | 首页 - 足不出户，购遍全球</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!-- start slider -->		
+    <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" >
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
 	<script type="text/javascript" src="js/jquery.cslider.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('#da-slider').cslider();
-		});
-	</script>
-		<!-- Owl Carousel Assets -->
-		<link href="css/owl.carousel.css" rel="stylesheet">
-		     <!-- Owl Carousel Assets -->
-		    <!-- Prettify -->
-		    <script src="js/owl.carousel.js"></script>
-		        <script>
-		    $(document).ready(function() {
-		
-		      $("#owl-demo").owlCarousel({
-		        items : 4,
-		        lazyLoad : true,
-		        autoPlay : true,
-		        navigation : true,
-			    navigationText : ["",""],
-			    rewindNav : false,
-			    scrollPerPage : false,
-			    pagination : false,
-    			paginationNumbers: false,
-		      });
-		
-		    });
-		    </script>
-		   <!-- //Owl Carousel Assets -->
-		<!-- start top_js_button -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		   <script type="text/javascript">
-				jQuery(document).ready(function($) {
-					$(".scroll").click(function(event){		
-						event.preventDefault();
-						$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-					});
-				});
-			</script>
+	<script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="template/header.jsp"></jsp:include>
 
 <!-- start slider -->
 			<div id="da-slider" class="da-slider">
@@ -87,11 +53,9 @@
 					<span class="da-arrows-next"></span>
 				</nav>
 			</div>
-        </div>
-        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
 <!----start-cursual---->
-<div class="wrap">
-<!----start-img-cursual---->
+<!-- <div class="wrap">
+--start-img-cursual--
 	<div id="owl-demo" class="owl-carousel">
 		<div class="item" onClick="location.href='details.jsp';">
 			<div class="cau_left">
@@ -157,13 +121,13 @@
 			</div>
 		</div>	
 	</div>
-	<!----//End-img-cursual---->
-</div>
+	--//End-img-cursual--
+</div> -->
 <!-- start main1 -->
 <div class="main_bg1">
 <div class="wrap">	
 	<div class="main1">
-		<h2>推荐商品</h2>
+		<h2>人気商品↓</h2>
 	</div>
 </div>
 </div>
@@ -243,7 +207,7 @@
 </div>
 </div>	
 
-<jsp:include page="footer.jsp"></jsp:include>
+<jsp:include page="template/footer.jsp"></jsp:include>
 
 </body>
 </html>
