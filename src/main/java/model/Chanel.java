@@ -4,7 +4,11 @@ public class Chanel {
 
 	private String id;
 	
+	private int req;
+	
 	private String name;
+	
+	private String action;
 	
 	public String getId() {
 		return id;
@@ -12,6 +16,14 @@ public class Chanel {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public int getReq() {
+		return req;
+	}
+
+	public void setReq(int req) {
+		this.req = req;
 	}
 
 	public String getName() {
@@ -22,4 +34,12 @@ public class Chanel {
 		this.name = name;
 	}
 
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+	
 }

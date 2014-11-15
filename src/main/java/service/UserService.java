@@ -29,7 +29,15 @@ public class UserService {
 		return userDao.Read();
 	}
 	
+		public String getInfoo(String content){
+	return "asss";
+}
+	
 	public Integer Delete(UserInfo userInfo){
 		return userDao.Delete(userInfo);
+	}
+	
+	public String getInfo(String content){
+		return "ReturnValue:" + content;
 	}
 }

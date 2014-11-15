@@ -17,14 +17,28 @@
 			<result name="Failure">/failure.jsp</result>
 		</action>
 
+		<action name="chanelread" class="action.ChanelAction" method="Read">
+			<result name="Success">#</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>
 
+		<action name="index" class="action.IndexAction" method="PageLoad">
+			<result name="Success">/index.jsp</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>
+
+		<action name="handbags" class="action.HandbagsAction" method="PageLoad">
+			<result name="Success">/handbags.jsp</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>		
+		
 <action name="accessories"><result>/accessories.jsp</result></action>
 <action name="contact"><result>/contact.jsp</result></action>
 <action name="details"><result>/details.jsp</result></action>
 <action name="footer"><result>/footer.jsp</result></action>
-<action name="handbags"><result>/handbags.jsp</result></action>
-<action name="header"><result>/header.jsp</result></action>
-<action name="index"><result>/index.jsp</result></action>
+<!-- <action name="handbags"><result>/handbags.jsp</result></action>
+<action name="header"><result>/header.jsp</result></action> -->
+<!-- <action name="index"><result>/index.jsp</result></action> -->
 <action name="sale"><result>/sale.jsp</result></action>
 <action name="service"><result>/service.jsp</result></action>
 <action name="shoes"><result>/shoes.jsp</result></action>

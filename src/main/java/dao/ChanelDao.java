@@ -31,10 +31,13 @@ public class ChanelDao {
 	}
 
 	public Integer Update(Chanel chanel) {
-		return getMongoTemplate().updateFirst(
+		/*return getMongoTemplate().updateFirst(
 				new Query(Criteria.where("id").is(chanel.getId())),
 				new Update().set("name", chanel.getName()), Chanel.class)
-				.getN();
+				.getN();*/
+		
+		 getMongoTemplate().save(chanel);
+		 return 0;
 	}
 
 	public List<Chanel> Read() {

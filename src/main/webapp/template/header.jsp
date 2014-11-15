@@ -9,7 +9,7 @@
 	<div class="header_top">
 		<div class="wrap">
 			<div class="logo">
-				<a href="index.jsp"><img src="images/logo.png" alt="" /> </a>
+				<a href="index.action"><img src="images/logo.png" alt="" /> </a>
 			</div>
 			<div class="h_icon">
 				<ul class="icon1 sub-icon1">
@@ -40,13 +40,16 @@
 		<div class="wrap">
 				<div class="h_menu">
 					<ul>
-						<li><a href="<s:url action='index'/>">首页</a></li>
+						<%-- <li><a href="<s:url action='index'/>">首页</a></li>
 						<li><a href="<s:url action='handbags'/>">母婴用品</a></li>
 						<li><a href="<s:url action='accessories'/>">美装护肤</a></li>
 						<li><a href="<s:url action='shoes'/>">手机数码</a></li>
 						<li><a href="<s:url action='service'/>">用户服务</a></li>
 						<li><a href="<s:url action='userinfo'/>">登录注册</a></li>
-						<li><a href="<s:url action='contact'/>">联系我们</a></li>
+						<li><a href="<s:url action='contact'/>">联系我们</a></li> --%>
+						<s:iterator value="#request.chanels" id="item">
+						<li><a href=<s:property value="action"/>><s:property value="name" /></a></li>
+						</s:iterator>
 					</ul>
 				</div>
 				

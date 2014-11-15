@@ -1,7 +1,9 @@
 package service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import util.ChanelCompare;
 import model.Chanel;
 import dao.ChanelDao;
 
@@ -9,11 +11,11 @@ public class ChanelService {
 
 	private ChanelDao chanelDao;
 	
-	public ChanelDao getUserDao() {
+	public ChanelDao getChanelDao() {
 		return chanelDao;
 	}
 
-	public void setUserDao(ChanelDao chanelDao) {
+	public void setChanelDao(ChanelDao chanelDao) {
 		this.chanelDao = chanelDao;
 	}
 
@@ -26,10 +28,17 @@ public class ChanelService {
 	}
 	
 	public List<Chanel> Read(){
-		return chanelDao.Read();
+		List<Chanel> chanels = new ArrayList<Chanel>();
+		try{
+			chanels = chanelDao.Read();
+			chanels.sort(new ChanelCompare());
+		}catch(Exception e){
+		}
+		return chanels;
 	}
 	
 	public Integer Delete(Chanel chanel){
 		return chanelDao.Delete(chanel);
 	}
+	
 }

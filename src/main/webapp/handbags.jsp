@@ -29,15 +29,15 @@
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
-		<h2 class="style top">featured handbags</h2>
+		<!-- <h2 class="style top">featured handbags</h2> -->
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic1.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<img width="200px" height="180px" src="images/slider1.jpg" alt=""/>
+					<h3>花王ーMerries</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>¥2378<span>詳細</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -45,9 +45,9 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic2.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>明治ーほほえみ</h3>
 					<div class="price">
-						<h4>$299 <span>indulge</span></h4>
+						<h4>$299 <span>詳細</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -55,9 +55,9 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic3.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>ーほほえみ</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$299<span>詳細</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
