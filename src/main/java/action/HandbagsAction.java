@@ -3,7 +3,9 @@ package action;
 import java.util.List;
 
 import model.Chanel;
+import model.Product;
 import service.ChanelService;
+import service.ProductService;
 import util.ChanelCompare;
 
 public class HandbagsAction {
@@ -29,9 +31,28 @@ public class HandbagsAction {
 		this.chanels = chanels;
 	}
 	
+	private ProductService productService;
+	private List<Product> products;
+	
+	public ProductService getProductService() {
+		return productService;
+	}
+
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
+	}
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+	
 	public String PageLoad() {
 		chanels = chanelService.Read();
-		chanels.sort(new ChanelCompare());
+		products = productService.Read();
 		return "Success";
 	}
 }

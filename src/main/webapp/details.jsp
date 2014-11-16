@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  
-<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+ <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 <!-- start details -->
 <link rel="stylesheet" type="text/css" href="css/productviewgallery.css" media="all" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -73,12 +74,12 @@
 				        </div>
 				    </div>
 				    <div class="product-image"> 
-				        <a class="cs-fancybox-thumbs cloud-zoom" rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" data-fancybox-group="thumb" href="images/0001-2.jpg" title="Women Shorts" alt="Women Shorts">
-				           	<img src="images/0001-2.jpg" alt="Women Shorts" title="Women Shorts" />
+				        <a class="cs-fancybox-thumbs cloud-zoom" rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" data-fancybox-group="thumb" href="images/0001-3.jpg" title="Women Shorts" alt="Women Shorts">
+				           	<img src="images/0001-3.jpg" alt="Women Shorts" title="Women Shorts" />
 				        </a>
 				   </div>
 					<script type="text/javascript">
-						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/0001-2.jpg","main":"images/large/0001-2.jpg","thumb":"images/small/0001-2.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-2.jpg","main":"images/large/0001-2.jpg","thumb":"images/small/0001-2.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
+						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
 						    gallery_elmnt = jQblvg('.product-img-box'),
 						    galleryObj = new Object(),
 						    gallery_conf = new Object();
@@ -117,9 +118,9 @@
 			<!-- start span1_of_1 -->
 			<div class="span1_of_1_des">
 				  <div class="desc1">
-					<h3>Lorem Ipsum is simply dummy text </h3>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-					<h5>Rs. 399 <a href="#">click for offer</a></h5>
+					<h3><s:property value="#request.product.name"/></h3>
+					<p><s:property value="#request.product.descripe1.chInfo"/></p>
+					<h5>¥.  <s:property value="#request.product.price.price3"/><a href="#">click for offer</a></h5>
 					<div class="available">
 						<h4>Available Options :</h4>
 						<ul>
@@ -174,19 +175,20 @@
 			   	<!-- start tabs -->
 				   	<section class="tabs">
 		            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked">
-			        <label for="tab-1" class="tab-label-1">overview</label>
+			        <label for="tab-1" class="tab-label-1">产品介绍①</label>
 			
 		            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2">
-			        <label for="tab-2" class="tab-label-2">consumer electronics</label>
+			        <label for="tab-2" class="tab-label-2">产品介绍②</label>
 			
 		            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3">
-			        <label for="tab-3" class="tab-label-3">semiconductor</label>
+			        <label for="tab-3" class="tab-label-3">产品介绍③</label>
 	          
 				    <div class="clear-shadow"></div>
 					
 			        <div class="content">
 				        <div class="content-1">
-				        	<p class="para top"><span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
+				        	<p class="para top">
+				     <%--    	<span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
 							<ul>
 								<li>Research</li>
 								<li>Design and Development</li>
@@ -194,19 +196,23 @@
 								<li>System integration</li>
 								<li>Verification, Validation and Testing</li>
 								<li>Maintenance and Support</li>
-							</ul>
+							</ul> --%>
+							<s:property value="#request.product.descripe2.jpInfo"/>
 							<div class="clear"></div>
 						</div>
 				        <div class="content-2">
-							<p class="para"><span>WELCOME </span> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections </p>
+							<p class="para">
+						<%-- 	<span>WELCOME </span> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections </p>
 							<ul class="qua_nav">
 								<li>Multimedia Systems</li>
 								<li>Digital media adapters</li>
 								<li>Set top boxes for HDTV and IPTV Player applications on various Operating Systems and Hardware Platforms</li>
-							</ul>
+							</ul> --%>
+							<s:property value="#request.product.descripe3.chInfo"/>
 						</div>
 				        <div class="content-3">
-				        	<p class="para top"><span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
+				        	<p class="para top">
+				      <%--   	<span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
 							<ul>
 								<li>Research</li>
 								<li>Design and Development</li>
@@ -214,7 +220,8 @@
 								<li>System integration</li>
 								<li>Verification, Validation and Testing</li>
 								<li>Maintenance and Support</li>
-							</ul>
+							</ul> --%>
+							<s:property value="#request.product.descripe4.chInfo"/>
 							<div class="clear"></div>
 						</div>
 			        </div>
@@ -224,11 +231,11 @@
 			   	<!-- start sidebar -->
 			 <div class="left_sidebar">
 					<div class="sellers">
-						<h4>Best Sellers</h4>
+						<h4>人氣商品</h4>
 						<div class="single-nav">
 			                <ul>
-			                   <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
+			                   <li><a href="#">明治ーほほえみ</a></li>
+			                    <li><a href="#">明治ーほほえみ</a></li>
 			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
 			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
 			                    <li><a href="#">Always free from repetition</a></li>

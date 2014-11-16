@@ -41,6 +41,14 @@
 	<bean id="chanelService" class="service.ChanelService">
 		<property name="chanelDao" ref="chanelDao" />
 	</bean>
+	
+	<bean id="productDao" class="dao.ProductDao">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+
+	<bean id="productService" class="service.ProductService">
+		<property name="productDao" ref="productDao" />
+	</bean>
 
 
 </beans>

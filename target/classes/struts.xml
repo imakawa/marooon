@@ -30,11 +30,16 @@
 		<action name="handbags" class="action.HandbagsAction" method="PageLoad">
 			<result name="Success">/handbags.jsp</result>
 			<result name="Failure">/failure.jsp</result>
-		</action>		
+		</action>	
+		
+		<action name="details" class="action.DetailsAction" method="PageLoad">
+			<result name="Success">/details.jsp</result>
+			<result name="Failure">/failure.jsp</result>
+		</action>
 		
 <action name="accessories"><result>/accessories.jsp</result></action>
 <action name="contact"><result>/contact.jsp</result></action>
-<action name="details"><result>/details.jsp</result></action>
+<!-- <action name="details"><result>/details.jsp</result></action> -->
 <action name="footer"><result>/footer.jsp</result></action>
 <!-- <action name="handbags"><result>/handbags.jsp</result></action>
 <action name="header"><result>/header.jsp</result></action> -->

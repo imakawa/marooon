@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -30,18 +31,28 @@
 <div class="wrap">	
 	<div class="main">
 		<!-- <h2 class="style top">featured handbags</h2> -->
-		<!-- start grids_of_3 -->
-		<div class="grids_of_3">
-			<div class="grid1_of_3">
-				<a href="details.jsp">
-					<img width="200px" height="180px" src="images/slider1.jpg" alt=""/>
-					<h3>花王ーMerries</h3>
-					<div class="price">
-						<h4>¥2378<span>詳細</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
+		<!-- <!-- start grids_of_3 -->
+
+				<s:iterator value="#request.products" status="product">
+				  <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
+						<div class="grid1_of_3">
+							<a href="details.action?productId=<s:property value='id' />">
+							<img width="200px" height="180px" src="images/slider1.jpg" alt="" />
+								<h3>
+									<s:property value="name" />
+								</h3>
+								<div class="price">
+									<h4>
+										¥<s:property value="price.price1" />
+										<span>詳細</span>
+									</h4>
+								</div> <span class="b_btm"></span>
+							</a>
+						</div>
+						<s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
+					</div></s:if>
+				</s:iterator>
+				<!-- 
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic2.jpg" alt=""/>
@@ -94,9 +105,9 @@
 					</div>
 					<span class="b_btm"></span>
 				</a>
-			</div>
-			<div class="clear"></div>
-		</div>	
+			</div> -->
+			<!-- <div class="clear"></div>
+		</div> -->
 		<!-- end grids_of_3 -->
 	</div>
 </div>

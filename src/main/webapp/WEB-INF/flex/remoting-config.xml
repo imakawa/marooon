@@ -23,5 +23,12 @@
 		   <factory>spring</factory>
 			<source>chanelService</source>
 		</properties>
-	</destination>	
+	</destination>
+	
+	<destination id="ProductService">
+		<properties>
+		   <factory>spring</factory>
+			<source>productService</source>
+		</properties>
+	</destination>
 </service>

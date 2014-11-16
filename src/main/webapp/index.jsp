@@ -138,7 +138,7 @@
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="details.action">
 					<img src="images/pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
