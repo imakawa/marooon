@@ -74,12 +74,16 @@
 				        </div>
 				    </div>
 				    <div class="product-image"> 
-				        <a class="cs-fancybox-thumbs cloud-zoom" rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" data-fancybox-group="thumb" href="images/0001-3.jpg" title="Women Shorts" alt="Women Shorts">
-				           	<img src="images/0001-3.jpg" alt="Women Shorts" title="Women Shorts" />
+				        <a class="cs-fancybox-thumbs cloud-zoom" 
+				           rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" 
+				           data-fancybox-group="thumb" 
+				           href="images/slider1.jpg"
+				           title="Women Shorts" alt="Women Shorts">
+				           	<img src="images/slider1.jpg" alt="Women Shorts" title="Women Shorts" />
 				        </a>
-				   </div>
+				   </div> 
 					<script type="text/javascript">
-						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
+						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/slider1.jpg","main":"images/slider1.jpg","thumb":"images/slider1.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
 						    gallery_elmnt = jQblvg('.product-img-box'),
 						    galleryObj = new Object(),
 						    gallery_conf = new Object();
