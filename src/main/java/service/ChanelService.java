@@ -1,6 +1,6 @@
 package service;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 
 import util.ChanelCompare;
@@ -31,7 +31,7 @@ public class ChanelService {
 		List<Chanel> chanels = new ArrayList<Chanel>();
 		try{
 			chanels = chanelDao.Read();
-			chanels.sort(new ChanelCompare());
+		    Collections.sort(chanels, new ChanelCompare());
 		}catch(Exception e){
 		}
 		return chanels;
