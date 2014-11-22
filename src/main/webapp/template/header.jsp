@@ -56,15 +56,9 @@
 				<div class="top-nav">
 					<nav class="nav"> <a href="#" id="w3-menu-trigger"> </a>
 					<ul class="nav-list" style="">
-						<li><a href="<s:url action='index'/>">首页</a></li>
-						<li><a href="<s:url action='sale'/>">人气商品</a></li>
-						<li><a href="<s:url action='handbags'/>">手机数码</a></li>
-						<li><a href="<s:url action='accessories'/>">美装/护肤</a></li>
-						<li><a href="<s:url action='wallets'/>">男女服饰/鞋帽</a></li>
-						<li><a href="<s:url action='shoes'/>">奢侈品</a></li>
-						<li><a href="<s:url action='service'/>">服务</a></li>
-						<li><a href="<s:url action='contact'/>">联系我们</a></li>
-						<li><a href="<s:url action='userinfo'/>">登录/注册</a></li>
+						<s:iterator value="#request.chanels" id="item">
+						    <li><a href="<s:property value='action'/>.action"><s:property value="name" /></a></li>
+						</s:iterator>
 					</ul>
 					</nav>
 					
