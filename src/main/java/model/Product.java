@@ -6,6 +6,10 @@ public class Product {
 
 	private String id;
 	
+	private String chanelId;
+	
+	private String code;
+	
 	private String name;
 	
 	private CommentInfo descripe1;
@@ -21,6 +25,8 @@ public class Product {
 	private String imageView;
 	
 	private List<String> images;
+	
+	private String imagesJson;
 	
 	private String shippingCode;
 	
@@ -38,6 +44,22 @@ public class Product {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getChanelId() {
+		return chanelId;
+	}
+
+	public void setChanelId(String chanelId) {
+		this.chanelId = chanelId;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getName() {
@@ -102,6 +124,14 @@ public class Product {
 
 	public void setImages(List<String> images) {
 		this.images = images;
+	}
+
+	public String getImagesJson() {
+		return imagesJson;
+	}
+
+	public void setImagesJson(String imagesJson) {
+		this.imagesJson = imagesJson;
 	}
 
 	public String getShippingCode() {

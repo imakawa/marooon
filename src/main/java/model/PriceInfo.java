@@ -5,6 +5,8 @@ public class PriceInfo {
 	private String price1;
 	private String price2;
 	private String price3;
+	private String price4;
+	private String price5;
 	
 	public PriceInfo() {
 		// TODO Auto-generated constructor stub
@@ -32,6 +34,22 @@ public class PriceInfo {
 
 	public void setPrice3(String price3) {
 		this.price3 = price3;
+	}
+
+	public String getPrice4() {
+		return price4;
+	}
+
+	public void setPrice4(String price4) {
+		this.price4 = price4;
+	}
+
+	public String getPrice5() {
+		return price5;
+	}
+
+	public void setPrice5(String price5) {
+		this.price5 = price5;
 	}
 
 }
