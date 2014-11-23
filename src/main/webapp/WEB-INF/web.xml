@@ -34,11 +34,9 @@
 	</context-param>
 
 	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener
-		</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
-	<!-- Http Flex Session attribute and binding listener support -->
     <listener>
         <listener-class>flex.messaging.HttpFlexSession</listener-class>
     </listener>
