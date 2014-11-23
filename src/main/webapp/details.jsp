@@ -77,19 +77,26 @@
 				        <a class="cs-fancybox-thumbs cloud-zoom" 
 				           rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" 
 				           data-fancybox-group="thumb" 
-				           href="images/slider1.jpg"
+				           href="productImages/asdfae.jpg"
 				           title="Women Shorts" alt="Women Shorts">
-				           	<img src="images/slider1.jpg" alt="Women Shorts" title="Women Shorts" />
+				           	<img src="productImages/asdfae.jpg" alt="Women Shorts" title="Women Shorts" />
 				        </a>
 				   </div> 
 					<script type="text/javascript">
-						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/slider1.jpg","main":"images/slider1.jpg","thumb":"images/slider1.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
-						    gallery_elmnt = jQblvg('.product-img-box'),
-						    galleryObj = new Object(),
-						    gallery_conf = new Object();
-						    gallery_conf.moreviewitem = '<a class="cs-fancybox-thumbs" data-fancybox-group="thumb" style="width:64px;height:85px;" href=""  title="" alt=""><img src="" src_main="" width="64" height="85" title="" alt="" /></a>';
-						    gallery_conf.animspeed = 200;
+					/* var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/slider1.jpg","main":"images/slider1.jpg","thumb":"images/slider1.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'), */
+					
+					
 						jQblvg(document).ready(function() {
+						
+							var msg = document.getElementById('imagesJson').innerHTML;
+							alert(msg);
+							var prodGallery = jQblvg.parseJSON(msg),
+								    gallery_elmnt = jQblvg('.product-img-box'),
+								    galleryObj = new Object(),
+								    gallery_conf = new Object();
+								    gallery_conf.moreviewitem = '<a class="cs-fancybox-thumbs" data-fancybox-group="thumb" style="width:64px;height:85px;" href=""  title="" alt=""><img src="" src_main="" width="64" height="85" title="" alt="" /></a>';
+								    gallery_conf.animspeed = 200;
+								    
 						    galleryObj[1] = new prodViewGalleryForm(prodGallery, 'prod_1', gallery_elmnt, gallery_conf, '.product-image', '.more-views', 'http:');
 						        jQblvg('.product-image .cs-fancybox-thumbs').absoluteClick();
 						    jQblvg('.cs-fancybox-thumbs').fancybox({ prevEffect : 'none', 
@@ -201,7 +208,7 @@
 								<li>Verification, Validation and Testing</li>
 								<li>Maintenance and Support</li>
 							</ul> --%>
-							<s:property value="#request.product.descripe2.jpInfo"/>
+							<s:property value="#request.product.descripe2.chInfo"/>
 							<div class="clear"></div>
 						</div>
 				        <div class="content-2">
@@ -278,7 +285,7 @@
 	</div>
 </div>
 </div>		
-
+<span id="imagesJson" style="visibility:hidden"><s:property value="#request.product.imagesJson"/></span>
 <jsp:include page="template/footer.jsp"></jsp:include>
 
 </body>

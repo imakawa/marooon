@@ -52,50 +52,9 @@ public class HandbagsAction {
 	
 	public String PageLoad() {
 		chanels = chanelService.Read();
-		products = productService.Read();
-		for (Product x : products) {   
-	         x.setImagesJson(getImagesJson(x)); 
-	         System.out.println(x.getImagesJson());
-        }   
+		products = productService.Read(); 
 		return "Success";
 	}
 	
-	private String getImagesJson(Product product){
-		List<String> imageInfos = product.getImages();
-		
-		if(imageInfos.toArray().length==0){
-			return "";
-		}
-		
-		StringBuffer sb=new StringBuffer();
-		sb.append("{\"prod_1\":{");
-		sb.append("\"main\":{\"orig\":\"");
-		sb.append("productImages/" + imageInfos.get(0));
-		sb.append("\",\"main\":\"");
-		sb.append("productImages/" + imageInfos.get(0));
-		sb.append("\",\"thumb\":\"");
-		sb.append("productImages/" + imageInfos.get(0));
-		sb.append("\",\"label\":\"\"},");
 
-		sb.append("\"gallery\":{");
-		for (int i = 0; i < imageInfos.toArray().length; i++) {
-			String image=imageInfos.get(i);
-			
-			sb.append("\"item_");
-			sb.append(i);
-			sb.append("\":{\"orig\":\"");
-			sb.append("productImages/" + image);
-			sb.append("\",\"main\":\"");
-			sb.append("productImages/" + image);
-			sb.append("\",\"thumb\":\"");
-			sb.append("productImages/" + image);
-			
-			if(i==imageInfos.toArray().length-1){
-				sb.append("\",\"label\":\"\"}},\"type\":\"simple\",\"video\":false}}");
-			}else{
-				sb.append("\",\"label\":\"\"},");	
-			}	
-		}
-		return sb.toString();
-	}
 }

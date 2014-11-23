@@ -38,6 +38,9 @@ public class DetailsAction {
 		String productId = ((String[])map.get("productId"))[0];
 		product = productService.Read(productId);
 		
+		product.setImagesJson(getImagesJson(product)); 
+	    System.out.println(product.getImagesJson());
+         
 		return "Success";
 	}
 	
@@ -59,44 +62,50 @@ public class DetailsAction {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-
-	public String CreateProduct(){
-		Product product = new Product();
-		product.setName("ProductName");
-		
-		PriceInfo priceInfo = new PriceInfo();
-		priceInfo.setPrice1("1001");
-		priceInfo.setPrice2("1002");
-		priceInfo.setPrice3("1003");
-		product.setPrice(priceInfo);
-		
-		product.setShippingCode("shippingCode111");
-		product.setWeightInfo("200g");
-		product.setIsInStock("1");
-		
-		CommentInfo comment1 = new CommentInfo();
-		comment1.setChInfo("cnInfo1");
-		comment1.setJpInfo("jpInfo1");
-		product.setDescripe1(comment1);
-		
-		CommentInfo comment2 = new CommentInfo();
-		comment2.setChInfo("cnInfo2");
-		comment2.setJpInfo("jpInfo2");
-		product.setDescripe2(comment2);
-		
-		CommentInfo comment3 = new CommentInfo();
-		comment3.setChInfo("cnInfo3");
-		comment3.setJpInfo("jpInfo3");
-		product.setDescripe3(comment3);
-		
-		CommentInfo comment4 = new CommentInfo();
-		comment4.setChInfo("cnInfo4");
-		comment4.setJpInfo("jpInfo4");
-		product.setDescripe4(comment4);
-		
-		productService.Create(product);
-		return "Success";
-	}
 	
+	private String getImagesJson(Product product){
+		List<String> imageInfos = product.getImages();
+		
+		if(imageInfos==null ||imageInfos.toArray().length==0){
+			return "";
+		}
+		
+		StringBuffer sb=new StringBuffer();
+		sb.append("{\"prod_1\":{");
+		sb.append("\"main\":{\"orig\":\"");
+		sb.append("productImages/");
+		sb.append(imageInfos.get(0));
+		sb.append("\",\"main\":\"");
+		sb.append("productImages/");
+		sb.append(imageInfos.get(0));
+		sb.append("\",\"thumb\":\"");
+		sb.append("productImages/");
+		sb.append(imageInfos.get(0));
+		sb.append("\",\"label\":\"\"},");
+
+		sb.append("\"gallery\":{");
+		for (int i = 0; i < imageInfos.toArray().length; i++) {
+			String image=imageInfos.get(i);
+			
+			sb.append("\"item_");
+			sb.append(i);
+			sb.append("\":{\"orig\":\"");
+			sb.append("productImages/");
+			sb.append(image);
+			sb.append("\",\"main\":\"");
+			sb.append("productImages/");
+			sb.append(image);
+			sb.append("\",\"thumb\":\"");
+			sb.append("productImages/");
+			sb.append(image);
+			
+			if(i==imageInfos.toArray().length-1){
+				sb.append("\",\"label\":\"\"}},\"type\":\"simple\",\"video\":false}}");
+			}else{
+				sb.append("\",\"label\":\"\"},");	
+			}	
+		}
+		return sb.toString();
+	}
 
 }
