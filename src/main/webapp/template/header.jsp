@@ -48,7 +48,7 @@
 						<li><a href="<s:url action='userinfo'/>">登录注册</a></li>
 						<li><a href="<s:url action='contact'/>">联系我们</a></li> --%>
 						<s:iterator value="#request.chanels" id="item">
-						<li><a href="<s:property value='action'/>.action"><s:property value="name" /></a></li>
+						<li><a href="<s:property value='action'/>.action?chanelId=<s:property value='id' />"><s:property value="name" /></a></li>
 						</s:iterator>
 					</ul>
 				</div>
@@ -57,7 +57,7 @@
 					<nav class="nav"> <a href="#" id="w3-menu-trigger"> </a>
 					<ul class="nav-list" style="">
 						<s:iterator value="#request.chanels" id="item">
-						    <li><a href="<s:property value='action'/>.action"><s:property value="name" /></a></li>
+						<li><a href="<s:property value='action'/>.action?chanelId=<s:property value='id' />"><s:property value="name" /></a></li>
 						</s:iterator>
 					</ul>
 					</nav>

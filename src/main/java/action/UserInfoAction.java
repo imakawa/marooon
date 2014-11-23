@@ -4,10 +4,9 @@ import java.util.List;
 
 import model.Chanel;
 import service.ChanelService;
-import util.ChanelCompare;
 
-public class IndexAction {
-	
+public class UserInfoAction {
+
 	private ChanelService chanelService;
 
 	private List<Chanel> chanels;

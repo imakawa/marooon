@@ -3,6 +3,9 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+
 import model.Product;
 import dao.ProductDao;
 
@@ -32,12 +35,16 @@ public class ProductService {
 	}
 	
 	public List<Product> Read(){
-		List<Product> chanels = new ArrayList<Product>();
+		List<Product> products = new ArrayList<Product>();
 		try{
-			chanels = productDao.Read();
+			products = productDao.Read();
 		}catch(Exception e){
 		}
-		return chanels;
+		return products;
+	}
+	
+	public List<Product> ReadByChanel(String chanelId){
+		return productDao.ReadByChanel(chanelId);
 	}
 	
 	public Product Read(String id){

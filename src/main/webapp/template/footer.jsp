@@ -6,10 +6,10 @@
 <link href="css/tmp_footer.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-	<div class="footer_bg">
+	<!-- <div class="footer_bg">
 		<div class="wrap">
 			<div class="footer">
-				<!-- start grids_of_4 -->
+				start grids_of_4
 				<div class="grids_of_4">
 					<div class="grid1_of_4">
 						<h4>featured sale</h4>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- start footer -->
 	<div class="footer_bg1">
 		<div class="wrap">
@@ -89,8 +89,9 @@
 
 					});
 				</script>
-				<a href="#" id="toTop" style="display: block;"><span
-					id="toTopHover" style="opacity: 1;"></span></a>
+				<a href="#" id="toTop" style="display: block;">
+				<span id="toTopHover" style="opacity: 1;"></span></a>
+				<!-- <a href="updateHistory.html">改版履歴</a> -->
 				<!--end scroll_top_btn -->
 			</div>
 		</div>

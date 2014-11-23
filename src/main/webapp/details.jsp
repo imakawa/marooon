@@ -83,13 +83,8 @@
 				        </a>
 				   </div> 
 					<script type="text/javascript">
-					/* var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/slider1.jpg","main":"images/slider1.jpg","thumb":"images/slider1.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'), */
-					
-					
 						jQblvg(document).ready(function() {
-						
 							var msg = document.getElementById('imagesJson').innerHTML;
-							alert(msg);
 							var prodGallery = jQblvg.parseJSON(msg),
 								    gallery_elmnt = jQblvg('.product-img-box'),
 								    galleryObj = new Object(),

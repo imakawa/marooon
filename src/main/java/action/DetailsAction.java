@@ -34,12 +34,9 @@ public class DetailsAction {
 		chanels = chanelService.Read();
 		ActionContext ac = ActionContext.getContext();
 		Map<String,Object> map = ActionContext.getContext().getParameters();
-		System.out.println(((String[])map.get("productId"))[0]);
 		String productId = ((String[])map.get("productId"))[0];
 		product = productService.Read(productId);
-		
-		product.setImagesJson(getImagesJson(product)); 
-	    System.out.println(product.getImagesJson());
+		product.setImagesJson(getImagesJson(product));
          
 		return "Success";
 	}

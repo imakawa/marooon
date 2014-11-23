@@ -1,6 +1,9 @@
 package action;
 
 import java.util.List;
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionContext;
 
 import model.Chanel;
 import model.Product;
@@ -51,10 +54,15 @@ public class HandbagsAction {
 	}
 	
 	public String PageLoad() {
-		chanels = chanelService.Read();
-		products = productService.Read(); 
-		return "Success";
+		try{
+			chanels = chanelService.Read();
+			
+			Map<String,Object> map = ActionContext.getContext().getParameters();
+			String chanelId = ((String[])map.get("chanelId"))[0];
+			products = productService.ReadByChanel(chanelId);
+			return "Success";	
+		}catch(Exception e){
+			return "Failure";			
+		}
 	}
-	
-
 }

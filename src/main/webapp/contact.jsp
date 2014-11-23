@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+<link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"></script> 
 <!-- start top_js_button -->
 <script type="text/javascript" src="js/move-top.js"></script>
@@ -30,14 +30,14 @@
 <div class="main">
 	 	 <div class="contact">				
 					<div class="contact_info">
-						<h2>get in touch</h2>
+						<h2>联系地图</h2>
 			    	 		<div class="map">
-					   			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.479912100908!2d139.91017938947573!3d35.64645923532048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187dbad0b5cda3%3A0x7259321af59ce2fe!2z44CSMjc5LTAwMTIgQ2hpYmEta2VuLCBVcmF5YXN1LXNoaSwgSW1hZ2F3YSwgMSBDaG9tZeKIkjEx4oiSMSDjgqbjgqjjgrnjg4jjgrXjgqTjg4k!5e0!3m2!1szh-CN!2sjp!4v1411404131483" width="100%" height="250" frameborder="0" style="border:0"></iframe>
+					   			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.479912100908!2d139.91017938947573!3d35.64645923532048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187dbad0b5cda3%3A0x7259321af59ce2fe!2z44CSMjc5LTAwMTIgQ2hpYmEta2VuLCBVcmF5YXN1LXNoaSwgSW1hZ2F3YSwgMSBDaG9tZeKIkjEx4oiSMSDjgqbjgqjjgrnjg4jjgrXjgqTjg4k!5e0!3m2!1szh-CN!2sjp!4v1411404131483" width="100%" height="500" frameborder="0" style="border:0"></iframe>
 					   		</div>
       				</div>
 				  <div class="contact-form">
-			 	  	 	<h2>Contact Us</h2>
-			 	 	    <form method="post" action="contact-post.html">
+			 	  	 	<h2>联系方式</h2>
+			<!--  	 	    <form method="post" action="contact-post.html">
 					    	<div>
 						    	<span><label>Name</label></span>
 						    	<span><input name="userName" type="text" class="textbox"></span>
@@ -57,7 +57,15 @@
 						   <div>
 						   		<span><input type="submit" class="" value="Submit us"></span>
 						  </div>
-					    </form>
+					    </form> -->
+					    
+					    <div>
+						   <span>①微信（WeChat）ID：kenanchuan</span>
+						</div>
+						
+					    <div>
+						   <span>②地址：千葉県浦安市今川１−１１−１ウエストサイド　  邮编：279－0022</span>
+						</div>
 				    </div>
   				<div class="clear"></div>		
 			  </div>

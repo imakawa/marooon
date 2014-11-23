@@ -5,6 +5,7 @@ import java.util.List;
 import model.Product;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
 public class ProductDao {
@@ -45,6 +46,10 @@ public class ProductDao {
 		return this.mongoTemplate.findById(id, Product.class);
 	}
 
+	public List<Product> ReadByChanel(String chanelId){
+		return this.mongoTemplate.find(new Query(Criteria.where("chanelId").is(chanelId)), Product.class);
+	}
+	
 	public Integer Delete(Product product) {
 		return getMongoTemplate().remove(product).getN();
 	}

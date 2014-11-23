@@ -38,6 +38,10 @@
 		});
 	});
 </script>
+
+<style type="text/css">
+.userinfo {padding-top:150px; padding-bottom:150px;}
+</style>
 </head>
 <body>
 	<jsp:include page="template/header.jsp"></jsp:include>
@@ -46,22 +50,24 @@
 		<div class="wrap">
 			<div class="main">
 			
+			<h2>・注册功能暂不开放，用户注册请<a href="connect.action">联系我们</a>。</h2>
+			<div class="userinfo">
 				<form name="form1" method="post" action="useraction">
 					<div class="container">
 					
 						<form class="form-signin" role="form">
 							<h2 class="form-signin-heading"></h2>
 							<input name="username" id="username" type="text"
-								class="form-control" placeholder="Your UserName" required>
+								class="form-control" placeholder="请输入用户名" required>
 
 							<input name="password" id="password" type="password"
-								class="form-control" placeholder="Your Password" required>
+								class="form-control" placeholder="请输入密码" required>
 
-							<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+							<button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
 						</form>
-
 					</div>
 				</form>
+				</div>
 				
 			</div>
 		</div>
