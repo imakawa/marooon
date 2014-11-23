@@ -61,20 +61,23 @@ public class HandbagsAction {
 	}
 	
 	private String getImagesJson(Product product){
+		List<String> imageInfos = product.getImages();
+		
+		if(imageInfos.toArray().length==0){
+			return "";
+		}
+		
 		StringBuffer sb=new StringBuffer();
 		sb.append("{\"prod_1\":{");
 		sb.append("\"main\":{\"orig\":\"");
-		sb.append("productImages/" + product.getImages().get(0));
+		sb.append("productImages/" + imageInfos.get(0));
 		sb.append("\",\"main\":\"");
-		sb.append("productImages/" + product.getImages().get(0));
+		sb.append("productImages/" + imageInfos.get(0));
 		sb.append("\",\"thumb\":\"");
-		sb.append("productImages/" + product.getImages().get(0));
+		sb.append("productImages/" + imageInfos.get(0));
 		sb.append("\",\"label\":\"\"},");
 
 		sb.append("\"gallery\":{");
-		
-		List<String> imageInfos = product.getImages();
-		
 		for (int i = 0; i < imageInfos.toArray().length; i++) {
 			String image=imageInfos.get(i);
 			
@@ -91,12 +94,8 @@ public class HandbagsAction {
 				sb.append("\",\"label\":\"\"}},\"type\":\"simple\",\"video\":false}}");
 			}else{
 				sb.append("\",\"label\":\"\"},");	
-			}
-			
+			}	
 		}
-		
-		
-		
 		return sb.toString();
 	}
 }
