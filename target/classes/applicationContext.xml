@@ -50,5 +50,12 @@
 		<property name="productDao" ref="productDao" />
 	</bean>
 
+	<bean id="shippingDao" class="dao.ShippingDao">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+
+	<bean id="shippingService" class="service.ShippingService">
+		<property name="shippingDao" ref="shippingDao" />
+	</bean>
 
 </beans>

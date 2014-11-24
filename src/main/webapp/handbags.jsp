@@ -4,10 +4,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>全球购 | 手机数码 </title>
+<title>大東微购</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
 <!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"></script> 
@@ -37,7 +38,7 @@
 				  <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
 						<div class="grid1_of_3">
 							<a href="details.action?productId=<s:property value='id' />">
-							<img width="200px" height="180px" src="images/slider1.jpg" alt="" />
+							<img width="200px" height="180px" src="productImages/<s:property value='imageView'/>" alt="" />
 								<h3>
 									<s:property value="name" />
 								</h3>

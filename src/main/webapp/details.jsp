@@ -4,10 +4,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>The Aditii Website Template | Details </title>
+<title>大東微购｜<s:property value="#request.product.name"/></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- 
+ <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
+
  <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 <!-- start details -->
 <link rel="stylesheet" type="text/css" href="css/productviewgallery.css" media="all" />
@@ -126,10 +127,11 @@
 				  <div class="desc1">
 					<h3><s:property value="#request.product.name"/></h3>
 					<p><s:property value="#request.product.descripe1.chInfo"/></p>
-					<h5>¥.  <s:property value="#request.product.price.price3"/><a href="#">click for offer</a></h5>
+					<h5>¥<s:property value="#request.product.price.price3"/></h5>
+<%-- 					 <a href="#">click for offer</a></h5>
 					<div class="available">
-						<h4>Available Options :</h4>
-						<ul>
+						<h4>产品情报 :</h4>
+						 <ul>
 							<li>Color:
 								<select>
 								<option>Silver</option>
@@ -162,10 +164,11 @@
 						</div>
 						<span class="span_right"><a href="#">login to save in wishlist </a></span>
 						<div class="clear"></div>
-					</div>
-					<div class="share-desc">
+					</div>--%>
+					
+<!--					<div class="share-desc">
 						<div class="share">
-							<h4>Share Product :</h4>
+ 							<h4>Share Product :</h4>
 							<ul class="share_nav">
 								<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
 								<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
@@ -173,7 +176,29 @@
 								<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
 				    		</ul>
 						</div>
-						<div class="clear"></div>
+						<div class="clear"></div> 
+					</div>-->
+					<hr/>
+                    <div>
+						<span>商品标示码：</span>
+						<span><s:property value="#request.product.code"/></span>
+					</div>
+                    <div>
+						<span>重量：</span>
+						<span><s:property value="#request.product.weightInfo"/></span>
+					</div>
+                    <div>
+						<span>在库是否：</span>
+						  <s:if test="#request.product.isInStock==1"><span>是</span></s:if>
+						  <s:if test="#request.product.isInStock!=1"><span>否</span></s:if>
+					</div>
+                    <div>
+						<span>商品商店信息：</span>
+						  <s:if test="#request.product.shippingCode==null"><span>暂无</span></s:if>
+						  <s:if test="#request.product.shippingCode!=null">
+						     <div>&nbsp;・店名：<s:property value="#request.product.shipping.name"/></div>
+						     <div>&nbsp;・地址：<s:property value="#request.product.shipping.address"/></div>
+						  </s:if>
 					</div>
 			   	 </div>
 			   	</div>
@@ -258,9 +283,9 @@
 						  <div class="banner-wrap bottom_banner color_link">
 								<a href="#" class="main_link">
 								<figure><img src="images/delivery.png" alt=""></figure>
-								<h5><span>Free Shipping</span><br> on orders over $99.</h5><p>This offer is valid on all our store items.</p></a>
+								<h5><span>商品配送</span><br>具体请联系</h5><p>站点持续更新中^_^</p></a>
 						 </div>
-						 <div class="brands">
+						<%--  <div class="brands">
 							 <h1>Brands</h1>
 					  		 <div class="field">
 				                 <select class="select1">
@@ -270,7 +295,7 @@
 										<option>Lorem ipsum dolor sit amet</option>
 				                  </select>
 				            </div>
-			    		</div>
+			    		</div> --%>
 					</div>
 				</div>
 					<!-- end sidebar -->

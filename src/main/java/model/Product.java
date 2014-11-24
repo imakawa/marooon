@@ -30,6 +30,8 @@ public class Product {
 	
 	private String shippingCode;
 	
+	private Shipping shipping;
+	
 	private String weightInfo;
 	
 	private String isInStock;
@@ -140,6 +142,14 @@ public class Product {
 
 	public void setShippingCode(String shippingCode) {
 		this.shippingCode = shippingCode;
+	}
+	
+	public Shipping getShipping() {
+		return shipping;
+	}
+
+	public void setShipping(Shipping shipping) {
+		this.shipping = shipping;
 	}
 
 	public String getWeightInfo() {

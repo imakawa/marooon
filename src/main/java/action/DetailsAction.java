@@ -32,12 +32,12 @@ public class DetailsAction {
 	
 	public String PageLoad() {
 		chanels = chanelService.Read();
-		ActionContext ac = ActionContext.getContext();
+		
 		Map<String,Object> map = ActionContext.getContext().getParameters();
 		String productId = ((String[])map.get("productId"))[0];
 		product = productService.Read(productId);
 		product.setImagesJson(getImagesJson(product));
-         
+        product.setShipping(getShipping(product.getShippingCode()));
 		return "Success";
 	}
 	
@@ -58,6 +58,20 @@ public class DetailsAction {
 
 	public void setProduct(Product product) {
 		this.product = product;
+	}
+	
+	private ShippingService shippingService;
+	
+	public ShippingService getShippingService() {
+		return shippingService;
+	}
+
+	public void setShippingService(ShippingService shippingService) {
+		this.shippingService = shippingService;
+	}
+
+	private Shipping getShipping(String shippingId){
+		return this.shippingService.Read(shippingId);
 	}
 	
 	private String getImagesJson(Product product){

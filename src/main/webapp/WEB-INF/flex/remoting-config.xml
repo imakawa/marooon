@@ -31,4 +31,11 @@
 			<source>productService</source>
 		</properties>
 	</destination>
+		
+	<destination id="ShippingService">
+		<properties>
+		   <factory>spring</factory>
+			<source>shippingService</source>
+		</properties>
+	</destination>
 </service>

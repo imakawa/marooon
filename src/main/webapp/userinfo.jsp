@@ -3,8 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>全球购 | 登录/注册 </title>
+<title>大東微购</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet"
 	href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -40,7 +42,7 @@
 </script>
 
 <style type="text/css">
-.userinfo {padding-top:150px; padding-bottom:150px;}
+.userinfo {padding-top:100px; padding-bottom:150px;}
 </style>
 </head>
 <body>

@@ -3,10 +3,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>全球购 | 服务 </title>
+<title>大東微购</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+ <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
  <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"></script> 
 <!-- start top_js_button -->
