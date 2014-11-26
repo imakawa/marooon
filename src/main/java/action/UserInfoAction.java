@@ -1,6 +1,9 @@
 package action;
 
 import java.util.List;
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionContext;
 
 import model.Chanel;
 import service.ChanelService;
@@ -30,7 +33,13 @@ public class UserInfoAction {
 	public String PageLoad() {
 		try{
 			chanels = chanelService.Read();
-			return "Success";	
+			Map<String, Object> session = ActionContext.getContext().getSession();
+			if(session.get("loginuser")==null){
+				return "Success";	
+			}else{
+				return "Login";
+			}
+				
 		}catch(Exception e){
 			return "Failure";
 		}

@@ -58,4 +58,12 @@
 		<property name="shippingDao" ref="shippingDao" />
 	</bean>
 
+	<bean id="groupDao" class="dao.GroupDao">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+
+	<bean id="groupService" class="service.GroupService">
+		<property name="groupDao" ref="groupDao" />
+	</bean>
+	
 </beans>

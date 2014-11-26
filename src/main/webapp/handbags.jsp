@@ -9,8 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
-<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
-<link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" />
+ <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" /> 
+<!--<link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" />-->
 <script src="js/jquery.min.js"></script> 
 <!-- start top_js_button -->
 <script type="text/javascript" src="js/move-top.js"></script>
@@ -44,7 +44,9 @@
 								</h3>
 								<div class="price">
 									<h4>
-										¥<s:property value="price.price1" />
+										<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
+										   ¥<s:property value="price.price1" />
+										</s:if>
 										<span>詳細</span>
 									</h4>
 								</div> <span class="b_btm"></span>

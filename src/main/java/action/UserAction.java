@@ -2,8 +2,13 @@ package action;
 
 
 import java.util.List;
+import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
+import model.Chanel;
 import model.UserInfo;
+import service.ChanelService;
 import service.UserService;
 
 public class UserAction {
@@ -56,7 +61,7 @@ public class UserAction {
 
 	public String Create() {
 		UserInfo userInfo = new UserInfo();
-		userInfo.setUserName(username);
+		userInfo.setUsername(username);
 		userInfo.setPassword(password);
 		userService.Create(userInfo);
 		Read();
@@ -78,6 +83,47 @@ public class UserAction {
 	public String Delete() {
 		UserInfo userInfo = new UserInfo();
 		userService.Delete(userInfo);
+		return "Success";
+	}
+
+	/*-------------------------------------------------*/
+	
+	private ChanelService chanelService;
+	private List<Chanel> chanels;
+	
+	public ChanelService getChanelService() {
+		return chanelService;
+	}
+
+	public void setChanelService(ChanelService chanelService) {
+		this.chanelService = chanelService;
+	}
+
+	public List<Chanel> getChanels() {
+		return chanels;
+	}
+
+	public void setChanels(List<Chanel> chanels) {
+		this.chanels = chanels;
+	}
+
+	public String Login(){
+		chanels = chanelService.Read();
+		List<UserInfo> userInfoList = this.userService.Read();
+		for(UserInfo user : userInfoList){
+			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
+				Map<String, Object> session = ActionContext.getContext().getSession();
+				session.put("loginuser",user);
+				return "Success";
+			}
+		}
+		return "Failure";
+	}
+	
+	public String Logout(){
+		chanels = chanelService.Read();
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		session.remove("loginuser");
 		return "Success";
 	}
 }

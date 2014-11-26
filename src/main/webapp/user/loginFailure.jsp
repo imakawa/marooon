@@ -39,10 +39,7 @@
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
-	 <div>・登録成功</div>
-	 <div>用户：<s:property value="%{#session.loginuser.username}"/></div>
-	 <div>用户组：<s:property value="%{#session.loginuser.groupeCode}"/></div>
-	 <div><a href="userLogout.action">登出</a></div>
+	　・登録失敗
 	</div>
 </div>
 </div><!-- end main -->	

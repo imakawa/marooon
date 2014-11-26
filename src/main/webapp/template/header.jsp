@@ -11,7 +11,7 @@
 			<div class="logo">
 				<a href="index.action"><img src="images/logo.png" alt="" /> </a>
 			</div>
-			<div class="h_icon">
+<!-- 			<div class="h_icon">
 				<ul class="icon1 sub-icon1">
 					<li><a class="active-icon c1" href="#"><i>$300</i></a>
 						<ul class="sub-icon1 list">
@@ -24,7 +24,13 @@
 						</ul>
 					</li>
 				</ul>
-			</div>
+			</div> -->
+				
+				<div class="h_icon">
+				　<s:if test="#session.loginuser!=null">
+				    [<a href="/marooon/userinfo.action"><s:property value="%{#session.loginuser.username}"/></a>]
+				　</s:if>
+				</div>
 				
 				<div class="h_search">
 					<form>
@@ -40,13 +46,6 @@
 		<div class="wrap">
 				<div class="h_menu">
 					<ul>
-						<%-- <li><a href="<s:url action='index'/>">首页</a></li>
-						<li><a href="<s:url action='handbags'/>">母婴用品</a></li>
-						<li><a href="<s:url action='accessories'/>">美装护肤</a></li>
-						<li><a href="<s:url action='shoes'/>">手机数码</a></li>
-						<li><a href="<s:url action='service'/>">用户服务</a></li>
-						<li><a href="<s:url action='userinfo'/>">登录注册</a></li>
-						<li><a href="<s:url action='contact'/>">联系我们</a></li> --%>
 						<s:iterator value="#request.chanels" id="item">
 						<li><a href="<s:property value='action'/>.action?chanelId=<s:property value='id' />"><s:property value="name" /></a></li>
 						</s:iterator>

@@ -4,11 +4,15 @@ public class UserInfo {
 
 	private String id;
 	
-	private String UserName;
+	private String username;
 	
-	private String Password;
+	private String password;
 
 	private String address;
+	
+	private String groupeCode;
+	
+	private String type;
 	
 	public String getId() {
 		return id;
@@ -18,22 +22,22 @@ public class UserInfo {
 		this.id = id;
 	}
 	
-	public String getUserName() {
-		return UserName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		UserName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
-	
+
 	public String getAddress() {
 		return address;
 	}
@@ -41,4 +45,21 @@ public class UserInfo {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	public String getGroupeCode() {
+		return groupeCode;
+	}
+
+	public void setGroupeCode(String groupeCode) {
+		this.groupeCode = groupeCode;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+	
 }

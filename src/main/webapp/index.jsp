@@ -8,7 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-    <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" >
 	

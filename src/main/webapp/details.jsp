@@ -127,7 +127,9 @@
 				  <div class="desc1">
 					<h3><s:property value="#request.product.name"/></h3>
 					<p><s:property value="#request.product.descripe1.chInfo"/></p>
-					<h5>¥<s:property value="#request.product.price.price3"/></h5>
+					<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
+					    <h5>¥<s:property value="#request.product.price.price1"/></h5>
+					</s:if>
 <%-- 					 <a href="#">click for offer</a></h5>
 					<div class="available">
 						<h4>产品情报 :</h4>

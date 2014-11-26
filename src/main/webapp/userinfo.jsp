@@ -54,7 +54,7 @@
 			
 			<h2>・注册功能暂不开放，用户注册请<a href="connect.action">联系我们</a>。</h2>
 			<div class="userinfo">
-				<form name="form1" method="post" action="useraction">
+				<form name="form1" method="post" action="userLogin.action">
 					<div class="container">
 					
 						<form class="form-signin" role="form">
