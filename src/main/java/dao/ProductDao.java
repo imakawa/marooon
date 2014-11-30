@@ -50,6 +50,13 @@ public class ProductDao {
 		return this.mongoTemplate.find(new Query(Criteria.where("chanelId").is(chanelId)), Product.class);
 	}
 	
+	public List<Product> ReadByKeyword(String keyword){
+		Criteria cname=Criteria.where("name").regex(keyword);
+		Criteria ccode=Criteria.where("code").is(keyword);
+		
+		return this.mongoTemplate.find(new Query(new Criteria().orOperator(cname,ccode)), Product.class);
+	}
+	
 	public Integer Delete(Product product) {
 		return getMongoTemplate().remove(product).getN();
 	}

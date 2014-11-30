@@ -49,11 +49,15 @@
 										</s:if>
 										<span>詳細</span>
 									</h4>
-								</div> <span class="b_btm"></span>
+								</div>
+								<h1>
+								标示码：<s:property value="code" />
+								</h1>
+								 <span class="b_btm"></span>
 							</a>
 						</div>
 						<s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
-					</div></s:if>
+					</s:if>
 				</s:iterator>
 				<!-- 
 			<div class="grid1_of_3">

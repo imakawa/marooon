@@ -47,6 +47,10 @@ public class ProductService {
 		return productDao.ReadByChanel(chanelId);
 	}
 	
+	public List<Product> ReadByKeyword(String keyword){
+		return productDao.ReadByKeyword(keyword);
+	}
+	
 	public Product Read(String id){
 		return productDao.Read(id);
 	}

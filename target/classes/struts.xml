@@ -59,7 +59,12 @@
 		<result name="Success">/contact.jsp</result>
 		<result name="Failure">/failure.jsp</result>
 	</action>
-			
+	
+	<action name="productSearch" class="action.ProductSearchAction" method="ProductSearch">
+		<result name="Success">/productSearch/productSearch.jsp</result>
+		<result name="Failure">/failure.jsp</result>
+	</action>
+	
 <action name="accessories"><result>/accessories.jsp</result></action>
 <!-- <action name="contact"><result>/contact.jsp</result></action> -->
 <!-- <action name="details"><result>/details.jsp</result></action> -->

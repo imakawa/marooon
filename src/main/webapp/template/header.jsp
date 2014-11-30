@@ -4,6 +4,7 @@
 <html>
 <head>
 <link href="css/tmp_header.css" rel="stylesheet" type="text/css" media="all" />
+
 </head>
 <body>
 	<div class="header_top">
@@ -33,9 +34,11 @@
 				</div>
 				
 				<div class="h_search">
-					<form>
-						<input type="text" value="检索：商品名称或标示码" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"> <input type="submit" value="">
+					<form  method="post" action="productSearch.action">
+						<input id="keyword" name="keyword" type="text" 
+						       value="检索：商品名称或标示码" onfocus="this.value = '';"
+							   onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"/> 
+								<input type="submit" value=""/>
 					</form>
 				</div>
 				
