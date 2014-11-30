@@ -267,7 +267,7 @@
 						<h4>人氣商品</h4>
 						<div class="single-nav">
 			                <ul>
-			                   <li><a href="#">明治ーほほえみ</a></li>
+			                  <!--  <li><a href="#">明治ーほほえみ</a></li>
 			                    <li><a href="#">明治ーほほえみ</a></li>
 			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
 			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
@@ -279,14 +279,21 @@
 			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
 			                    <li><a href="#">Always free from repetition</a></li>
 			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>			                    
+			                    <li><a href="#">Always free from repetition</a></li> -->
+			                     <s:iterator value="#request.hotProducts" id="item">
+			                       <li>
+			                        <a href="details.action?productId=<s:property value='product.id' />">
+			                          <s:property value='product.name'/>
+			                        </a>
+			                       </li>
+			                     </s:iterator>			                    
 			                </ul>
 			              </div>
-						  <div class="banner-wrap bottom_banner color_link">
+<%-- 						  <div class="banner-wrap bottom_banner color_link">
 								<a href="#" class="main_link">
 								<figure><img src="images/delivery.png" alt=""></figure>
 								<h5><span>商品配送</span><br>具体请联系</h5><p>站点持续更新中^_^</p></a>
-						 </div>
+						 </div> --%>
 						<%--  <div class="brands">
 							 <h1>Brands</h1>
 					  		 <div class="field">

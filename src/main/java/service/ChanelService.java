@@ -33,6 +33,7 @@ public class ChanelService {
 			chanels = chanelDao.Read();
 		    Collections.sort(chanels, new ChanelCompare());
 		}catch(Exception e){
+			System.out.println(e.toString());
 		}
 		return chanels;
 	}

@@ -2,15 +2,17 @@ package action;
 
 import java.util.List;
 
-import model.Chanel;
-import service.ChanelService;
-import util.ChanelCompare;
+import model.*;
+import service.*;
 
 public class IndexAction {
 	
 	private ChanelService chanelService;
-
 	private List<Chanel> chanels;
+	
+	private PopularProductService popularProductService;
+	private List<PopularProduct> indexProducts;
+	private List<PopularProduct> hotProducts;
 	
 	public ChanelService getChanelService() {
 		return chanelService;
@@ -28,9 +30,35 @@ public class IndexAction {
 		this.chanels = chanels;
 	}
 	
+	public PopularProductService getPopularProductService() {
+		return popularProductService;
+	}
+
+	public void setPopularProductService(PopularProductService popularProductService) {
+		this.popularProductService = popularProductService;
+	}
+
+	public List<PopularProduct> getIndexProducts() {
+		return indexProducts;
+	}
+
+	public void setIndexProducts(List<PopularProduct> indexProducts) {
+		this.indexProducts = indexProducts;
+	}
+
+	public List<PopularProduct> getHotProducts() {
+		return hotProducts;
+	}
+
+	public void setHotProducts(List<PopularProduct> hotProducts) {
+		this.hotProducts = hotProducts;
+	}
+
 	public String PageLoad() {
 		try{
 			chanels = chanelService.Read();
+			indexProducts= popularProductService.ReadIndex();
+			hotProducts= popularProductService.ReadHot();
 			return "Success";	
 		}catch(Exception e){
 			return "Failure";

@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import model.Chanel;
+import model.Product;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -43,7 +44,11 @@ public class ChanelDao {
 	public List<Chanel> Read() {
 		return getMongoTemplate().find(new Query(), Chanel.class); 
 	}
-
+	
+	public Chanel Read(String id){
+		return getMongoTemplate().findById(id, Chanel.class);
+	}
+	
 	public Integer Delete(Chanel chanel) {
 		return getMongoTemplate().remove(chanel).getN();
 	}

@@ -66,4 +66,13 @@
 		<property name="groupDao" ref="groupDao" />
 	</bean>
 	
+	<bean id="popularProductDao" class="dao.PopularProductDao">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+
+	<bean id="popularProductService" class="service.PopularProductService">
+		<property name="popularProductDao" ref="popularProductDao" />
+		<property name="productDao" ref="productDao" />
+		<property name="chanelDao" ref="chanelDao" />
+	</bean>
 </beans>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,7 +27,7 @@
 
 <!-- start slider -->
 			<div id="da-slider" class="da-slider">
-				<div class="da-slide">
+<!-- 				<div class="da-slide">
 					<h2>welcome to aditii</h2>
 					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
 					<a href="details.jsp" class="da-link">shop now</a>
@@ -49,7 +50,15 @@
 					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 					<a href="details.jsp" class="da-link">shop now</a>
 					<div class="da-img"><img src="images/slider4.png" alt="image01" /></div>
-				</div>
+				</div> -->
+				<s:iterator value="#request.indexProducts" id="item">
+				  <div class="da-slide">
+					<h2><s:property value='product.name'/></h2>
+					<p><s:property value="product.descripe1.chInfo"/></p>
+					<a href="details.action?productId=<s:property value='product.id' />" class="da-link">详细</a>
+					<div class="da-img"><img src="productImages/<s:property value='product.imageView'/>" alt="image01" /></div>
+				  </div>				
+				</s:iterator>
 				<nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
 					<span class="da-arrows-next"></span>
@@ -138,8 +147,8 @@
 <div class="wrap">	
 	<div class="main">
 		<!-- start grids_of_3 -->
-		<div class="grids_of_3">
-			<div class="grid1_of_3">
+		 <div class="grids_of_3">
+		<%--	<div class="grid1_of_3">
 				<a href="details.action">
 					<img src="images/pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
@@ -202,7 +211,25 @@
 					<span class="b_btm"></span>
 				</a>
 			</div>
-			<div class="clear"></div>
+ --%>	
+         <s:iterator value="#request.hotProducts" id="item">
+           <div class="grid1_of_3">
+				<a href="details.action?productId=<s:property value='product.id' />">
+					<img src="productImages/<s:property value='product.imageView'/>" alt=""/>
+					<h3><s:property value='product.name'/></h3>
+					<div class="price">
+						<h4>
+						  <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
+					         ¥<s:property value="product.price.price1"/>
+					      </s:if>
+						  <span>详细</span>
+						</h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+         </s:iterator>	
+         <div class="clear"></div>
 		</div>	
 		<!-- end grids_of_3 -->
 	</div>

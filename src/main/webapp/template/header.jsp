@@ -34,7 +34,8 @@
 				
 				<div class="h_search">
 					<form>
-						<input type="text" value=""> <input type="submit" value="">
+						<input type="text" value="检索：商品名称或标示码" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"> <input type="submit" value="">
 					</form>
 				</div>
 				
@@ -63,8 +64,8 @@
 					
 					<div class="search_box">
 						<form>
-							<input type="text" value="搜索商品" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = '搜索商品';}"><input
+							<input type="text" value="检索：商品名称或标示码" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"><input
 								type="submit" value="">
 						</form>
 					</div>

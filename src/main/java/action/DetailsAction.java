@@ -11,8 +11,10 @@ import service.*;
 public class DetailsAction {
 
 	private ChanelService chanelService;
-
 	private List<Chanel> chanels;
+
+	private PopularProductService popularProductService;
+	private List<PopularProduct> hotProducts;
 	
 	public ChanelService getChanelService() {
 		return chanelService;
@@ -30,6 +32,22 @@ public class DetailsAction {
 		this.chanels = chanels;
 	}
 	
+	public PopularProductService getPopularProductService() {
+		return popularProductService;
+	}
+
+	public void setPopularProductService(PopularProductService popularProductService) {
+		this.popularProductService = popularProductService;
+	}
+
+	public List<PopularProduct> getHotProducts() {
+		return hotProducts;
+	}
+
+	public void setHotProducts(List<PopularProduct> hotProducts) {
+		this.hotProducts = hotProducts;
+	}
+
 	public String PageLoad() {
 		chanels = chanelService.Read();
 		
@@ -38,6 +56,9 @@ public class DetailsAction {
 		product = productService.Read(productId);
 		product.setImagesJson(getImagesJson(product));
         product.setShipping(getShipping(product.getShippingCode()));
+        
+        hotProducts = popularProductService.ReadHot();
+        
 		return "Success";
 	}
 	

@@ -45,4 +45,11 @@
 			<source>groupService</source>
 		</properties>
 	</destination>
+	
+	<destination id="PopularProductService">
+		<properties>
+		   <factory>spring</factory>
+			<source>popularProductService</source>
+		</properties>
+	</destination>
 </service>
