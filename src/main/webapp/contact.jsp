@@ -61,7 +61,7 @@
 					    </form> -->
 					    
 					    <div>
-						   <span>①微信（WeChat）ID：kenanchuan</span>
+						   <span>①QQID：2845128719</span>
 						</div>
 						
 					    <div>

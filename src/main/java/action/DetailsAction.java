@@ -58,7 +58,7 @@ public class DetailsAction {
         product.setShipping(getShipping(product.getShippingCode()));
         
         hotProducts = popularProductService.ReadHot();
-        
+        System.out.println("Details:"+product.getCode());
 		return "Success";
 	}
 	
