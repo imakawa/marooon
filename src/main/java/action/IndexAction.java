@@ -2,6 +2,10 @@ package action;
 
 import java.util.List;
 
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
+
 import model.*;
 import service.*;
 
@@ -59,7 +63,8 @@ public class IndexAction {
 			chanels = chanelService.Read();
 			indexProducts= popularProductService.ReadIndex();
 			hotProducts= popularProductService.ReadHot();
-			System.out.println("Index");
+			String ipadd=ServletActionContext.getRequest().getRemoteAddr();
+			System.out.println("Index:"+ipadd);
 			return "Success";	
 		}catch(Exception e){
 			return "Failure";
