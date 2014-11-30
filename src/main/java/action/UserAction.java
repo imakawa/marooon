@@ -114,6 +114,7 @@ public class UserAction {
 			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
 				Map<String, Object> session = ActionContext.getContext().getSession();
 				session.put("loginuser",user);
+				System.out.println("Login:"+user.getUsername());
 				return "Success";
 			}
 		}

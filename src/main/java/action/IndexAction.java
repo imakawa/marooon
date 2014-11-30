@@ -59,6 +59,7 @@ public class IndexAction {
 			chanels = chanelService.Read();
 			indexProducts= popularProductService.ReadIndex();
 			hotProducts= popularProductService.ReadHot();
+			System.out.println("Index");
 			return "Success";	
 		}catch(Exception e){
 			return "Failure";
