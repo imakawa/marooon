@@ -208,13 +208,13 @@
 			   	<!-- start tabs -->
 				   	<section class="tabs">
 		            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked">
-			        <label for="tab-1" class="tab-label-1">产品介绍①</label>
+			        <label for="tab-1" class="tab-label-1">日文</label>
 			
 		            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2">
-			        <label for="tab-2" class="tab-label-2">产品介绍②</label>
+			        <label for="tab-2" class="tab-label-2">中文</label>
 			
 		            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3">
-			        <label for="tab-3" class="tab-label-3">产品介绍③</label>
+			        <label for="tab-3" class="tab-label-3">其他</label>
 	          
 				    <div class="clear-shadow"></div>
 					
