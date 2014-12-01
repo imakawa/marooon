@@ -147,8 +147,8 @@
 <div class="wrap">	
 	<div class="main">
 		<!-- start grids_of_3 -->
-		 <div class="grids_of_3">
-		<%--	<div class="grid1_of_3">
+		<%-- <div class="grids_of_3">
+			<div class="grid1_of_3">
 				<a href="details.action">
 					<img src="images/pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
@@ -212,10 +212,11 @@
 				</a>
 			</div>
  --%>	
-         <s:iterator value="#request.hotProducts" id="item">
+         <s:iterator value="#request.hotProducts" status="product">
+          <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
            <div class="grid1_of_3">
 				<a href="details.action?productId=<s:property value='product.id' />">
-					<img src="productImages/<s:property value='product.imageView'/>" alt=""/>
+					<img width="200px" height="180px" src="productImages/<s:property value='product.imageView'/>" alt=""/>
 					<h3><s:property value='product.name'/></h3>
 					<div class="price">
 						<h4>
@@ -228,8 +229,10 @@
 					<span class="b_btm"></span>
 				</a>
 			</div>
+			<s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
+					</s:if>
          </s:iterator>	
-         <div class="clear"></div>
+         <!-- <div class="clear"></div> -->
 		</div>	
 		<!-- end grids_of_3 -->
 	</div>
