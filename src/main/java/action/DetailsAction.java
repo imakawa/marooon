@@ -49,17 +49,21 @@ public class DetailsAction {
 	}
 
 	public String PageLoad() {
-		chanels = chanelService.Read();
-		
-		Map<String,Object> map = ActionContext.getContext().getParameters();
-		String productId = ((String[])map.get("productId"))[0];
-		product = productService.Read(productId);
-		product.setImagesJson(getImagesJson(product));
-        product.setShipping(getShipping(product.getShippingCode()));
-        
-        hotProducts = popularProductService.ReadHot();
-        System.out.println("Details:"+product.getCode());
-		return "Success";
+		try{
+			chanels = chanelService.Read();
+			
+			Map<String,Object> map = ActionContext.getContext().getParameters();
+			String productId = ((String[])map.get("productId"))[0];
+			product = productService.Read(productId);
+			product.setImagesJson(getImagesJson(product));
+	        product.setShipping(getShipping(product.getShippingCode()));
+	        
+	        hotProducts = popularProductService.ReadHot();
+	        System.out.println("Details:"+product.getCode());
+			return "Success";	
+		}catch(Exception e){
+			return "Failure";	
+		}
 	}
 	
 	private ProductService productService;
