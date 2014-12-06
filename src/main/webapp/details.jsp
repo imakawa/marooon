@@ -261,7 +261,7 @@
 			        </section>
 		         	<!-- end tabs -->
 			   	</div>
-			   	<!-- start sidebar -->
+			 <%--   	<!-- start sidebar -->
 			 <div class="left_sidebar">
 					<div class="sellers">
 						<h4>人氣商品</h4>
@@ -289,12 +289,12 @@
 			                     </s:iterator>			                    
 			                </ul>
 			              </div>
-<%-- 						  <div class="banner-wrap bottom_banner color_link">
+						  <div class="banner-wrap bottom_banner color_link">
 								<a href="#" class="main_link">
 								<figure><img src="images/delivery.png" alt=""></figure>
 								<h5><span>商品配送</span><br>具体请联系</h5><p>站点持续更新中^_^</p></a>
-						 </div> --%>
-						<%--  <div class="brands">
+						 </div>
+						 <div class="brands">
 							 <h1>Brands</h1>
 					  		 <div class="field">
 				                 <select class="select1">
@@ -304,12 +304,12 @@
 										<option>Lorem ipsum dolor sit amet</option>
 				                  </select>
 				            </div>
-			    		</div> --%>
+			    		</div>
 					</div>
 				</div>
 					<!-- end sidebar -->
           	    <div class="clear"></div>
-	       </div>	
+	       </div>	 --%>
 	<!-- end content -->
 	</div>
 </div>
