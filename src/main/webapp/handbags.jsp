@@ -38,7 +38,7 @@
 				  <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
 						<div class="grid1_of_3">
 							<a href="details.action?productId=<s:property value='id' />">
-							<img width="200px" height="180px" src="productImages/<s:property value='imageView'/>" alt="" />
+							<img  src="productImages/<s:property value='imageView'/>" alt="" />
 								<h3>
 									<s:property value="name" />
 								</h3>
