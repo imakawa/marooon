@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>大东购｜<s:property value="#request.product.name"/></title>
+<title>大東购｜<s:property value="#request.product.name"/></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"/>
