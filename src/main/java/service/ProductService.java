@@ -2,6 +2,7 @@ package service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -15,6 +16,8 @@ import dao.ProductDao;
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
+
+import util.ProductCompare;
 
 public class ProductService {
 
@@ -53,11 +56,17 @@ public class ProductService {
 	}
 	
 	public List<Product> ReadByChanel(String chanelId){
-		return productDao.ReadByChanel(chanelId);
+		List<Product> products = productDao.ReadByChanel(chanelId);
+		
+		Collections.sort(products, new ProductCompare());
+		return products;
 	}
 	
 	public List<Product> ReadByKeyword(String keyword){
-		return productDao.ReadByKeyword(keyword);
+		List<Product> products =productDao.ReadByKeyword(keyword);
+
+		Collections.sort(products, new ProductCompare());
+		return products;
 	}
 	
 	public Product Read(String id){
