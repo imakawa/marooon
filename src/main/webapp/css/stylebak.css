@@ -441,7 +441,8 @@ body {
 	background: #ffffff;
 }
 .main{
-	padding: 2%;
+	position:relative;
+	margin:0 auto 25px;
 }
 /* start grids_of_3 */
 .grids_of_3{

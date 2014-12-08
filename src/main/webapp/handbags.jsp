@@ -15,12 +15,27 @@
 <!-- start top_js_button -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<script src="js/blocksit.min.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
+			
+			$(window).load( function() {
+				var winWidth = $(window).width();
+				var col = 3;
+				if(winWidth < 650) {
+					col = 1
+				}
+				$('#container').BlocksIt({
+					numOfCol:col,
+					offsetX: 5,
+					offsetY: 5
+				});
+			});
+			
 		});
 	</script>
 </head>
@@ -30,12 +45,12 @@
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-	<div class="main">
+	<div id="container" class="main">
 		<!-- <h2 class="style top">featured handbags</h2> -->
 		<!-- <!-- start grids_of_3 -->
 
 				<s:iterator value="#request.products" status="product">
-				  <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
+				  <%-- <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if> --%>
 						<div class="grid1_of_3">
 							<a href="details.action?productId=<s:property value='id' />">
 							<img  src="productImages/<s:property value='imageView'/>" alt="" />
@@ -56,8 +71,8 @@
 								 <span class="b_btm"></span>
 							</a>
 						</div>
-						<s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
-					</s:if>
+						<%-- <s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
+					</s:if> --%>
 				</s:iterator>
 				<!-- 
 			<div class="grid1_of_3">
