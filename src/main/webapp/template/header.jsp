@@ -12,36 +12,19 @@
 			<div class="logo">
 				<a href="index.action"><img src="images/logo.png" alt="" /> </a>
 			</div>
-<!-- 			<div class="h_icon">
-				<ul class="icon1 sub-icon1">
-					<li><a class="active-icon c1" href="#"><i>$300</i></a>
-						<ul class="sub-icon1 list">
-							<li><h3>shopping cart empty</h3> <a href=""></a></li>
-							<li><p>
-									if items in your wishlit are missing, <a href="contact.jsp">contact
-										us</a> to view them
-								</p>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div> -->
-				
 				<div class="h_icon">
 				　<s:if test="#session.loginuser!=null">
 				    [<a href="/marooon/userinfo.action"><s:property value="%{#session.loginuser.username}"/></a>]
 				　</s:if>
 				</div>
-				
 				<div class="h_search">
-					<form  method="post" action="productSearch.action">
+					<form method="post" action="productSearch.action">
 						<input id="keyword" name="keyword" type="text" 
 						       value="检索：商品名称或标示码" onfocus="this.value = '';"
 							   onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"/> 
 								<input type="submit" value=""/>
 					</form>
 				</div>
-				
 				<div class="clear"></div>
 		</div><!-- end of [wrap] -->
 	</div><!-- end of [header_top] -->
@@ -66,10 +49,11 @@
 					</nav>
 					
 					<div class="search_box">
-						<form>
-							<input type="text" value="检索：商品名称或标示码" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}"><input
-								type="submit" value="">
+						<form method="post" action="productSearch.action">
+							<input id="keyword" name="keyword" type="text" 
+							       value="检索：商品名称或标示码" onfocus="this.value = '';"
+								   onblur="if (this.value == '') {this.value = '检索：商品名称或标示码';}">
+							<input type="submit" value="">
 						</form>
 					</div>
 					<div class="clear"></div>

@@ -22,11 +22,62 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<script src="js/blocksit.min.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+			
+			$(window).load( function() {
+				var winWidth = $(window).width();
+				var conWidth;
+				if(winWidth < 600) {
+					conWidth = 300;
+					col = 1
+				} else if(winWidth < 900) {
+					conWidth = 600;
+					col = 2
+				} else if(winWidth < 1200) {
+					conWidth = 900;
+					col = 3;
+				} else {
+					conWidth = 1200;
+					col = 4;
+				}
+				
+				$('#container').width(conWidth);
+				$('#container').BlocksIt({
+					numOfCol: col,
+					offsetX: 10,
+					offsetY: 10
+				});
+			});
+			
+			$(window).resize(function() {
+				var winWidth = $(window).width();
+				var conWidth;
+				if(winWidth < 600) {
+					conWidth = 300;
+					col = 1
+				} else if(winWidth < 900) {
+					conWidth = 600;
+					col = 2
+				} else if(winWidth < 1200) {
+					conWidth = 900;
+					col = 3;
+				} else {
+					conWidth = 1200;
+					col = 4;
+				}
+				
+				$('#container').width(conWidth);
+				$('#container').BlocksIt({
+					numOfCol: col,
+					offsetX: 10,
+					offsetY: 10
+				});
 			});
 		});
 	</script>
@@ -38,7 +89,7 @@
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-	<div class="main">
+     <div style="margin-top:15px">
 	  <h2>・关键字：<s:property value="#request.keyword" /></h2>
 	  <s:if test="#request.products.size==0">
 	  <br/>
@@ -47,9 +98,10 @@
 	  <h1>&nbsp;&nbsp;&nbsp;→商品名称为模糊检索</h1>
 	  <h1>&nbsp;&nbsp;&nbsp;→标示码为精准检索</h1>
 	  </s:if>
-	  
+	 </div> 
+	<div id="container" class="main">	  
 	　<s:iterator value="#request.products" status="product">
-				  <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if>
+				<%--   <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if> --%>
 						<div class="grid1_of_3">
 							<a href="details.action?productId=<s:property value='id' />">
 							<img width="200px" height="180px" src="productImages/<s:property value='imageView'/>" alt="" />
@@ -70,8 +122,8 @@
 								 <span class="b_btm"></span>
 							</a>
 						</div>
-						<s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
-					</s:if>
+						<%-- <s:if test="#product.index%3==2 || #product.isLast()"><div class="clear"></div>
+					</s:if> --%>
 		</s:iterator>
 	</div>
 </div>
