@@ -24,16 +24,18 @@
     <script src="js/blocksit.min.js"></script>
      <script type="text/javascript">
 		jQuery(document).ready(function($) {
-			var winWidth = $(window).width();
-			var col = 3;
-			if(winWidth < 650) {
-				col = 1
-			}
-			$('#container').BlocksIt({
-				numOfCol:col,
-				offsetX: 5,
-				offsetY: 5
-			});	
+			$(window).load( function() {
+				var winWidth = $(window).width();
+				var col = 3;
+				if(winWidth < 650) {
+					col = 1
+				}
+				$('#container').BlocksIt({
+					numOfCol:col,
+					offsetX: 5,
+					offsetY: 5
+				});
+			});
 		});
 	</script>
 </head>
