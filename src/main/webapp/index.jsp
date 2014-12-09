@@ -26,16 +26,54 @@
 		jQuery(document).ready(function($) {
 			$(window).load( function() {
 				var winWidth = $(window).width();
-				var col = 3;
-				if(winWidth < 650) {
+				var conWidth;
+				if(winWidth < 600) {
+					conWidth = 300;
 					col = 1
+				} else if(winWidth < 900) {
+					conWidth = 600;
+					col = 2
+				} else if(winWidth < 1200) {
+					conWidth = 900;
+					col = 3;
+				} else {
+					conWidth = 1200;
+					col = 4;
 				}
+				
+				$('#container').width(conWidth);
 				$('#container').BlocksIt({
-					numOfCol:col,
-					offsetX: 5,
-					offsetY: 5
+					numOfCol: col,
+					offsetX: 10,
+					offsetY: 10
 				});
 			});
+			
+			$(window).resize(function() {
+				var winWidth = $(window).width();
+				var conWidth;
+				if(winWidth < 600) {
+					conWidth = 300;
+					col = 1
+				} else if(winWidth < 900) {
+					conWidth = 600;
+					col = 2
+				} else if(winWidth < 1200) {
+					conWidth = 900;
+					col = 3;
+				} else {
+					conWidth = 1200;
+					col = 4;
+				}
+				
+				$('#container').width(conWidth);
+				$('#container').BlocksIt({
+					numOfCol: col,
+					offsetX: 10,
+					offsetY: 10
+				});
+			});
+			
 		});
 	</script>
 </head>

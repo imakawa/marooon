@@ -446,13 +446,11 @@ body {
 }
 /* start grids_of_3 */
 .grids_of_3{
-	text-align:center;
-	margin: 4% 0;
+	 text-align:center;
+	margin: 4% 0; 
 }
 .grid1_of_3{
-	float: left;
 	width: 29.333%;
-	margin-left: 4.3333%;
 	border: 1px solid rgb(223, 223, 223);
 	position: relative;
 }
@@ -1492,7 +1490,7 @@ p.para{
 	.product-essential {
 		padding: 5px;
 	}
-}
+}	
 @media only screen and (max-width: 320px) {
 	.wrap{
 		width:95%;
