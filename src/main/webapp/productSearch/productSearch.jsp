@@ -108,15 +108,14 @@
 								<h3>
 									<s:property value="name" />
 								</h3>
+								<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
 								<div class="price">
 									<h4>
-										<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
-										   ¥<s:property value="price.price1" />
-										</s:if>
-										<span>詳細</span>
+										¥<s:property value="price.price1" />
 									</h4>
 								</div>
-								<h1>
+								</s:if>
+								<h1 style="text-align:center">
 								标示码：<s:property value="code" />
 								</h1>
 								 <span class="b_btm"></span>
