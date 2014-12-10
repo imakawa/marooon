@@ -77,10 +77,8 @@
 				    <div class="product-image"> 
 				        <a class="cs-fancybox-thumbs cloud-zoom" 
 				           rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" 
-				           data-fancybox-group="thumb" 
-				           href="productImages/asdfae.jpg"
-				           title="Women Shorts" alt="Women Shorts">
-				           	<img src="productImages/asdfae.jpg" alt="Women Shorts" title="Women Shorts" />
+				           data-fancybox-group="thumb">
+				           	<img />
 				        </a>
 				   </div> 
 					<script type="text/javascript">

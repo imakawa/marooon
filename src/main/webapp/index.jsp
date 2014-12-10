@@ -7,8 +7,9 @@
 <title>大東购</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+<!-- 
+<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"> -->
+<link rel="icon" type="image/x-icon" href="images/title.ico">
     <!-- <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" /> -->
     <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
@@ -112,14 +113,13 @@
 				<a href="details.action?productId=<s:property value='product.id' />">
 					<img  src="productImages/<s:property value='product.imageView'/>" alt=""/>
 					<h3><s:property value='product.name'/></h3>
+					<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
 					<div class="price">
 						<h4>
-						  <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
 					         ¥<s:property value="product.price.price1"/>
-					      </s:if>
-						  <span>详细</span>
 						</h4>
 					</div>
+					</s:if>
 					<span class="b_btm"></span>
 				</a>
 			</div>
