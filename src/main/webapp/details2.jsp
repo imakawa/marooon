@@ -66,7 +66,7 @@
 		
 		        
 		<hr/>	
-		     <div style="width:100%;margin:15px;">
+		     <div style="margin:15px;">
 			
 			      <s:if test="#request.product.descripe2.chInfo!=''">
 		            <span style="font-weight:bold;">・商品介绍（日本语）</span>
