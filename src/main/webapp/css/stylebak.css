@@ -29,11 +29,10 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 @font-face {
-    font-family: 'bebas_neueregular';
     src:url(../fonts/BebasNeue-webfont.ttf) format('truetype');
 }
 body {
-	font-family: 'bebas_neueregular';
+	/* font-family: 'bebas_neueregular'; */
 	background:#ffffff;
 	font-size: 100%;
 }

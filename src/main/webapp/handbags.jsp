@@ -92,7 +92,7 @@
 							<a href="details.action?productId=<s:property value='id' />">
 							<img  src="productImages/<s:property value='imageView'/>" alt="" />
 								<h3>
-									<s:property value="name" />
+									<s:property escape="false" value="name" />
 								</h3>
 								<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
 								<div class="price">

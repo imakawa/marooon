@@ -112,7 +112,7 @@
            <div class="grid1_of_3">
 				<a href="details.action?productId=<s:property value='product.id' />">
 					<img  src="productImages/<s:property value='product.imageView'/>" alt=""/>
-					<h3><s:property value='product.name'/></h3>
+					<h3><s:property escape="false" value='product.name'/></h3>
 					<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
 					<div class="price">
 						<h4>
