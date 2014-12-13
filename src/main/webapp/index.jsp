@@ -99,7 +99,7 @@
 <div class="main_bg1">
 <div class="wrap">	
 	<div class="main1">
-		<h2>人気商品↓</h2>
+		<h2>人气商品↓</h2>
 	</div>
 </div>
 </div>
