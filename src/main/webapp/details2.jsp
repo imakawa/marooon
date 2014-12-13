@@ -72,7 +72,7 @@
 		            <span style="font-weight:bold;">・商品介绍（日本语）</span>
 		              <hr/>
 				        <div>
-							<s:property value="#request.product.descripe2.chInfo"/>
+							<s:property escape="false" value="#request.product.descripe2.chInfo"/>
 							<div class="clear"></div>
 						</div>
 				  </s:if>
@@ -82,7 +82,7 @@
 		            <span style="font-weight:bold;">・商品介绍（中国语）</span>
 		              <hr/>
 				        <div>
-							<s:property value="#request.product.descripe3.chInfo"/>
+							<s:property escape="false" value="#request.product.descripe3.chInfo"/>
 						</div>
 				    </s:if>
 				    
@@ -91,7 +91,7 @@
 		            <span style="font-weight:bold;">・商品介绍（其他）</span>
 		              <hr/>
 				        <div>
-							<s:property value="#request.product.descripe4.chInfo"/>
+							<s:property escape="false" value="#request.product.descripe4.chInfo"/>
 							<div class="clear"></div>
 						</div>
 					</s:if>
