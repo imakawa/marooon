@@ -40,7 +40,7 @@
 	</action>
 
 	<action name="details" class="action.DetailsAction" method="PageLoad">
-		<result name="Success">/details.jsp</result>
+		<result name="Success">/details2.jsp</result>
 		<result name="Failure">/failure.jsp</result>
 	</action>
 
