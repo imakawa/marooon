@@ -16,6 +16,7 @@
 				　<s:if test="#session.loginuser!=null">
 				    [<a href="/marooon/userinfo.action"><s:property value="%{#session.loginuser.username}"/></a>]
 				　</s:if>
+				<a href="/marooon/service.action">代购须知</a>
 				</div>
 				<div class="h_search">
 					<form method="post" action="productSearch.action">

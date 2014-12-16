@@ -44,7 +44,7 @@
 		<result name="Failure">/failure.jsp</result>
 	</action>
 
-	<action name="userService" class="action.UserServiceAction" method="PageLoad">
+	<action name="service" class="action.UserServiceAction" method="PageLoad">
 		<result name="Success">/service.jsp</result>
 		<result name="Failure">/failure.jsp</result>
 	</action>
