@@ -12,8 +12,6 @@
 <link rel="icon" type="image/x-icon" href="images/title.ico">
     <!-- <link href="css/productlist.css" rel="stylesheet" type="text/css" media="all" /> -->
     <link href="css/stylebak.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" >
 	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
@@ -77,25 +75,61 @@
 			
 		});
 	</script>
+	
+	<!-- Le styles -->
+<link href="css/indexSlider.css" rel="stylesheet">
+<link href="http://m.w3cschool.cc/try/bootstrap/layoutit/css/layoutit.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+		<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.htmlClean.js"></script>
+
+
 </head>
 <body>
 <jsp:include page="template/header.jsp"></jsp:include>
 
-<!-- start slider -->
-			<div id="da-slider" class="da-slider">
-				<s:iterator value="#request.indexProducts" id="item">
-				  <div class="da-slide">
-					<h2><s:property value='product.name'/></h2>
-					<p><s:property value="product.descripe1.chInfo"/></p>
-					<a href="details.action?productId=<s:property value='product.id' />" class="da-link">详细</a>
-					<div class="da-img"><img src="productImages/<s:property value='product.imageView'/>" alt="image01" /></div>
-				  </div>				
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="carousel slide" id="carousel-988571">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-988571">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-988571" class="active">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-988571">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+				<s:iterator value="#request.indexProducts" status="product">
+					<s:if test="#product.index==0"><div class="item active"></s:if>
+					<s:if test="#product.index!=0"><div class="item"></s:if>
+						<img src="productImages/<s:property value='product.imageView'/>" />
+						<div class="carousel-caption">
+							<h4>
+								<s:property value='product.name'/>
+							</h4>
+							<p>
+								<s:property value="product.descripe1.chInfo"/>
+							</p>
+						</div>
+					</div>
 				</s:iterator>
-				<nav class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</nav>
+				</div> <a data-slide="prev" href="#carousel-988571" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-988571" class="right carousel-control">›</a>
 			</div>
+		</div>
+	</div>
+</div>
 <div class="main_bg1">
 <div class="wrap">	
 	<div class="main1">
