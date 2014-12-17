@@ -114,7 +114,9 @@
 				<s:iterator value="#request.indexProducts" status="product">
 					<s:if test="#product.index==0"><div class="item active"></s:if>
 					<s:if test="#product.index!=0"><div class="item"></s:if>
-						<img src="productImages/<s:property value='product.imageView'/>" />
+						<a href="details.action?productId=<s:property value='product.id' />">
+						   <img src="productImages/<s:property value='product.imageView'/>" />
+						</a>
 						<div class="carousel-caption">
 							<h4>
 								<s:property value='product.name'/>
