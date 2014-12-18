@@ -11,13 +11,9 @@ public class ChanelService {
 
 	private ChanelDao chanelDao;
 	
-	public ChanelDao getChanelDao() {
-		return chanelDao;
-	}
+	public ChanelDao getChanelDao() {return chanelDao;}
 
-	public void setChanelDao(ChanelDao chanelDao) {
-		this.chanelDao = chanelDao;
-	}
+	public void setChanelDao(ChanelDao chanelDao) {this.chanelDao = chanelDao;}
 
 	public Integer Create(Chanel chanel){
 		return chanelDao.Create(chanel);

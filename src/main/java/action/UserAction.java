@@ -127,4 +127,29 @@ public class UserAction {
 		session.remove("loginuser");
 		return "Success";
 	}
+	
+	
+	
+	private String adminName;
+	private String adminPassword;
+	public String getAdminName() {return adminName;}
+	public void setAdminName(String adminName) {this.adminName = adminName;}
+	public String getAdminPassword() {return adminPassword;}
+	public void setAdminPassword(String adminPassword) {this.adminPassword = adminPassword;}
+	
+	/*
+	 * 管理者権限チェックする処理メソッド
+	 */
+	public String AdminLogin(){
+		List<UserInfo> userInfoList = this.userService.Read();
+		for(UserInfo admin : userInfoList){
+			if(admin.getUsername().equals(adminName) && 
+			   admin.getPassword().equals(adminPassword)){
+				Map<String, Object> session = ActionContext.getContext().getSession();
+				session.put("admin",admin);
+				return "Success";
+			}
+		}
+		return "Failure";
+	}	
 }

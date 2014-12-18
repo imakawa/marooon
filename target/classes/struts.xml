@@ -65,6 +65,21 @@
 		<result name="Failure">/failure.jsp</result>
 	</action>
 	
+	<action name="adminLogin" class="action.UserAction" method="AdminLogin">
+			<result name="Success">/backend/admin.jsp</result>
+			<result name="Failure">/user/loginFailure.jsp</result>
+	</action>
+	
+	<action name="exchange" class="action.backend.ExchangeAction" method="Read">
+			<result name="Success">/backend/admin.jsp</result>
+			<result name="Failure">/user/loginFailure.jsp</result>
+	</action>
+	
+	<action name="exchangeCreate" class="action.backend.ExchangeAction" method="Create">
+			<result name="Success">/backend/admin.jsp</result>
+			<result name="Failure">/user/loginFailure.jsp</result>
+	</action>
+		
 <action name="accessories"><result>/accessories.jsp</result></action>
 <!-- <action name="contact"><result>/contact.jsp</result></action> -->
 <!-- <action name="details"><result>/details.jsp</result></action> -->

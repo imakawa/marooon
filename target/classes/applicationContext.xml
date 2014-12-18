@@ -9,7 +9,11 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mongo:mongo host="192.168.0.10" port="27017" />
+	<mongo:mongo host="54.65.145.187" port="27017">
+	    <mongo:options  
+             connect-timeout="10000000"/> 
+             
+	</mongo:mongo>
 
 <!-- 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg ref="mongo" />
@@ -74,5 +78,13 @@
 		<property name="popularProductDao" ref="popularProductDao" />
 		<property name="productDao" ref="productDao" />
 		<property name="chanelDao" ref="chanelDao" />
+	</bean>
+	
+	<bean id="exchangeDao" class="dao.ExchangeDao">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+
+	<bean id="exchangeService" class="service.ExchangeService">
+		<property name="exchangeDao" ref="exchangeDao" />
 	</bean>
 </beans>
