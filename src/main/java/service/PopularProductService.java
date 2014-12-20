@@ -77,7 +77,6 @@ public class PopularProductService {
 		popularProducts = popularProductDao.ReadIndex();
 		
 		for(PopularProduct x:popularProducts){
-			System.out.println(x.getProductId());
 			Product product = productService.Read(x.getProductId());
 			x.setProduct(product);
 			Chanel chanel = chanelDao.Read(product.getChanelId());

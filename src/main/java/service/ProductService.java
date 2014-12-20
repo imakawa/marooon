@@ -92,9 +92,10 @@ public class ProductService {
 		String price = p.getPrice().getPrice1();
 		Integer intPrice = Integer.parseInt(price);
 		
-		String parten = "#.#";
+		String parten = ".0";
 		DecimalFormat decimal = new DecimalFormat(parten);
-		String newPrice= decimal.format((intPrice * 1.2)/100*exchange.getRate());
+		String newPrice= decimal.format((intPrice * 1.22222)/100*exchange.getRate());
+		
 		
 		p.getPrice().setPrice1(newPrice+"0");
 	}
