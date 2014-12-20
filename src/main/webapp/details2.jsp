@@ -53,9 +53,9 @@
 				  <div class="desc1">
 					<h3><s:property value="#request.product.name"/></h3>
 					<p><s:property value="#request.product.descripe1.chInfo"/></p>
-					<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
+					<%-- <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'"> --%>
 					    <h5>¥<s:property value="#request.product.price.price1"/></h5>
-					</s:if>
+					<%-- </s:if> --%>
                     <div>
 						<span>标示码：</span>
 						<span><s:property value="#request.product.code"/></span>

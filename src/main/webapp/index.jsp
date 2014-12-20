@@ -149,13 +149,13 @@
 				<a href="details.action?productId=<s:property value='product.id' />">
 					<img  src="productImages/<s:property value='product.imageView'/>" alt=""/>
 					<h3><s:property escape="false" value='product.name'/></h3>
-					<s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'">
+					<%-- <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'"> --%>
 					<div class="price">
 						<h4>
 					         ¥<s:property value="product.price.price1"/>
 						</h4>
 					</div>
-					</s:if>
+					<%-- </s:if> --%>
 					<span class="b_btm"></span>
 				</a>
 			</div>

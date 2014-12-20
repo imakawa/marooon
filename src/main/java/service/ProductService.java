@@ -1,6 +1,7 @@
 package service;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,6 +10,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
 import model.CommentInfo;
+import model.Exchange;
 import model.PriceInfo;
 import model.Product;
 import dao.ProductDao;
@@ -26,14 +28,13 @@ public class ProductService {
 	}
 
 	private ProductDao productDao;
+	public ProductDao getProductDao() {return productDao;}
+	public void setProductDao(ProductDao productDao) {this.productDao = productDao;}
 	
-	public ProductDao getProductDao() {
-		return productDao;
-	}
-
-	public void setProductDao(ProductDao productDao) {
-		this.productDao = productDao;
-	}
+	private ExchangeService exchangeService;
+	public ExchangeService getExchangeService() {return exchangeService;}
+	public void setExchangeService(ExchangeService exchangeService) {this.exchangeService = exchangeService;}
+	
 	public Integer Create(Product product){
 		
 		/*Product productdo =parseProduct(product.getName(),product.getChanelId());*/
@@ -50,6 +51,7 @@ public class ProductService {
 		List<Product> products = new ArrayList<Product>();
 		try{
 			products = productDao.Read();
+			ChangePrice(products);
 		}catch(Exception e){
 		}
 		return products;
@@ -57,20 +59,44 @@ public class ProductService {
 	
 	public List<Product> ReadByChanel(String chanelId){
 		List<Product> products = productDao.ReadByChanel(chanelId);
-		
+		ChangePrice(products);
 		Collections.sort(products, new ProductCompare());
 		return products;
 	}
 	
 	public List<Product> ReadByKeyword(String keyword){
 		List<Product> products =productDao.ReadByKeyword(keyword);
-
+		ChangePrice(products);
 		Collections.sort(products, new ProductCompare());
 		return products;
 	}
 	
 	public Product Read(String id){
-		return productDao.Read(id);
+		Product p= productDao.Read(id);
+		ChangePrice(p);
+		return p;
+	}
+	
+	private void ChangePrice(List<Product> ps){
+		 for (Product p : ps) {
+			 ChangePrice(p);
+	     }
+	}
+	
+	private void ChangePrice(Product p){
+		Exchange exchange = null;
+		if(exchange == null){
+			exchange = exchangeService.ReadCurrentRate();	
+		}
+		
+		String price = p.getPrice().getPrice1();
+		Integer intPrice = Integer.parseInt(price);
+		
+		String parten = "#.#";
+		DecimalFormat decimal = new DecimalFormat(parten);
+		String newPrice= decimal.format((intPrice * 1.2)/100*exchange.getRate());
+		
+		p.getPrice().setPrice1(newPrice);
 	}
 	
 	public Integer Delete(Product product){

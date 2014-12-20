@@ -13,7 +13,7 @@ public class PopularProductService {
 	}
 	
 	private PopularProductDao popularProductDao;
-	private ProductDao productDao;
+	/*private ProductDao productDao;*/
 	private ChanelDao chanelDao;
 	
 	public PopularProductDao getPopularProductDao() {
@@ -24,13 +24,13 @@ public class PopularProductService {
 		this.popularProductDao = popularProductDao;
 	}
 	
-	public ProductDao getProductDao() {
+/*	public ProductDao getProductDao() {
 		return productDao;
 	}
 
 	public void setProductDao(ProductDao productDao) {
 		this.productDao = productDao;
-	}
+	}*/
 
 	public ChanelDao getChanelDao() {
 		return chanelDao;
@@ -38,6 +38,16 @@ public class PopularProductService {
 
 	public void setChanelDao(ChanelDao chanelDao) {
 		this.chanelDao = chanelDao;
+	}
+	
+	private ProductService productService;
+	
+	public ProductService getProductService() {
+		return productService;
+	}
+
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
 	}
 
 	public Integer Create(PopularProduct popularProduct){
@@ -53,7 +63,7 @@ public class PopularProductService {
 		popularProducts = popularProductDao.Read();
 		
 		for(PopularProduct x:popularProducts){
-			Product product = productDao.Read(x.getProductId());
+			Product product = productService.Read(x.getProductId());
 			x.setProduct(product);
 			Chanel chanel = chanelDao.Read(product.getChanelId());
 			x.setChanel(chanel);
@@ -67,7 +77,8 @@ public class PopularProductService {
 		popularProducts = popularProductDao.ReadIndex();
 		
 		for(PopularProduct x:popularProducts){
-			Product product = productDao.Read(x.getProductId());
+			System.out.println(x.getProductId());
+			Product product = productService.Read(x.getProductId());
 			x.setProduct(product);
 			Chanel chanel = chanelDao.Read(product.getChanelId());
 			x.setChanel(chanel);
@@ -81,7 +92,7 @@ public class PopularProductService {
 		popularProducts = popularProductDao.ReadHot();
 		
 		for(PopularProduct x:popularProducts){
-			Product product = productDao.Read(x.getProductId());
+			Product product = productService.Read(x.getProductId());
 			x.setProduct(product);
 			Chanel chanel = chanelDao.Read(product.getChanelId());
 			x.setChanel(chanel);

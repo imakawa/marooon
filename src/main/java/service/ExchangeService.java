@@ -23,13 +23,24 @@ public class ExchangeService {
 	}
 	
 	public List<Exchange> Read(){
-		List<Exchange> chanels = new ArrayList<Exchange>();
+		List<Exchange> exchanges = new ArrayList<Exchange>();
 		try{
-			chanels = exchangeDao.Read();
+			exchanges = exchangeDao.Read();
 		}catch(Exception e){
 			System.out.println(e.toString());
 		}
-		return chanels;
+		return exchanges;
+	}
+	
+	public Exchange ReadCurrentRate(){
+		List<Exchange> exchanges = new ArrayList<Exchange>();
+		try{
+			exchanges = exchangeDao.Read();
+			
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
+		return exchanges.get(exchanges.size()-1);
 	}
 	
 	public Integer Delete(Exchange exchange){

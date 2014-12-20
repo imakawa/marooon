@@ -52,6 +52,7 @@
 
 	<bean id="productService" class="service.ProductService">
 		<property name="productDao" ref="productDao" />
+		<property name="exchangeService" ref="exchangeService" />
 	</bean>
 
 	<bean id="shippingDao" class="dao.ShippingDao">
@@ -76,8 +77,8 @@
 
 	<bean id="popularProductService" class="service.PopularProductService">
 		<property name="popularProductDao" ref="popularProductDao" />
-		<property name="productDao" ref="productDao" />
 		<property name="chanelDao" ref="chanelDao" />
+		<property name="productService" ref="productService" />
 	</bean>
 	
 	<bean id="exchangeDao" class="dao.ExchangeDao">
