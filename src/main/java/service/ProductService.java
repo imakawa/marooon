@@ -96,7 +96,7 @@ public class ProductService {
 		DecimalFormat decimal = new DecimalFormat(parten);
 		String newPrice= decimal.format((intPrice * 1.2)/100*exchange.getRate());
 		
-		p.getPrice().setPrice1(newPrice);
+		p.getPrice().setPrice1(newPrice+"0");
 	}
 	
 	public Integer Delete(Product product){

@@ -110,7 +110,7 @@
 								</h3>
 								<div class="price">
 									<h4>
-										¥<s:property value="price.price1" />
+										¥&nbsp<s:property value="price.price1" />
 									</h4>
 								</div>
 								<h1 style="text-align:center">

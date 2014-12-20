@@ -114,9 +114,9 @@
 				<s:iterator value="#request.indexProducts" status="product">
 					<s:if test="#product.index==0"><div class="item active"></s:if>
 					<s:if test="#product.index!=0"><div class="item"></s:if>
-						<a href="details.action?productId=<s:property value='product.id' />">
+					
 						   <img src="productImages/<s:property value='product.imageView'/>" />
-						</a>
+						<a href="details.action?productId=<s:property value='product.id' />">
 						<div class="carousel-caption">
 							<h4>
 								<s:property value='product.name'/>
@@ -125,6 +125,7 @@
 								<s:property value="product.descripe1.chInfo"/>
 							</p>
 						</div>
+						</a>
 					</div>
 				</s:iterator>
 				</div> <a data-slide="prev" href="#carousel-988571" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-988571" class="right carousel-control">›</a>
@@ -152,7 +153,7 @@
 					<%-- <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'"> --%>
 					<div class="price">
 						<h4>
-					         ¥<s:property value="product.price.price1"/>
+					         ¥&nbsp<s:property value="product.price.price1"/>
 						</h4>
 					</div>
 					<%-- </s:if> --%>

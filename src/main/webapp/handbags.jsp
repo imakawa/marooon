@@ -97,7 +97,7 @@
 								<%-- <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'"> --%>
 								<div class="price">
 									<h4>
-									    ¥<s:property value="price.price1" />
+									    ¥&nbsp<s:property value="price.price1" />
 										<%-- <span>詳細</span> --%>
 									</h4>
 								</div>
