@@ -1,8 +1,15 @@
 package action;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.StrutsStatics;
 
 import com.opensymphony.xwork2.ActionContext;
 
@@ -70,4 +77,45 @@ public class IndexAction {
 			return "Failure";
 		}
 	}
+	
+	public void ReadIndexProducts() {
+		try {
+			List<PopularProduct> indexProducts= popularProductService.ReadIndex();
+
+			ActionContext context = ActionContext.getContext();
+			HttpServletResponse response = (HttpServletResponse) context.get(StrutsStatics.HTTP_RESPONSE);
+			response.setContentType("application/json;charset=utf-8");
+			response.setCharacterEncoding("utf-8");
+
+			PrintWriter pw = response.getWriter();
+			String str = JSONArray.fromObject(indexProducts).toString();
+			pw.write(str);
+			pw.flush();
+			pw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void ReadHotProducts() {
+		try {
+			List<PopularProduct> hotProducts= popularProductService.ReadHot();
+
+			ActionContext context = ActionContext.getContext();
+			HttpServletResponse response = (HttpServletResponse) context.get(StrutsStatics.HTTP_RESPONSE);
+			response.setContentType("application/json;charset=utf-8");
+			response.setCharacterEncoding("utf-8");
+
+			PrintWriter pw = response.getWriter();
+			String str = JSONArray.fromObject(hotProducts).toString();
+			pw.write(str);
+			pw.flush();
+			pw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 }

@@ -70,10 +70,13 @@
 			<result name="Failure">/user/loginFailure.jsp</result>
 	</action>
 	
-
 	
 	<action name="exchangeJson" class="action.backend.ExchangeAction" method="ReadAllJson"/>
 	<action name="createExchange" class="action.backend.ExchangeAction" method="CreateExchange"/>
+	<action name="chanelJson" class="action.ChanelAction" method="ReadJson"/>
+	<action name="readIndexProducts" class="action.IndexAction" method="ReadIndexProducts"/>
+	<action name="readHotProducts" class="action.IndexAction" method="ReadHotProducts"/>
+	<action name="readChannelProudcts" class="action.HandbagsAction" method="ReadChannelProudcts"/>
 	
 <action name="accessories"><result>/accessories.jsp</result></action>
 <!-- <action name="contact"><result>/contact.jsp</result></action> -->

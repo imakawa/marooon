@@ -21,6 +21,17 @@
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>
     <script src="js/blocksit.min.js"></script>
+  <link href="css/tmp_header.css" rel="stylesheet" type="text/css" media="all" />
+  
+  <link href="css/indexSlider.css" rel="stylesheet">
+<link href="http://m.w3cschool.cc/try/bootstrap/layoutit/css/layoutit.css" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.htmlClean.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
+
      <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(window).load( function() {
@@ -76,24 +87,6 @@
 		});
 	</script>
 	
-	<!-- Le styles -->
-<link href="css/indexSlider.css" rel="stylesheet">
-<link href="http://m.w3cschool.cc/try/bootstrap/layoutit/css/layoutit.css" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-		<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-	<![endif]-->
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-	<![endif]-->
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="http://m.w3cschool.cc/try/bootstrap/layoutit/js/jquery.htmlClean.js"></script>
-
-
 </head>
 <body>
 <jsp:include page="template/header.jsp"></jsp:include>
@@ -102,20 +95,12 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<div class="carousel slide" id="carousel-988571">
-				<ol class="carousel-indicators">
-					<li data-slide-to="0" data-target="#carousel-988571">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-988571" class="active">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-988571">
-					</li>
-				</ol>
 				<div class="carousel-inner">
 				<s:iterator value="#request.indexProducts" status="product">
 					<s:if test="#product.index==0"><div class="item active"></s:if>
 					<s:if test="#product.index!=0"><div class="item"></s:if>
-					
-						   <img src="productImages/<s:property value='product.imageView'/>" />
+					    <img src="productImages/<s:property value='product.imageView'/>" />
+						
 						<a href="details.action?productId=<s:property value='product.id' />">
 						<div class="carousel-caption">
 							<h4>
@@ -126,13 +111,20 @@
 							</p>
 						</div>
 						</a>
+						
 					</div>
 				</s:iterator>
-				</div> <a data-slide="prev" href="#carousel-988571" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-988571" class="right carousel-control">›</a>
+				</div> 
+				
+				<a data-slide="prev" href="#carousel-988571" class="left carousel-control">‹</a> 
+				<a data-slide="next" href="#carousel-988571" class="right carousel-control">›</a>
+				
 			</div>
 		</div>
 	</div>
 </div>
+
+
 <div class="main_bg1">
 <div class="wrap">	
 	<div class="main1">
@@ -148,7 +140,7 @@
           <%-- <s:if test="#product.index%3==0"><div class="grids_of_3"></s:if> --%>
            <div class="grid1_of_3">
 				<a href="details.action?productId=<s:property value='product.id' />">
-					<img  src="productImages/<s:property value='product.imageView'/>" alt=""/>
+					<img style="margin:5px auto;" src="productImages/<s:property value='product.imageView'/>"/>
 					<h3><s:property escape="false" value='product.name'/></h3>
 					<%-- <s:if test="#session.loginuser!=null && #session.loginuser.groupeCode=='1001'"> --%>
 					<div class="price">
