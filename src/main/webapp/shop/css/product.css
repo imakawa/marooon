@@ -1,1 +1,27 @@
-@CHARSET "UTF-8";
+.span1_of_1_des{
+	margin-top:20px;
+ 	float: left;
+/*	width: 44.3333%;*/
+	margin-left: 3.333%;
+}
+/* start desc1 */
+.desc1 {
+	font-family: 'Microsoft yahei', sans-serif;
+	display: block;
+	float: right;
+}
+.desc1 h3{
+	text-shadow: 0 1px 0 #ffffff;
+	font-family: 'bebas_neueregular';
+	color:#555555;
+	font-size:2em;
+	margin-bottom: 10px;
+}
+
+.desc1 h5{
+	margin-top: 2%;
+	font-size: 1.6em;
+	color: #ff0000;
+	line-height: 1.5em;
+	text-shadow: 0 1px 0 #ffffff;
+}

@@ -13,7 +13,11 @@
 			<result name="Failure">/failure.jsp</result>
 		</action>
 		 -->
-		 
+
+	<interceptors>
+		<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>
+	</interceptors>
+	
 		<action name="userLogin" class="action.UserAction" method="Login">
 			<result name="Success">/user/user.jsp</result>
 			<result name="Failure">/user/loginFailure.jsp</result>
@@ -30,6 +34,7 @@
 		</action>
 
 	<action name="index" class="action.IndexAction" method="PageLoad">
+	<interceptor-ref name="addressInterceptor"></interceptor-ref>
 		<result name="Success">/index.jsp</result>
 		<result name="Failure">/failure.jsp</result>
 	</action>
@@ -77,6 +82,9 @@
 	<action name="readIndexProducts" class="action.IndexAction" method="ReadIndexProducts"/>
 	<action name="readHotProducts" class="action.IndexAction" method="ReadHotProducts"/>
 	<action name="readChannelProudcts" class="action.HandbagsAction" method="ReadChannelProudcts"/>
+	<action name="readProductJson" class="action.DetailsAction" method="ReadProductJson"/>
+	<action name="productSearchJson" class="action.ProductSearchAction" method="ProductSearchJson"/>
+	
 	
 <action name="accessories"><result>/accessories.jsp</result></action>
 <!-- <action name="contact"><result>/contact.jsp</result></action> -->

@@ -32,14 +32,14 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item thumbnail active">
 					<img src="../productImages/40101111.jpg"/> 
-					<a href="details.action?productId=548eff16ff03eacff8ca5a2a">
+					<a href="product.html?i=548eff16ff03eacff8ca5a2a">
 						<div class="carousel-caption-marooon">THERMOS/膳魔师不锈钢保温饭盒套装弁当箱 海水蓝</div>
 					</a>
 				</div>
 				
 				<div class="item thumbnail" ng-repeat="indexProduct in indexProducts">
 					<img src="../productImages/{{indexProduct.product.imageView}}"/> 
-					<a href="details.action?productId={{indexProduct.product.id}}">
+					<a href="product.html?i={{indexProduct.product.id}}">
 						<div class="carousel-caption-marooon">{{indexProduct.product.name}}</div>
 					</a>
 				</div>
@@ -65,7 +65,7 @@
 			<div class="wrap">
 				<div id="container" class="main">
 					<div class="grid1_of_3" ng-repeat="hotProduct in hotProducts" on-finish-render-filters>
-						<a href="details.action?productId={{hotProduct.product.id}}">
+						<a href="product.html?i={{hotProduct.product.id}}">
 							<img style="margin: 5px auto;" src="../productImages/{{hotProduct.product.imageView}}" />
 							<h3>{{hotProduct.product.name}}</h3>
 							<div class="price">

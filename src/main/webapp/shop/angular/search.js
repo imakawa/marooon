@@ -1,5 +1,5 @@
-var indexApp = angular.module('indexApp', []);
-indexApp.directive('onFinishRenderFilters', function ($timeout) {
+var searchApp = angular.module('searchApp', []);
+searchApp.directive('onFinishRenderFilters', function ($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attr) {
@@ -12,38 +12,23 @@ indexApp.directive('onFinishRenderFilters', function ($timeout) {
     };
 });
 
-indexApp.controller('headerController', function Execute($scope,$http,$location) {
+searchApp.controller('headerController', function Execute($scope,$http) {
 	$http.get('chanelJson.action').success(function(datas) {  
 		$scope.menus = datas;
-	}).error(function(datas) {  
-		alert("index.js.chanelJson.action:Error! Please Contact Later!");
-	})
-	
-	$scope.search = function(){
-		$http.get('productSearchJson.action?kw='+$scope.ke).success(function(datas) {  
-			$scope.searchProducts = datas;
-		}).error(function(datas) {  
-			alert("index.js.productSearchJson.action:Error! Please Contact Later!"+datas);
-		})
-	}
-});
-
-
-indexApp.controller('sliderController', function Execute($scope,$http) {
-	$http.get('readIndexProducts.action').success(function(datas) {
-		$scope.indexProducts = datas;
-	}).error(function(datas) {  
-		//alert("index.js.readIndexProducts.action:Error! Please Contact Later!");
+	}).error(function(datas) { 
+		alert("search.js.chanelJson.action:Error! Please Contact Later!");
 	})
 });
 
-indexApp.controller('productListController', function Execute($scope,$http) {
-	$scope.loadMessage = "----正在加载..马上呈现..";
-	$http.get('readHotProducts.action').success(function(datas) {
-		$scope.hotProducts = datas;
-		$scope.loadMessage = "";
-	}).error(function(datas) {
-		//alert("index.js.readHotProducts.action:Error! Please Contact Later!");
+searchApp.controller('searchController', function Execute($http,$scope,$location){
+	$scope.updateMessage = "商品加载中...请稍后..";
+	var url = window.location.search;
+    var i = url.substring(url.lastIndexOf('=')+1, url.length);
+	$http.get('productSearchJson.action?kw='+i).success(function(datas) {  
+		$scope.updateMessage = "";
+		$scope.products = datas;
+	}).error(function(datas) { 
+		//alert("channel.js.chanelJson.action:Error! Please Contact Later!");
 	})
 	
 	$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
@@ -69,7 +54,7 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 			offsetX: 10,
 			offsetY: 10
 		});
-});
+	});	
 });
 
 jQuery(document).ready(function($) {
