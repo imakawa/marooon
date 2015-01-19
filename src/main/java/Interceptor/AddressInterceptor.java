@@ -17,8 +17,6 @@ public class AddressInterceptor extends AbstractInterceptor {
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println(invocation.getAction().toString());
-		System.out.println(invocation.getAction().getClass().toString());
 		String actionName = invocation.getAction().getClass().toString();
 		
 		if (actionName.contains("IndexAction")){

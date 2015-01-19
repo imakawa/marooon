@@ -1,4 +1,4 @@
-var indexApp = angular.module('indexApp', []);
+var indexApp = angular.module('indexApp', ['infinite-scroll']);
 indexApp.directive('onFinishRenderFilters', function ($timeout) {
     return {
         restrict: 'A',
@@ -28,7 +28,6 @@ indexApp.controller('headerController', function Execute($scope,$http,$location)
 	}
 });
 
-
 indexApp.controller('sliderController', function Execute($scope,$http) {
 	$http.get('readIndexProducts.action').success(function(datas) {
 		$scope.indexProducts = datas;
@@ -41,15 +40,20 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 	$scope.loadMessage = "----正在加载..马上呈现..";
 	$http.get('readHotProducts.action').success(function(datas) {
 		$scope.hotProductsCache=datas;
-		//$scope.hotProducts = datas;
-		$scope.loadNext();
 		$scope.loadMessage = "";
+		//$scope.hotProducts = datas;
+		//$scope.loadNext();
 	}).error(function(datas) {
 		//alert("index.js.readHotProducts.action:Error! Please Contact Later!");
 	})
 	
 	$scope.loadCount = 0;
-	$scope.loadNext = function(){
+/*	$scope.loadNext = function(){
+		$scope.loadCount += 1;
+		$scope.hotProducts = $scope.hotProductsCache.slice(0, $scope.loadCount*4);
+	}*/
+	
+	$scope.loadMore = function() {
 		$scope.loadCount += 1;
 		$scope.hotProducts = $scope.hotProductsCache.slice(0, $scope.loadCount*4);
 	}
@@ -79,8 +83,6 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 		});
 });
 });
-
-
 
 jQuery(document).ready(function($) {
 	$(window).resize(function() {
