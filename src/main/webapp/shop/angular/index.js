@@ -50,7 +50,6 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 	
 	$scope.loadCount = 0;
 	$scope.loadNext = function(){
-		$scope.loadCount += 1;
 		$scope.hotProducts = $scope.hotProductsCache.slice(0, $scope.loadCount*4);
 	}
 	
