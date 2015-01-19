@@ -2,6 +2,7 @@ package Interceptor;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.StrutsStatics;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -22,6 +23,8 @@ public class AddressInterceptor extends AbstractInterceptor {
 		if (actionName.contains("IndexAction")){
 			ActionContext context = ActionContext.getContext();
 			HttpServletResponse response = (HttpServletResponse) context.get(StrutsStatics.HTTP_RESPONSE);
+			String ipadd=ServletActionContext.getRequest().getRemoteAddr();
+			System.out.println("Index:"+ipadd);
 			response.sendRedirect("shop"); 
 		}
 		return null;
