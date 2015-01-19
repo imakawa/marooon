@@ -42,17 +42,17 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 		$scope.hotProductsCache=datas;
 		$scope.loadMessage = "";
 		//$scope.hotProducts = datas;
-		//$scope.loadNext();
-		$scope.loadMore();
+		$scope.loadNext();
+		//$scope.loadMore();
 	}).error(function(datas) {
 		//alert("index.js.readHotProducts.action:Error! Please Contact Later!");
 	})
 	
 	$scope.loadCount = 0;
-/*	$scope.loadNext = function(){
+	$scope.loadNext = function(){
 		$scope.loadCount += 1;
 		$scope.hotProducts = $scope.hotProductsCache.slice(0, $scope.loadCount*4);
-	}*/
+	}
 	
 	$scope.loadMore = function() {
 		$scope.loadCount += 1;
