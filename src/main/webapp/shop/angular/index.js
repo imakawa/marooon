@@ -43,6 +43,7 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 		$scope.loadMessage = "";
 		//$scope.hotProducts = datas;
 		//$scope.loadNext();
+		$scope.loadMore();
 	}).error(function(datas) {
 		//alert("index.js.readHotProducts.action:Error! Please Contact Later!");
 	})
