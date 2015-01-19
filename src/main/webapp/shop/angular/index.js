@@ -40,11 +40,19 @@ indexApp.controller('sliderController', function Execute($scope,$http) {
 indexApp.controller('productListController', function Execute($scope,$http) {
 	$scope.loadMessage = "----正在加载..马上呈现..";
 	$http.get('readHotProducts.action').success(function(datas) {
-		$scope.hotProducts = datas;
+		$scope.hotProductsCache=datas;
+		//$scope.hotProducts = datas;
+		$scope.loadNext();
 		$scope.loadMessage = "";
 	}).error(function(datas) {
 		//alert("index.js.readHotProducts.action:Error! Please Contact Later!");
 	})
+	
+	$scope.loadCount = 0;
+	$scope.loadNext = function(){
+		$scope.loadCount += 1;
+		$scope.hotProducts = $scope.hotProductsCache.slice(0, $scope.loadCount*4);
+	}
 	
 	$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
 		var winWidth = $(window).width();
@@ -71,6 +79,8 @@ indexApp.controller('productListController', function Execute($scope,$http) {
 		});
 });
 });
+
+
 
 jQuery(document).ready(function($) {
 	$(window).resize(function() {
