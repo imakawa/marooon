@@ -85,6 +85,8 @@
 	<action name="readProductJson" class="action.DetailsAction" method="ReadProductJson"/>
 	<action name="productSearchJson" class="action.ProductSearchAction" method="ProductSearchJson"/>
 	
+	<action name="getAllProducts" class="action.ProductAction" method="GetAllProducts"/>
+	
 	
 <action name="accessories"><result>/accessories.jsp</result></action>
 <!-- <action name="contact"><result>/contact.jsp</result></action> -->
