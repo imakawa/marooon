@@ -4,6 +4,7 @@ img{max-width:100%;}
 /* start main */
 .main_bg{
 	background: #ffffff;
+	margin-left:15px;
 }
 .main{
 	position:relative;
@@ -15,9 +16,10 @@ img{max-width:100%;}
 	margin: 4% 0; 
 }
 .grid1_of_3{
-	width: 29.333%;
+	width: 23%;
 	border: 1px solid rgb(223, 223, 223);
 	position: relative;
+	margin-top:15px;
 }
 .grid1_of_3:first-child{
 	margin-left: 0;
