@@ -125,7 +125,8 @@ function imageLoad(){
 	if(imageCount == loadedImgCount){
 		var msnry = new Masonry( '#container', {
 			  // options
-			  columnWidth: 100,
+//			  columnWidth: 100,
+			"gutter": 15,
 			  itemSelector: '.grid1_of_3'
 			});	
 	}
