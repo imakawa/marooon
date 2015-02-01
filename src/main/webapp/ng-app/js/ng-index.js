@@ -1,4 +1,4 @@
-var indexApp = angular.module('indexApp', ['ngGrid']);
+var indexApp = angular.module('indexApp', ['ngTouch', 'ui.grid']);
 indexApp.controller('gridCtrl', function($scope,$http) {
 	$scope.loadMessage=new Date();
 	$http.get('getAllProducts.action').success(function(datas) {
@@ -18,6 +18,8 @@ indexApp.controller('gridCtrl', function($scope,$http) {
 
 	$scope.gridOptions = { 
 			data: 'productList',
+			paginationPageSizes: [25, 50, 75],
+		    paginationPageSize: 25,
 			columnDefs: [{field:'name', displayName:'商品名称'}, 
 			             {field:'price1', displayName:'原价'},
 			             {field:'price2', displayName:'实价'}]};
