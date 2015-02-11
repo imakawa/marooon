@@ -16,6 +16,7 @@
 
 	<interceptors>
 		<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>
+		<interceptor name="loginInterceptor" class="Interceptor.LoginInterceptor"></interceptor>
 	</interceptors>
 	
 		<action name="userLogin" class="action.UserAction" method="Login">
@@ -86,21 +87,23 @@
 	<action name="productSearchJson" class="action.ProductSearchAction" method="ProductSearchJson"/>
 	
 	<action name="getAllProducts" class="action.ProductAction" method="GetAllProducts"/>
+	<action name="userLoginAuth" class="action.UserAuth" method="UserLoginAuth" />
+	<action name="IsHaveUserLogin" class="action.UserAuth" method="isHaveUserLogin" />
 	
-	
-<action name="accessories"><result>/accessories.jsp</result></action>
-<!-- <action name="contact"><result>/contact.jsp</result></action> -->
-<!-- <action name="details"><result>/details.jsp</result></action> -->
+
+<!-- <action name="accessories"><result>/accessories.jsp</result></action>
+<action name="contact"><result>/contact.jsp</result></action>
+<action name="details"><result>/details.jsp</result></action>
 <action name="footer"><result>/footer.jsp</result></action>
-<!-- <action name="handbags"><result>/handbags.jsp</result></action>
-<action name="header"><result>/header.jsp</result></action> -->
-<!-- <action name="index"><result>/index.jsp</result></action> -->
+<action name="handbags"><result>/handbags.jsp</result></action>
+<action name="header"><result>/header.jsp</result></action>
+<action name="index"><result>/index.jsp</result></action>
 <action name="sale"><result>/sale.jsp</result></action>
-<!-- <action name="service"><result>/service.jsp</result></action> -->
+<action name="service"><result>/service.jsp</result></action>
 <action name="shoes"><result>/shoes.jsp</result></action>
-<action name="success"><result>/success.jsp</result></action><!-- 
-<action name="userinfo"><result>/userinfo.jsp</result></action> -->
-<action name="wallets"><result>/wallets.jsp</result></action>
+<action name="success"><result>/success.jsp</result></action>
+<action name="userinfo"><result>/userinfo.jsp</result></action>
+<action name="wallets"><result>/wallets.jsp</result></action> -->
 		
 	</package>
 </struts>
