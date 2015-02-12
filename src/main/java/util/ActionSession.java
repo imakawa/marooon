@@ -7,13 +7,8 @@ public class ActionSession {
 
 	public static String CUR_USER = "CURRENT_LOGIN_USER_INFO";
 	
-	static Map<String, Object> session = null;
-	
 	private static Map<String, Object> getSession(){
-		if(session != null) return session;
-		
-		session = ActionContext.getContext().getSession();
-		return session;
+		return ActionContext.getContext().getSession();
 	}
 	
 	public static void insert(String key,Object value){
