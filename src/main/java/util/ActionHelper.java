@@ -49,7 +49,6 @@ public class ActionHelper {
 	public String getParam(String field){
 		HttpServletRequest request = this.getRequest();
 		if(request == null) return "";
-		
 		return request.getParameter(field);
 	}
 	

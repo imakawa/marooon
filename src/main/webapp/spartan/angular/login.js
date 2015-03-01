@@ -1,8 +1,15 @@
 var loginApp = angular.module('loginApp',[]);
 loginApp.controller('containerCtrl', function Execute($scope,$http,$location,$window) {
-	
+
 	$scope.formData = {};
 	$scope.isShow = false;
+	
+	$http.get('clearSession.action').success(function(datas) {
+		alert("sdfdfdsdfsdfsfds");
+	}).error(function(datas) {  
+		alert("index.js.chanelJson.action:Error! Please Contact Later!");
+	})
+	
 	$scope.processForm = function() {
 	    $http({
 	        method  : 'POST',
@@ -18,4 +25,5 @@ loginApp.controller('containerCtrl', function Execute($scope,$http,$location,$wi
 	            }
 	    });
 	};
+	
 });

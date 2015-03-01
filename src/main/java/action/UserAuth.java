@@ -97,5 +97,13 @@ public class UserAuth {
 			e.printStackTrace();
 		}
 	}
+	
+	public void ClearSession(){
+		try {			
+			ActionSession.clear();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+	}
 
 }

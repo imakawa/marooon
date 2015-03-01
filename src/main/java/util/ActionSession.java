@@ -19,4 +19,7 @@ public class ActionSession {
 		return getSession().containsKey(key);
 	}
 	
+	public static void clear(){
+		getSession().clear();
+	}
 }
