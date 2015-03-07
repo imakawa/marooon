@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mongo:mongo host="54.65.145.187" port="27017">
+	<mongo:mongo host="s233232322332" port="27017">
 	    <mongo:options  
              connect-timeout="10000000"/> 
              
@@ -17,10 +17,10 @@
 
 <!-- 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg ref="mongo" />
-		<constructor-arg name="databaseName" value="admin" />
+		<constructor-arg name="databaseName" value="lksdkllkds" />
 	</bean> -->
 
-	<mongo:db-factory dbname="admin" username="root" password="123456" mongo-ref="mongo" />
+	<mongo:db-factory dbname="dsdffdasfds" username="dfsafdsdfas" password="dfsdfsdfsfd" mongo-ref="mongo" />
 	
 
 	<!-- <mongo:db-factory id="anotherMongoDbFactory" host="localhost"
