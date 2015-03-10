@@ -1,0 +1,1014 @@
+<html>
+<head>
+
+    <script>
+        var bds = {
+            comm: {loginAction: []}, se: {}, su: {
+                urdata: [], urSendClick: function () {
+                }
+            }, util: {}, use: {}, _base64: {domain: "http://b1.bdstatic.com/", b64Exp: -1, pdc: -1}
+        };
+
+    </script>
+    <script type="text/javascript" data-for="result">
+        if (!window.A) {
+            function G(a) {
+                return document.getElementById(a)
+            }
+
+            window.bds = window.bds || {};
+            bds.util = bds.util || {};
+            bds.util.getWinWidth = function () {
+                return window.document.documentElement.clientWidth
+            };
+            bds.util.setContainerWidth = function () {
+                var f = G("container"), b = G("wrapper"), a = function (c, g) {
+                    g.className = g.className.replace(c, "")
+                }, e = function (c, g) {
+                    g.className = (g.className + " " + c).replace(/^\s+/g, "")
+                }, d = function (c, g) {
+                    return c.test(g.className)
+                };
+                if (bds.util.getWinWidth() < 1207) {
+                    if (f) {
+                        a(/\bcontainer_l\b/g, f);
+                        if (!d(/\bcontainer_s\b/, f)) {
+                            e("container_s", f)
+                        }
+                    }
+                    if (b) {
+                        a(/\bwrapper_l\b/g, b);
+                        if (!d(/\bwrapper_s\b/, b)) {
+                            e("wrapper_s", b)
+                        }
+                    }
+                    bds.comm.containerSize = "s"
+                } else {
+                    if (f) {
+                        a(/\bcontainer_s\b/g, f);
+                        if (!d(/\bcontainer_l\b/, f)) {
+                            e("container_l", f)
+                        }
+                    }
+                    if (b) {
+                        a(/\bwrapper_s\b/g, b);
+                        if (!d(/\bwrapper_l\b/, b)) {
+                            e("wrapper_l", b)
+                        }
+                    }
+                    bds.comm.containerSize = "l"
+                }
+            };
+            (function () {
+                var c = [], f = false;
+                var b = function (h, g) {
+                    try {
+                        h.call(g)
+                    } catch (i) {
+                    }
+                }, d = function () {
+                    this.ids = [];
+                    this.has = true;
+                    this.list = [];
+                    this.logs = [];
+                    this.loadTimes = [];
+                    this.groupData = [];
+                    this.mergeFns = [];
+                    this._currentContainer = null
+                };
+                window.A = bds.aladdin = {};
+                b(d, window.A);
+                bds.ready = function (g) {
+                    if (typeof g != "function") {
+                        return
+                    }
+                    if (f) {
+                        b(g)
+                    } else {
+                        c.push(g)
+                    }
+                };
+                bds.doReady = function () {
+                    f = true;
+                    while (c.length) {
+                        b(c.shift())
+                    }
+                };
+                bds.clearReady = function () {
+                    f = false;
+                    c = []
+                };
+                A.__reset = d;
+                var a = (function () {
+                    var g = document.getElementsByTagName("script");
+                    return function () {
+                        var i = g[g.length - 1];
+                        if (window.currentScriptElem) {
+                            i = window.currentScriptElem
+                        }
+                        var h = i;
+                        while (h) {
+                            if (h.className) {
+                                if (/(?:^|\s)result(?:-op)?(?:$|\s)/.test(h.className)) {
+                                    if (tplname = h.getAttribute("tpl")) {
+                                        return h
+                                    }
+                                }
+                            }
+                            h = h.parentNode
+                        }
+                    }
+                })(), e = function (g, j, h) {
+                    var l;
+                    if (!g.initIndex) {
+                        l = {container: g, data: {}, handlers: []};
+                        g.initIndex = A.groupData.length + 1;
+                        A.groupData.push(l)
+                    } else {
+                        l = A.groupData[g.initIndex - 1]
+                    }
+                    if (typeof j == "function") {
+                        l.handlers.push(j)
+                    } else {
+                        if (typeof j == "object") {
+                            for (var m in j) {
+                                if (j.hasOwnProperty(m)) {
+                                    l.data[m] = j[m]
+                                }
+                            }
+                        } else {
+                            l.data[j] = h
+                        }
+                    }
+                };
+                A.init = A.setup = function (i, h) {
+                    if (i === undefined || i === null) {
+                        return
+                    }
+                    var g = A._currentContainer || a();
+                    if (!g) {
+                        return
+                    }
+                    e(g, i, h)
+                };
+                A.merge = function (h, g) {
+                    A.mergeFns.push({tplName: h, fn: g})
+                }
+            })()
+        }
+        ;</script>
+
+</head>
+
+<body>
+
+<div id="wrapper" class="wrapper_l">
+    <div id="wrapper_wrapper">
+        <script>if (bds.ready && document.cookie.match('B64_BOT=1')) {
+            bds.ready(function () {
+                setTimeout(function () {
+                    if (bds.base64 && bds.base64.ts) {
+                        bds.base64.ts();
+                    }
+                }, 2000)
+            })
+        }</script>
+
+
+        <div class="result-op xpath-log" tpl="right_blackhole"
+             data-click='{"fm":"alxr","p1":3,"mu":"http:\/\/nourl.ubs.baidu.com\/18755","rsv_stl":"0","rsv_srcid":18755}'>
+
+            <div class="cr-content ">
+                <script data-compress="off">
+                    A.setup({
+                        script_url: "http://bdaladdin.duapp.com/blackhole/blackhole"
+                    });
+                </script>
+            </div>
+        </div>
+
+
+        <img class="c-img c-img6" src="http://t11.baidu.com/it/u=1244923219,2207365624&fm=58"/>
+        <img src="http://t12.baidu.com/it/u=2930291015,2900275272&fm=58" class="c-img c-img4 opr-recommends-merge-img"/>
+        <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAoCAYAAABZ7GwgAAAFMElEQVR42u2ZPZajuhaFv/tW5yhziDJCQs0AzQBmoEFpBAUjaHkEpdAhUYvQUYkR+AbCZZsy/ulyv3fXfSi0+ZH22WefczZ/HQ6HA+u6u/6zQrACtQK1ArUCtQL1f7N+PHZZxLcdu/HGJVlJ3SjEo9eTUdYNSiy80bf4TYOWV/4MDrsdHtp5XhmK3nJ+eZbnMAyMN88wW4eH1sfh/e3n4dfi/78OP9/eDx8X178d3qcfPt7fDm/vH5d3/Dz9f/WN72+Hn78OD69r71jc48f74e1iv9fOcLl+/FnCBpzdkoLZYXfHwNWoL4z1bBqNXCS1p/UbmiPFrrLq9I4jm7S8s0PXslfLzH4y9c422+1mlM2pTPFgSqYDtvsXxSGvMBMS0bc4NM104uAs/X9fo6YlFI1Rl4xp99wMxrijOw8zkJXqNbsftlh7g1HFSe+6STAHuyMvyz8MFBHfOtATVUNPlApB/EczSqgGo1JQVaMQ0dOGdJ59FGzEy4ESqEbjW4sVOfkAyghYACp6zzCODDNGAfQ5CP7XKxLHgV3rqZvNa9qDOMLmEyzDxll8WS+LL4JCa/SCaAbXsv/Nw51aj+Fm6jFY7K2SH3pinpNFAIlu5DeBintiJtLLJkGnrJChw8YKo4ExEqPHOdAaAoJiLv6DZTelTHWmcaopnmS1QQWH7YvP1PtazSx9Mat6R73MK4ze0zqB1uDcQmV9FqjYB5Ca6CxdLKmNSaCpxCwXakSW8h2xgd6D1AghPsV/zqjoPX2/J4rNFO2B7SU9AIudadJvNSkuNZxZWWOUSK1FB5XRiOhfJ+YxglQCKQxm9p/UZko/gd3uyCtD7D1SgW/tZXd+ZBSQlyVxt4OyPrHkXmvin0nLjGNxlfq07+AsWyqMmVgjCiTdZ2XOK3P1yX+tDuc6FK9ArUCtQK1Arcbd3ETrbrtwV+evZcvl3HlQ7BdNvpzK3LBeCDjbU5iC/suzv95/YQZGTxpb1UOj1ENApaHymuUSkNdcyllHnpU1jZpvPHlQyz1UAuHC1Zx14sFtoUp9nDTmTg+2QYuvTbR4JaOuxtLvGPNq2fA6zlgvcAuib+mCpNbJpxBT4+hFTSMf65hHNheNaR9GxnE2G94w+34PqODYDjmVkU/eOB9Tcqq7nbYFWWMacQGcFzWNEg85lHEfYdjSDWksarOMUVSYhjRrqojbKzQO/zJGRU+7HciyjD5E9v7Mn1ow7E5G3bXUu+n6MVJSzx4uVEPzCZhGeYsdljWzAsraUPQtfqMR3rPREoJjEAVqHxAbQew/LZLvAhVwXZrPEvoC1Sictdi5iL8k9XIqDc5axrldEj1uJ1BGILmcQS9NvIBr5SmQvSdIhQJCP5AXmth7RJHmQyG+DVTEt1uGvMIowWnolmhjCM5i7Y0qFffEp1JPJEcCnRyI6Gltm4oHx2KRP7Dv5DMdHQRylRyE6PGxRMuA9wnI+H0xn0r7YumfJvTgsK2n1guCenH/vdQTbMRIf1TvM78+uICsK2LXPyipyZuqRYvfyCkzUsXGt0SpEcT0rt9vOBOTqMwiSGdoYY7pMe7orJ0+KUW8H8iL58RfFjmD96dIR0/beoS+/3lpHsTzrae2IjHT7QTq82HL/vkDjEp9ztPrTFOib+lExdNFUipK39G1UDcK+sAo1Le9dqkN8qwPPBaXuKzl/JkPoELRNGeiGyT1seE5/3CZldR3g1RDezTWMspa3pYHJtOuFneKUgKp6FvsNBZkN74BrMbdOhSvQK1ArUD9C9bfLHLkPkZ1j5cAAAAASUVORK5CYII="
+             class="opr-recommends-merge-imgtext" data-nolog="1"/>
+    </div>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript"
+        src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+<script type="text/javascript">var Cookie = {
+    set: function (c, e, d, f, a, b) {
+        document.cookie = c + "=" + (b ? e : escape(e)) + ((a) ? "; expires=" + a.toGMTString() : "") + ((f) ? "; path=" + f : "; path=/") + ((d) ? "; domain=" + d : "")
+    }, get: function (c, b) {
+        var a = document.cookie.match(new RegExp("(^| )" + c + "=([^;]*)(;|$)"));
+        if (a != null) {
+            return unescape(a[2])
+        }
+        return b
+    }, clear: function (a, c, b) {
+        if (this.get(a)) {
+            document.cookie = a + "=" + ((c) ? "; path=" + c : "; path=/") + ((b) ? "; domain=" + b : "") + ";expires=Fri, 02-Jan-1970 00:00:00 GMT"
+        }
+    }
+};
+(function () {
+    var defaultOptions = {
+        sugSet: 1,
+        sugStoreSet: 1,
+        isSwitch: 1,
+        imeSwitch: 0,
+        resultNum: 10,
+        skinOpen: 1,
+        resultLang: 0
+    }, options = {}, tmpName;
+    var expire30y = new Date();
+    expire30y.setTime(expire30y.getTime() + 30 * 365 * 86400000);
+    try {
+        if (bds && bds.comm && bds.comm.personalData) {
+            if (typeof bds.comm.personalData == "string") {
+                bds.comm.personalData = eval("(" + bds.comm.personalData + ")")
+            }
+            if (!bds.comm.personalData) {
+                return
+            }
+            for (tmpName in bds.comm.personalData) {
+                if (defaultOptions.hasOwnProperty(tmpName) && bds.comm.personalData.hasOwnProperty(tmpName)) {
+                    if (bds.comm.personalData[tmpName].ErrMsg == "SUCCESS") {
+                        options[tmpName] = bds.comm.personalData[tmpName].value
+                    }
+                }
+            }
+        }
+        try {
+            if (!parseInt(options.resultNum)) {
+                delete (options.resultNum)
+            }
+            if (!parseInt(options.resultLang) && options.resultLang != "0") {
+                delete (options.resultLang)
+            }
+        } catch (e) {
+        }
+        writeCookie();
+        if (!("sugSet" in options)) {
+            options.sugSet = (Cookie.get("sug", 3) != 3 ? 0 : 1)
+        }
+        if (!("sugStoreSet" in options)) {
+            options.sugStoreSet = Cookie.get("sugstore", 1)
+        }
+        var BAIDUID = Cookie.get("BAIDUID");
+        if (!("resultNum" in options)) {
+            if (/NR=(\d+)/.test(BAIDUID)) {
+                options.resultNum = RegExp.$1 ? parseInt(RegExp.$1) : 10
+            } else {
+                options.resultNum = 10
+            }
+        }
+        if (!("resultLang" in options)) {
+            if (/SL=(\d+)/.test(BAIDUID)) {
+                options.resultLang = RegExp.$1 ? parseInt(RegExp.$1) : 0
+            } else {
+                options.resultLang = 0
+            }
+        }
+        if (!("isSwitch" in options)) {
+            options.isSwitch = (Cookie.get("ORIGIN", 0) == 2 ? 0 : (Cookie.get("ORIGIN", 0) == 1 ? 2 : 1))
+        }
+        if (!("imeSwitch" in options)) {
+            options.imeSwitch = Cookie.get("bdime", 0)
+        }
+    } catch (e) {
+    }
+    function save(callback) {
+        var optionsStr = [];
+        for (tmpName in options) {
+            if (options.hasOwnProperty(tmpName)) {
+                optionsStr.push('"' + tmpName + '":"' + options[tmpName] + '"')
+            }
+        }
+        var str = "{" + optionsStr.join(",") + "}";
+        if (bds.comm.personalData) {
+            $.ajax({
+                url: "//www.baidu.com/ups/submit/addtips/?product=ps&tips=" + encodeURIComponent(str) + "&_r=" + new Date().getTime(),
+                success: function () {
+                    writeCookie();
+                    if (typeof callback == "function") {
+                        callback()
+                    }
+                }
+            })
+        } else {
+            writeCookie();
+            if (typeof callback == "function") {
+                setTimeout(callback, 0)
+            }
+        }
+    }
+
+    function set(optionName, value) {
+        options[optionName] = value
+    }
+
+    function get(optionName) {
+        return options[optionName]
+    }
+
+    function writeCookie() {
+        if (options.hasOwnProperty("sugSet")) {
+            var value = options.sugSet == "0" ? "0" : "3";
+            clearCookie("sug");
+            Cookie.set("sug", value, document.domain, "/", expire30y)
+        }
+        if (options.hasOwnProperty("sugStoreSet")) {
+            var value = options.sugStoreSet == 0 ? "0" : "1";
+            clearCookie("sugstore");
+            Cookie.set("sugstore", value, document.domain, "/", expire30y)
+        }
+        if (options.hasOwnProperty("isSwitch")) {
+            var ORINGIN_MAP = {0: "2", 1: "0", 2: "1"};
+            var value = ORINGIN_MAP[options.isSwitch];
+            clearCookie("ORIGIN");
+            Cookie.set("ORIGIN", value, document.domain, "/", expire30y)
+        }
+        if (options.hasOwnProperty("imeSwitch")) {
+            var value = options.imeSwitch;
+            clearCookie("bdime");
+            Cookie.set("bdime", value, document.domain, "/", expire30y)
+        }
+    }
+
+    function writeBAIDUID() {
+        var BAIDUID = Cookie.get("BAIDUID"), NR, FG, SL;
+        if (/FG=(\d+)/.test(BAIDUID)) {
+            FG = RegExp.$1
+        }
+        if (/SL=(\d+)/.test(BAIDUID)) {
+            SL = RegExp.$1
+        }
+        if (/NR=(\d+)/.test(BAIDUID)) {
+            NR = RegExp.$1
+        }
+        if (options.hasOwnProperty("resultNum")) {
+            NR = options.resultNum
+        }
+        if (options.hasOwnProperty("resultLang")) {
+            SL = options.resultLang
+        }
+        Cookie.set("BAIDUID", BAIDUID.replace(/:.*$/, "") + (typeof SL != "undefined" ? ":SL=" + SL : "") + (typeof NR != "undefined" ? ":NR=" + NR : "") + (typeof FG != "undefined" ? ":FG=" + FG : ""), ".baidu.com", "/", expire30y, true)
+    }
+
+    function clearCookie(name) {
+        Cookie.clear(name, "/");
+        Cookie.clear(name, "/", document.domain);
+        Cookie.clear(name, "/", "." + document.domain);
+        Cookie.clear(name, "/", ".baidu.com")
+    }
+
+    function reset(callback) {
+        options = defaultOptions;
+        save(callback)
+    }
+
+    window.UPS = {writeBAIDUID: writeBAIDUID, reset: reset, get: get, set: set, save: save}
+})();
+(function () {
+    var c = (navigator && navigator.userAgent) ? navigator.userAgent : "";
+    var b = (document && document.cookie) ? document.cookie : "";
+    var a = !!(c.match(/(msie [2-8])/i) || (c.match(/windows.*safari/i) && !c.match(/chrome/i)) || c.match(/(linux.*firefox)/i) || c.match(/Chrome\/29/i) || c.match(/mac os x.*firefox/i) || b.match(/\bISSW=1/) || UPS.get("isSwitch") == 0);
+    if (bds && bds.comm) {
+        bds.comm.supportis = !a;
+        bds.comm.isui = true
+    }
+    window.__restart_confirm_timeout = true;
+    window.__confirm_timeout = 8000;
+    window.__disable_is_guide = true;
+    window.__disable_swap_to_empty = true;
+    window.__switch_add_mask = true;
+    if (window._async_merge) {
+        document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_search_1c20c9c6.js'><\/script>")
+    } else {
+        if (a || window.__disable_predict || window.__disable_preload) {
+            document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_popstate1_bdbffbe4.js'><\/script>")
+        } else {
+            document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_instant_search1_8eeb46e2.js'><\/script>")
+        }
+    }
+    if (bds.comm.newindex) {
+        $(window).on("index_off", function () {
+            $('<div class="c-tips-container" id="c-tips-container"></div>').insertAfter("#wrapper");
+            if (window.__sample_dynamic_tab) {
+                $("#s_tab").remove()
+            }
+        })
+    }
+    $(function () {
+        setTimeout(function () {
+            $.ajax({
+                url: "http://s1.bdstatic.com/r/www/cache/static/baiduia/baiduia_b45d552b.js",
+                cache: true,
+                dataType: "script"
+            })
+        }, 0)
+    });
+    $(function () {
+        setTimeout(function () {
+            $.ajax({
+                url: "http://s1.bdstatic.com/r/www/cache/static/plugins/every_cookie_0c14e815.js",
+                cache: true,
+                dataType: "script"
+            })
+        }, 0)
+    });
+    if (bds.comm && bds.comm.ishome && Cookie.get("H_PS_PSSID")) {
+        bds.comm.indexSid = Cookie.get("H_PS_PSSID")
+    }
+})();
+</script>
+
+<script>
+    A.merge("bk_polysemy", function () {
+        A.setup(function () {
+            var _this = this, $focusrightf = _this.find(".op-bk-polysemy-focusrightf:first span");
+            if ($focusrightf.length)$focusrightf.last().remove()
+        });
+    });
+A.merge("zx_new_tvideo", function () {
+    A.setup(function () {
+        function isEmptyObj(obj) {
+            var empty = true;
+            for (var prop in obj) {
+                empty = false;
+                break
+            }
+            return empty
+        }
+
+        function getRecord() {
+            $.ajax({
+                url: _this.data.listUrl + "/pc_static/open/record/bdv-record-api.js",
+                dataType: "script",
+                timeout: 6e3,
+                success: function () {
+                    if ("undefined" != typeof bdvRecordAPI) {
+                        if (bdvRecordAPI.init({
+                                    proxy: "//www.baidu.com/aladdin/js/zx_tv_video/zx_video.html",
+                                    islogin: isLogin
+                                }), $dropDoms.length > 0)var ddVal = $.parseJSON(dd.getValue()), videoId = ddVal.id; else var $nowSel = _this.find(".c-tabs-nav-selected"), videoId = $nowSel.attr("data-videoId");
+                        bdvRecordAPI.getRecord(videoId, function (red) {
+                            if (red && red.result) {
+                                if (record = red.result, !record[0])record = [record];
+                                if (record.length > 0)updateHistory(record)
+                            }
+                        })
+                    }
+                },
+                error: function () {
+                }
+            })
+        }
+
+        function updateHistory(red) {
+            var $nowSel = _this.find(".c-tabs-nav-selected");
+            if ("close" != $nowSel.attr("data-close")) {
+                if ($dropDoms.length > 0)var ddVal = $.parseJSON(dd.getValue()), videoId = ddVal.id, nowSite = ddVal.key; else var videoId = $nowSel.attr("data-videoId"), nowSite = $nowSel.attr("data-key");
+                for (var nowRecord = "", i = 0; i < red.length; i++)if (red[i].videoid == videoId && red[i].site == nowSite && ("iqiyi.com" == red[i].site || "kankan.com" == red[i].site || "letv.com" == red[i].site))nowRecord = red[i];
+                for (var $mainLink = $main.find("ul.c-numberset li:visible a"), i = 0; i < $mainLink.length; i++) {
+                    var nowEpisode = $.trim($mainLink.eq(i).html());
+                    if (nowEpisode = nowEpisode.substring(0, nowEpisode.indexOf(vlinktext)), nowEpisode == nowRecord.episode) {
+                        var recordHtml = "";
+                        recordHtml += '<div class="op-zx-new-tvideo-record">', recordHtml += '<span class="op-zx-new-tvideo-ins1"></span>', recordHtml += '<span class="op-zx-new-tvideo-ins2"></span>', recordHtml += '<p class=" op-zx-new-tvideo-record-num">您上次观看至第<span class="op-zx-new-tvideo-record-em">' + nowRecord.episode + "</span>" + vlinktext + "</p>", recordHtml += '<span class="op-zx-new-tvideo-record-close"></span>', recordHtml += "</div>", $mainLink.eq(i).parent().addClass("op-zx-new-tvideo-record-rlt").append(recordHtml), $main.find(".op-zx-new-tvideo-record-close").on("click", function () {
+                            $main.find(".op-zx-new-tvideo-record").css("display", "none"), $nowSel.attr("data-close", "close")
+                        });
+                        break
+                    }
+                }
+            }
+        }
+
+        function initDrop($dropDom, index) {
+            if ($dropDom.hasClass("c-dropdown2"))A.use("dropdown21", function () {
+                dd = A.ui.dropdown21($dropDom.get(0), {
+                    onchange: function () {
+                        $main.find(".op-zx-new-tvideo-juhe-curcont").html('<div class="c-loading op-zx-new-tvideo-loading">&nbsp;</div>'), getVlink(0);
+                        var index = dd.getIndex();
+                        $nowTopInfo.html(updateTopInfo(tabTemp[tabs.current][index]));
+                        var $nowBs = $sTitle.eq(tabs.current);
+                        $title.html($nowBs.find(".op-zx-new-tvideo-tbs").eq(index).html()), $sUrl.html($nowBs.find(".op-zx-new-tvideo-sbs").eq(index).html()), finish = tabTemp[tabs.current][index].finish;
+                        var ddVal = $.parseJSON(dd.getValue()), ed = ddVal.cnt;
+                        if ($juhe.html(initJuheMenu(1, ed)), siteChange = ddVal.key, $goUser.length > 0)if (tabTemp[tabs.current][index].ecosite)$goUser.show().find("a").attr("href", vipAddress + tabTemp[tabs.current][index].ecosite); else $goUser.hide()
+                    }, onopen: function () {
+                        insertDrop(tabs.current)
+                    }
+                });
+                var ddVal = $.parseJSON(dd.getValue()), ed = ddVal.cnt;
+                $juhe.html(initJuheMenu(1, ed)), getRecord()
+            }); else getRecord()
+        }
+
+        function insertDrop(season) {
+            var index = 0;
+            if ($dropDoms.length > 0) {
+                var tabSite = tabTemp[season];
+                dd.removeAll();
+                for (var presel = 0, i = 0; i < tabSite.length; i++) {
+                    var isVip = "";
+                    if (tabSite[i].ecosite) {
+                        if (isVip = ' <span class="op-zx-new-tvideo-isvip', tabSite[i].ecotxt)isVip += " op-zx-new-mvideo-myvip";
+                        isVip += '" style="display:inline;">VIP</span>'
+                    }
+                    if (siteChange && siteChange == tabSite[i].se_sitekey)presel = 1; else presel = 0;
+                    dd.add({
+                        value: '{"cnt":"' + tabSite[i].latestEp + '","key":"' + tabSite[i].se_sitekey + '","season":"' + tabSite[i].se_locsign + '","title":"' + tabSite[i].se_sitename + '","id":"' + tabSite[i].se_videoid + '"}',
+                        selected: presel,
+                        text: '<b  class="c-gap-right-small op-zx-new-tvideo-icon" style="background-image:url(' + tabSite[i].site_logo + ')"></b> ' + tabSite[i].se_sitename + isVip
+                    })
+                }
+                if (tabSite.length > 1)$oneSite.addClass("op-zx-new-tvideo-hidden"), $dropDoms.removeClass("op-zx-new-tvideo-hidden"), index = dd.getIndex(); else {
+                    var isVip = "";
+                    if (tabSite[0].ecosite) {
+                        if (isVip = ' <span class="op-zx-new-tvideo-isvip', tabSite[0].ecotxt)isVip += " op-zx-new-mvideo-myvip";
+                        isVip += '" style="display:inline;">VIP</span>'
+                    }
+                    $oneSite.html('<b class="op-zx-new-tvideo-icon op-zx-new-tvideo-rgap2" style="background-image:url(' + tabSite[0].site_logo + ')"></b>' + tabSite[0].se_sitename + isVip), $oneSite.removeClass("op-zx-new-tvideo-hidden"), $dropDoms.addClass("op-zx-new-tvideo-hidden")
+                }
+                $nowTopInfo.html(updateTopInfo(tabTemp[season][index]));
+                var $nowBs = $sTitle.eq(season);
+                if ($title.html($nowBs.find(".op-zx-new-tvideo-tbs").eq(index).html()), $sUrl.html($nowBs.find(".op-zx-new-tvideo-sbs").eq(index).html()), finish = tabTemp[season][index].finish, $goUser.length > 0)if (tabTemp[season][index].ecosite)$goUser.show().find("a").attr("href", vipAddress + tabTemp[season][index].ecosite); else $goUser.hide()
+            }
+        }
+
+        function initBind() {
+            $main.delegate(".c-tag-cont span.OP_LOG_BTN", "click", function () {
+                var $this = $(this);
+                if (!$this.hasClass("c-tag-selected")) {
+                    $this.addClass("c-tag-selected").siblings(".c-tag-selected").removeClass("c-tag-selected");
+                    var st = parseInt($this.attr("data-spn")), ed = parseInt($this.attr("data-epn"));
+                    if ("全部" == $this.html()) {
+                        arn = 96;
+                        var sFlag = false
+                    } else {
+                        arn = 24;
+                        var sFlag = true
+                    }
+                    var nRn = arn;
+                    if (!finish && "全部" != $this.html()) {
+                        var sum = ed - st + 1, apn = sum - arn;
+                        if (apn < 0)nRn += apn, apn = 0
+                    } else {
+                        var apn = 0;
+                        nRn = false
+                    }
+                    $juhe.html(initJuheMenu(st, ed, sFlag)), getVlink(apn, nRn)
+                }
+            }), $main.delegate(".c-tag-more", "click", function () {
+                var $fa = $(this).parents(".c-tag");
+                if ($fa.hasClass("op-zx-new-tvideo-tag-auto"))$fa.removeClass("op-zx-new-tvideo-tag-auto"); else $fa.addClass("op-zx-new-tvideo-tag-auto")
+            }), $main.delegate(".op-zx-new-tvideo-more", "click", function () {
+                if ($main.hasClass("op-zx-new-tvideo-main-more"))$main.removeClass("op-zx-new-tvideo-main-more"); else {
+                    if ($main.addClass("op-zx-new-tvideo-main-more"), "0" == $moreNow.attr("data-flag"))if (getVlink(0), $main.find(".op-zx-new-tvideo-juhe-curcont").html('<div class="c-loading op-zx-new-tvideo-loading">&nbsp;</div>'), $dropDoms.length < 1) {
+                        var ed = _this.find(".c-tabs-nav-selected").attr("data-cnt");
+                        $juhe.html(initJuheMenu(1, ed))
+                    }
+                    var $tagfa = $main.find(".op-zx-new-tvideo-tag .c-tag");
+                    if ($tagfa.length > 0) {
+                        var taghei = parseInt($tagfa.find(".c-tag-cont").height());
+                        if (taghei > 30)$tagfa.find(".c-tag-more").removeClass("op-zx-new-tvideo-tag-hid"); else $tagfa.find(".c-tag-more").addClass("op-zx-new-tvideo-tag-hid")
+                    }
+                }
+            }), $main.delegate(".op-zx-new-tvideo-juhe-link", "click", function () {
+                var $this = $(this);
+                if (!$this.hasClass("op-zx-new-tvideo-juhe-cur-link")) {
+                    $this.addClass("op-zx-new-tvideo-juhe-cur-link").siblings(".op-zx-new-tvideo-juhe-cur-link").removeClass("op-zx-new-tvideo-juhe-cur-link");
+                    var nIndex = $main.find(".op-zx-new-tvideo-juhe-link").index($this), $tagSel = $main.find(".c-tag-selected"), nRn = arn;
+                    if ($tagSel.length > 0 && "全部" != $tagSel.html() && !finish) {
+                        var st = parseInt($tagSel.attr("data-spn")), ed = parseInt($tagSel.attr("data-epn"));
+                        st = ed - st + 1 - 24 * (nIndex + 1);
+                        var nRn = arn;
+                        if (st < 0)nRn += st, st = 0
+                    } else {
+                        var st = nIndex * arn;
+                        nRn = false
+                    }
+                    getVlink(st, nRn)
+                }
+            })
+        }
+
+        function getVlink(apn, nRn) {
+            if (nRn)var rnNow = nRn; else var rnNow = arn;
+            var $sel = _this.find(".c-tabs-nav-selected"), $tag = _this.find(".c-tag-selected");
+            if ($tag.length > 0)$sel.push($tag[0]);
+            for (var nTag = "", vTag = "", i = 0; i < $tag.length; i++) {
+                var $now = $tag.eq(i), tagVal = $now.attr("data-val");
+                if (tagVal && "全部" != tagVal)vTag = "[" + $now.attr("data-name") + "=" + encodeURIComponent(tagVal) + "]"
+            }
+            if ($dropDoms.length > 0) {
+                var ddVal = $.parseJSON(dd.getValue());
+                if (ddVal.season) {
+                    nTag = nTag + "&locsign=" + encodeURIComponent(ddVal.season);
+                    var nowSite = ddVal.key
+                }
+            } else {
+                nTag = nTag + "&locsign=" + encodeURIComponent($sel.attr("data-val"));
+                var nowSite = $sel.attr("data-key")
+            }
+            var url = _this.data.opendataUrl + "?resource_id=" + sid + "&query=" + encodeURIComponent(_this.data.key) + "&from_mid=1&co=vlink" + vTag + "&apn=" + apn + "&arn=" + rnNow + nTag;
+            if ("ipad" == _this.data.platform)url += "&tn=baiduipad"; else url += "&tn=baidu";
+            $.ajax({
+                url: url, dataType: "jsonp", timeout: 5e3, jsonp: "cb", success: function (data) {
+                    if (!ajaxFinished) {
+                        if (data = data.data[0], data = data.disp_data[0], !data || "undefined" == typeof data.vlink || !data.vlink)return $main.find(".op-zx-new-tvideo-juhe-curcont").html('<p class="c-gap-top op-zx-new-tvideo-error">抱歉，没有找到符合条件的资源，请尝试其它分类。</p>'), $moreNow.addClass("op-zx-new-tvideo-juhe-menuF"), void 0;
+                        if (data.vlink) {
+                            if (!data.vlink[0])data.vlink = [data.vlink];
+                            if (!finish && nRn)data.vlink = data.vlink.reverse();
+                            if ($main.find(".op-zx-new-tvideo-juhe-curcont").html(initVlinkHtml(data.vlink, nowSite)), _this.find(".op-zx-new-tvideo-juhe-conts .op-zx-new-tvideo-viptip").on("mouseover", function (e) {
+                                        e.stopPropagation(), window.event.cancelBubble = true
+                                    }), $moreNow.attr("data-flag", "1"), $juhe.hasClass("op-zx-new-tvideo-juhe-menuF"))$juhe.removeClass("op-zx-new-tvideo-juhe-menuF");
+                            if ($moreNow.hasClass("op-zx-new-tvideo-juhe-menuF"))$moreNow.removeClass("op-zx-new-tvideo-juhe-menuF");
+                            if (void 0 != record && record.length > 0)updateHistory(record); else;
+                        }
+                    }
+                }, error: function () {
+                    $main.find(".op-zx-new-tvideo-juhe-curcont").html('<p class="c-gap-top op-zx-new-tvideo-error">抱歉，没有找到符合条件的资源，请尝试其它分类。</p>'), $moreNow.addClass("op-zx-new-tvideo-juhe-menuF")
+                }
+            })
+        }
+
+        function initVlinkHtml(data, nowSite) {
+            var html = "", len = data.length, fUl = "";
+            if (!$main.attr("data-notip") && _eco && _eco.data && _eco.data.data && _eco.data.data.sites) {
+                var nindex = nowSite.indexOf(".");
+                if (nindex > 0)nowSite = nowSite.substring(0, nindex);
+                if ($.inArray(nowSite, _eco.data.data.sites) > -1) {
+                    var myTabNow = tabTemp[tabs.current];
+                    if (myTabNow[0])myTabNow = myTabNow[dd.getIndex()];
+                    if (myTabNow.ecotxt)var nowtxt = myTabNow.ecotxt; else var nowtxt = _this.data.ecosysTxt;
+                    html += '<p class="c-gap-top op-zx-new-tvideo-viptip"><a href="' + _this.data.ecosysnoUrl + "page/" + _this.data.ecosysType + "?type=video&wd=" + encodeURIComponent(_this.data.key) + "&nowType=" + _this.data.ecosysType + "&site=" + nowSite + '" target="_blank"><span class="op-zx-new-tvideo-ecosys">【<b>VIP</b>】</span>' + nowtxt + "</a><i></i></p>"
+                }
+            }
+            for (var i = 0, j = 0; i < len; i++) {
+                if (0 == i)fUl = " op-zx-new-tvideo-flink"; else fUl = "";
+                if (i % 16 == 0)html += '<ul  class="c-numberset ' + fUl + '">', j++;
+                if (html += '<li class="c-gap-top', i % 8 == 7)html += " c-numberset-last";
+                if ("true" == data[i].latest && !finish)html += " op-zx-new-tvideo-new";
+                if (data[i].linkurl) {
+                    if (html += '"><a target="_blank" href="' + data[i].linkurl, bdUser && _eco && _eco.data)if (data[i].linkurl.indexOf("?") < 0)html += "?fm=ala";
+                    else html += "&fm=ala"
+                } else html += '"><a href="javascript:;" style="color:#666;"';
+                if (html += '" class="op-zx-new-tvideo-vlink">' + data[i].linkcontent + vlinktext, "true" == data[i].latest && !finish)html += '<i class="c-text c-text-danger">新</i>';
+                if (html += "</a></li>", i == 16 * j - 1 || i == len - 1)html += "</ul>"
+            }
+            return html
+        }
+
+        function initJuheMenu(st, ed, sFlag) {
+            var spn = arn;
+            if ($dropDoms.length > 0)var ddVal = $.parseJSON(dd.getValue()), cnt = ddVal.cnt; else var cnt = _this.find(".c-tabs-nav-selected").attr("data-cnt");
+            var st = parseInt(st), ed = parseInt(ed);
+            if (ed > 16)$moreNow.removeClass("op-zx-new-tvideo-more-hid"); else $moreNow.addClass("op-zx-new-tvideo-more-hid");
+            if (ed > cnt)ed = cnt;
+            var str = "";
+            if (ed - st + 1 <= 16)$moreNow.addClass("op-zx-new-tvideo-hidden"); else $moreNow.removeClass("op-zx-new-tvideo-hidden");
+            if (ed - st + 1 <= spn)return $juhe.addClass("op-zx-new-tvideo-hidden"), void 0; else $juhe.removeClass("op-zx-new-tvideo-hidden");
+            var juheCnt = parseInt((ed - st + 1 + spn - 1) / spn);
+            if (finish || sFlag)for (var i = 1; i <= juheCnt; i++)if (1 == i)str += "<div class='op-zx-new-tvideo-juhe-link op-zx-new-tvideo-juhe-cur-link OP_LOG_OTHERS' data-flag='1'>" + (st + (i - 1) * spn) + "~" + (st + i * spn - 1) + vlinktext + "</div>"; else if (i == juheCnt)if (st + (i - 1) * spn == ed)str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + ed + vlinktext + "</div>"; else str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + (st + (i - 1) * spn) + "~" + ed + vlinktext + "</div>"; else str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + (st + (i - 1) * spn) + "~" + (st + i * spn - 1) + vlinktext + "</div>"; else for (var i = 1; i <= juheCnt; i++)if (1 == i)str += "<div class='op-zx-new-tvideo-juhe-link op-zx-new-tvideo-juhe-cur-link OP_LOG_OTHERS' data-flag='1'>" + ed + "~" + (ed - spn + 1) + vlinktext + "</div>"; else if (i != juheCnt)str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + (ed - spn * (i - 1)) + "~" + (ed - spn * i + 1) + vlinktext + "</div>"; else if (ed - (juheCnt - 1) * spn == st)str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + st + vlinktext + "</div>"; else str += "<div class='op-zx-new-tvideo-juhe-link OP_LOG_OTHERS' data-flag='0'>" + (ed - (juheCnt - 1) * spn) + "~" + st + vlinktext + "</div>";
+            return str
+        }
+
+        function updateTag(data) {
+            var nowData = tabTemp[tabs.current][0];
+            if (nowData.sec_tab) {
+                nowData = nowData.sec_tab;
+                for (var tabStr = "", i = 0; i < nowData.length; i++) {
+                    var isfirst = "";
+                    if (0 == i)isfirst = " c-tag-selected";
+                    tabStr += '<span class="OP_LOG_BTN ' + isfirst + '" data-name="sec_key" data-val="' + nowData[i].sec_key + '" data-spn="' + nowData[i].begin + '" data-epn="' + nowData[i].end + '" title="' + nowData[i].sec_key + '">' + $.subByte(nowData[i].sec_key, 40) + "</span>"
+                }
+                _this.find(".op-zx-new-tvideo-tag .c-tag-cont").html(tabStr)
+            } else;
+        }
+
+        function initTab() {
+            A.use("tabs5", function () {
+                tabs = A.ui.tabs5(_this.find(".c-tabs")[0], {
+                    onResetChange: function () {
+                        arn = 96, $main.find(".op-zx-new-tvideo-juhe-curcont").html('<div class="c-loading op-zx-new-tvideo-loading">&nbsp;</div>');
+                        var nowNav = tabs.navs[tabs.current], $tag = _this.find(".op-zx-new-tvideo-tag .c-tag-cont span.OP_LOG_BTN");
+                        if ($tag.eq(0).addClass("c-tag-selected").siblings(".c-tag-selected").removeClass("c-tag-selected"), $main.removeClass("op-zx-new-tvideo-main-more"), $dropDoms.length > 0) {
+                            updateTag();
+                            var season = String(nowNav.getAttribute("data-val"));
+                            insertDrop(tabs.current);
+                            var ddVal = $.parseJSON(dd.getValue()), ed = ddVal.cnt;
+                            $moreNow = $more.eq(tabs.current), $moreNow.removeClass("op-zx-new-tvideo-hidden").siblings(".op-zx-new-tvideo-more").addClass("op-zx-new-tvideo-hidden");
+                            var nowData = tabTemp[tabs.current][0], gid = "";
+                            if (nowData.se_group && nowData.se_group[0] && nowData.se_group[0].group_id)gid = nowData.se_group[0].group_id;
+                            $out.attr("data-click", "{'gid':'" + gid + "','" + nowData.se_uri + "'}")
+                        } else {
+                            $nowTopInfo.html(updateTopInfo(tabTemp[tabs.current]));
+                            var $nowBs = $sTitle.eq(tabs.current);
+                            $title.html($nowBs.find(".op-zx-new-tvideo-tbs").eq(0).html()), $sUrl.html($nowBs.find(".op-zx-new-tvideo-sbs").eq(0).html()), finish = tabTemp[tabs.current].finish;
+                            var ed = _this.find(".c-tabs-nav-selected").attr("data-cnt");
+                            if ($goUser.length > 0)if (tabTemp[tabs.current].ecosite)$goUser.show().find("a").attr("href", vipAddress + tabTemp[tabs.current].ecosite); else $goUser.hide()
+                        }
+                        for (var i = 0; i < $tag.length; i++) {
+                            var $nowTag = $tag.eq(i), st = parseInt($nowTag.attr("data-spn")), ed = parseInt(nowNav.getAttribute("data-cnt"));
+                            if (st > ed)$nowTag.addClass("op-zx-new-tvideo-hidden"); else $nowTag.removeClass("op-zx-new-tvideo-hidden")
+                        }
+                        $juhe.html(initJuheMenu(1, ed)), getVlink(0)
+                    }
+                })
+            })
+        }
+
+        function updateTopInfo(data) {
+            var topStr = "", videoInfo = [], infoRow = 0;
+            if (data.releaseTime)videoInfo.push(data.releaseTime);
+            if (data.area)videoInfo.push(data.area);
+            if (data.lang)videoInfo.push(data.lang);
+            if (topStr += '<div class="c-span6">', topStr += '<a target="_blank" href="' + data.url + '" class="op-zx-new-tvideo-poster">', topStr += '<img class="c-img c-img6" alt="图片" src="' + data.poster + '">', topStr += "</a>", topStr += "</div>", topStr += '<div class="c-span18 c-span-last op-zx-new-tvideo-rtop">', data.totalEp || data.latestEp) {
+                if (topStr += '<p class="c-clearfix op-zx-new-tvideo-tvplay">', topStr += '<span class="c-text c-text-public c-gap-icon-right-small">', data.finish)topStr += "已完结</span><span>"; else if (topStr += "更新至</span><span>", topStr += $.subByte(data.latestEp, 30), topStr += "集", data.totalEp)topStr += "/";
+                if (data.totalEp)topStr += "共" + $.subByte(data.totalEp, 30) + "集</span>";
+                topStr += "</p>", infoRow++
+            }
+            if (videoInfo) {
+                topStr += '<p class="op-zx-new-tvideo-oneline c-gray">';
+                for (var i = 0; i < videoInfo.length; i++) {
+                    if (0 != i)topStr += '<span class="c-gap-left-small c-gap-right-small op-zx-new-tvideo-split">|</span>';
+                    topStr += $.subByte(videoInfo[i], 20)
+                }
+                topStr += "</p>", infoRow++
+            }
+            if (data.netUpdate && !data.finish && infoRow >= 2) {
+                if (topStr += '<div class="op-zx-new-tvideo-net">', data.netUpdate.name)topStr += "<p>" + $.subByte(data.netUpdate.name, 36) + "</p>";
+                if (data.netUpdate.content)topStr += "<p>" + $.subByte(data.netUpdate.content, 36) + "</p>";
+                topStr += "</div>"
+            }
+            if (data.actor && "电视剧" == data.se_class) {
+                if (data.tvStation && !data.finish)if (data.tvStation.station) {
+                    if (topStr += '<p class="op-zx-new-tvideo-oneline"><span class="c-gray">首播频道：</span>' + $.subByte(data.tvStation.station, 40), data.tvStation.content)topStr += $.subByte(data.tvStation.content, 40);
+                    topStr += "</p>"
+                }
+                if (data.actor) {
+                    if (!data.actor[0])data.actor = [data.actor];
+                    topStr += '<p class="op-zx-new-tvideo-oneline"><span class="c-gray op-zx-new-tvideo-left">主演：</span>';
+                    for (var i = 0; i < data.actor.length && i < 5; i++)if (data.actor[i].name)if (data.actor[i].link || data.actor[i].query) {
+                        if (topStr += '<a target="_blank" href="', data.actor[i].link)topStr += data.actor[i].link; else if (data.actor[i].query)topStr += _this.data.mainurl.replace(encodeURIComponent("||;||"), encodeURIComponent(data.actor[i].query));
+                        if (topStr += '" class="  op-zx-new-tvideo-left', 0 != i)topStr += " c-gap-left";
+                        topStr += '">' + $.subByte(data.actor[i].name, 20) + "</a>"
+                    } else {
+                        if (topStr += '<span class="', 0 != i)topStr += " c-gap-left";
+                        topStr += '">' + $.subByte(data.actor[i].name, 20), topStr += "</span>"
+                    } else;
+                    topStr += "</p>"
+                }
+            } else if (data.author && "动漫" == data.se_class) {
+                if (!data.author[0])data.author = [data.author];
+                topStr += '<p class="op-zx-new-tvideo-oneline"><span class="c-gray">作者：</span>';
+                for (var i = 0; i < data.author.length; i++)if (data.author[i].name) {
+                    if (0 != i)topStr += '<span class="c-gap-left-small c-gap-right-small op-zx-new-tvideo-split">|</span>';
+                    if (data.author[i].link || data.author[i].query) {
+                        if (topStr += '<a target="_blank" href="', data.author[i].link)topStr += data.author[i].link; else if (data.author[i].query)topStr += _this.data.mainurl.replace(encodeURIComponent("||;||"), encodeURIComponent(data.author[i].query));
+                        topStr += '">' + $.subByte(data.author[i].name, 20) + "</a>"
+                    } else topStr += $.subByte(data.author[i].name, 20)
+                } else;
+                topStr += "</p>"
+            }
+            if (data.type) {
+                if (!data.type[0])data.type = [data.type];
+                topStr += '<p class="op-zx-new-tvideo-oneline"> <span class="c-gray">类型：</span>';
+                for (var i = 0; i < data.type.length; i++)if (data.type[i].name) {
+                    if (0 != i)topStr += '<span class="c-gap-left-small c-gap-right-small op-zx-new-tvideo-split">|</span>';
+                    if (data.type[i].link || data.type[i].query) {
+                        if (topStr += '<a target="_blank" href="', data.type[i].link)topStr += data.type[i].link; else if (data.type[i].query)topStr += _this.data.mainurl.replace(encodeURIComponent("||;||"), encodeURIComponent(data.type[i].query));
+                        topStr += '">' + $.subByte(data.type[i].name, 20) + "</a>"
+                    } else topStr += $.subByte(data.type[i].name, 20)
+                } else;
+                topStr += "</p>"
+            }
+            if (data.tvStation && !data.finish && "动漫" == data.se_class && data.tvStation.station) {
+                if (topStr += '<p><span class="c-gray">更新时间：</span>' + $.subByte(data.tvStation.station, 26), data.tvStation.content)topStr += $.subByte(data.tvStation.content, 26);
+                topStr += "</p>"
+            }
+            if (data.summary) {
+                var sumlen = 140;
+                if (topStr += '<p class="op-zx-new-tvideo-summary">', topStr += '<span class="c-gray">简介：</span>', topStr += "<span>", alias && "undefined" != typeof data.show_name && data.show_name.indexOf(alias) < 0 && true == data.showala)topStr += "（又名：<em>" + alias + "</em>）", sumlen = sumlen - aliaslen - 8;
+                if (topStr += $.subByte(data.summary.content, sumlen), data.summary.link)topStr += '<a target="_blank" href="' + data.summary.link + '" style="padding-left:5px;">更多&gt;&gt;</a>';
+                topStr += "</span>", topStr += "</p>"
+            }
+            return topStr += "</div>", topStr
+        }
+
+        var _this = this, sid = _this.data.sid, finish = _this.data.finish, vlinktext = _this.data.vlinktext, tabTemp = _this.data.temp, $out = _this.find(".op-zx-new-tvideo-out"), $main = _this.find(".op-zx-new-tvideo-main"), $juhe = _this.find(".op-zx-new-tvideo-juhe-menu"), $dropDoms = _this.find(".op-zx-new-tvideo-sitecon"), $oneSite = _this.find(".op-zx-video-onesite"), $more = _this.find(".op-zx-new-tvideo-more"), $nowTopInfo = _this.find(".op-zx-new-tvideo-out .zx-tv-video-topinfo"), ajaxFinished = false, $moreNow = $more.eq(0), arn = 96, $title = _this.find("h3"), $sTitle = _this.find(".op-zx-new-tvideo-stitle"), $sUrl = _this.find(".op-zx-new-tvideo-showurl"), alias = _this.data.alias, aliaslen = alias.replace(/[^\x00-\xff]/g, "ci").length, $goUser = $out.find(".op-zx-new-tvideo-user"), vipAddress = _this.data.ecosysnoUrl + "page/" + _this.data.ecosysType + "?type=video&wd=" + encodeURIComponent(_this.data.key) + "&nowType=" + _this.data.ecosysType + "&site=";
+        if (bds && bds.util && bds.util.domain)bds.util.domain.set("video.baidu.com", _this.data.videoUrl), bds.util.domain.set("v.baidu.com", _this.data.vUrl);
+        var siteChange = false, tabs, dd, record;
+        if (bdUser)var isLogin = true; else var isLogin = false;
+        var ls_vip, ls_hover_key = "zx_new_tvideo_hover", hover_info_obj, ls_file_name = "zx_new_tvideo", ls_expires_day = 7, pk_url_val = [], pk_url_reg = /^http:\/\/www.iqiyi.com\/(.+)$/;
+        if ("array" === $.type(tabTemp))if ("array" === $.type(tabTemp[0]))$(tabTemp).each(function (i) {
+            $(tabTemp[i]).each(function (j) {
+                var info = tabTemp[i][j];
+                if ("iqiyi" === info.se_sitekey) {
+                    var pk_url = info.pk_url, result = pk_url.match(pk_url_reg);
+                    if ("array" === $.type(result) && result.length > 1)pk_url = result[1], pk_url_val.push(pk_url)
+                }
+            })
+        }); else $(tabTemp).each(function (i) {
+            var info = tabTemp[i];
+            if ("iqiyi" === info.se_sitekey) {
+                var pk_url = info.pk_url, result = pk_url.match(pk_url_reg);
+                if ("array" === $.type(result) && result.length > 1)pk_url = result[1], pk_url_val.push(pk_url)
+            }
+        });
+        pk_url_val = pk_url_val.join("|");
+        var ecosys = function () {
+            var _eco = this;
+            if (_eco.addHover = function () {
+                        if ("true" == $out.attr("data-hover")) {
+                            var $hoverCon = $out.find(".op-zx-new-tvideo-juhe-conts"), hoverTip = "";
+                            hoverTip += '<div class="op-zx-new-tvideo-record" style="margin-top:0px;display:none; z-index:299;">', hoverTip += '<span class="op-zx-new-tvideo-ins1" style="top:-6px;"></span>', hoverTip += '<span class="op-zx-new-tvideo-ins2" style="top:-5px;"></span>', hoverTip += '<div style="padding-top:8px;">', hoverTip += '<a href="#" onclick="return false;" class=" op-zx-new-tvideo-record-num op-zx-new-tvideo-eco-num op-zx-new-tvideo-eco-clo" >我愿意每次都看广告<span class="op-zx-new-tvideo-eco-close"></span></a>', hoverTip += '<a href="http://api.open.baidu.com/pae/ecosys/page/lottery?type=video&nowType=lottery&site=iqiyi" target="_blank" class=" op-zx-new-tvideo-record-num op-zx-new-tvideo-eco-num op-zx-new-tvideo-eco-hova" >花一分钟免费去广告<i class="c-icon c-icon-success"></i></a>', hoverTip += "", hoverTip += "</div>", hoverTip += "</div>";
+                            var $hoverTip = $(hoverTip);
+                            $hoverCon.append($hoverTip), _this.find(".op-zx-new-tvideo-juhe-conts .op-zx-new-tvideo-viptip").on("mouseover", function (e) {
+                                e.stopPropagation(), window.event.cancelBubble = true
+                            }), $hoverTip.find(".op-zx-new-tvideo-eco-clo").on("click", function () {
+                                $hoverTip.hide(), $hoverCon.unbind("mouseover"), A.use("localstorage", function () {
+                                    if (ls_vip = A.ui.localstorage({
+                                                fileName: ls_file_name,
+                                                expiresDay: ls_expires_day
+                                            }), hover_info_obj = $.parseJSON(ls_vip.get(ls_hover_key)), hover_info_obj && hover_info_obj.num)hover_info_obj.num++; else hover_info_obj = {}, hover_info_obj.num = 1;
+                                    hover_info_obj.last = (new Date).getTime(), hover_info_obj.hasVip = _eco.data.data.vips, ls_vip.set(ls_hover_key, $.stringify(hover_info_obj))
+                                })
+                            });
+                            var conoff = $hoverCon.offset();
+                            $hoverCon.on("mouseover", function (event) {
+                                var $vip = $hoverCon.find(".op-zx-new-tvideo-viptip");
+                                if ($vip.is(":visible")) {
+                                    $hoverTip.find(".op-zx-new-tvideo-eco-hova").attr("href", $vip.find("a").attr("href")), $hoverTip.show();
+                                    var $target = $(event.target);
+                                    if ($target.hasClass("op-zx-new-tvideo-vlink")) {
+                                        var off = $target.offset(), nowleft = off.left - conoff.left, upn = bds.comm.upn, nowtop = off.top - conoff.top + 12 + 10;
+                                        if (upn && "msie" == upn.browser && parseInt(upn.ie) <= 10);
+                                        $hoverTip.css({left: nowleft, top: nowtop})
+                                    }
+                                }
+                            }), $hoverCon.on("mouseout", function (event) {
+                                $hoverTip.hide()
+                            })
+                        }
+                    }, _eco.tabIsVip = function (nowSite) {
+                        var nindex = nowSite.indexOf(".");
+                        if (nindex > 0)nowSite = nowSite.substring(0, nindex);
+                        if (_eco.data.data.vips[nowSite])if (_eco.data.data.vips[nowSite].expiry_time && "0" != _eco.data.data.vips[nowSite].expiry_time)if (_eco.data.data.vips[nowSite].share_expirytime)return "已有vip，可享受免广告特权，有效期分享后加倍至：" + _eco.data.data.vips[nowSite].share_expirytime; else return "已有vip，可享受免广告特权，有效期至：" + _eco.data.data.vips[nowSite].expiry_time; else return "您有一张未激活的vip，激活即可享受免广告特权"; else return false
+                    }, _eco.checkGj = function (data) {
+                        _eco.data = data;
+                        var $goVip = $out.find(".op-zx-new-tvideo-viptip");
+                        if (tabTemp[0][0])var $isVip = $out.find(".op-zx-new-tvideo-sites .op-zx-new-tvideo-isvip"); else var $isVip = $out.find(".op-zx-new-tvideo-isvip");
+                        var nowSite = $goVip.attr("data-key");
+                        if (nowSite) {
+                            var nindex = nowSite.indexOf(".");
+                            if (nindex > 0)nowSite = nowSite.substring(0, nindex)
+                        }
+                        if (_eco.data && _eco.data.data)for (var i = 0; i < tabTemp.length; i++)if (tabTemp[i][0])for (var j = 0; j < tabTemp[i].length; j++) {
+                            var nowSite = tabTemp[i][j].se_sitekey, nindex = nowSite.indexOf(".");
+                            if (nindex > 0)nowSite = nowSite.substring(0, nindex);
+                            if (bdUser && _eco.data.data.vips && void 0 === _eco.data.data.vips.length)if (tabTemp[i][j].ecotxt = _eco.tabIsVip(nowSite), 0 == i && 0 == j && tabTemp[0][0].ecotxt)$goVip.find("a").html('<span class="op-zx-new-tvideo-ecosys">【<b>VIP</b>】</span>' + tabTemp[0][0].ecotxt), $isVip.addClass("op-zx-new-mvideo-myvip");
+                            if (nowSite && _eco.data.data.sites && $.inArray(nowSite, _eco.data.data.sites) > -1)if (tabTemp[i][j].ecosite = nowSite, 0 == i && 0 == j && tabTemp[0][0].ecosite)$goVip.eq(0).show().find("a").attr("href", vipAddress + nowSite), $goUser.show().find("a").attr("href", vipAddress + nowSite), $isVip.show()
+                        } else {
+                            var nowSite = tabTemp[i].se_sitekey, nindex = nowSite.indexOf(".");
+                            if (nindex > 0)nowSite = nowSite.substring(0, nindex);
+                            if (bdUser && _eco.data.data.vips && void 0 === _eco.data.data.vips.length)if (tabTemp[i].ecotxt = _eco.tabIsVip(nowSite), tabTemp[i].ecotxt)if ($isVip.eq(i).addClass("op-zx-new-mvideo-myvip"), 0 == i)$goVip.find("a").html('<span class="op-zx-new-tvideo-ecosys">【<b>VIP</b>】</span>' + tabTemp[0].ecotxt);
+                            if (nowSite && _eco.data.data.sites && $.inArray(nowSite, _eco.data.data.sites) > -1)if (tabTemp[i].ecosite = nowSite, $goVip.eq(i).show().find("a").attr("href", vipAddress + nowSite), $isVip.eq(i).show(), 0 == i)$goUser.show().find("a").attr("href", vipAddress + nowSite)
+                        }
+                        initTab(), A.use("localstorage", function () {
+                            if (ls_vip = A.ui.localstorage({
+                                        fileName: ls_file_name,
+                                        expiresDay: ls_expires_day
+                                    }), hover_info_obj = $.parseJSON(ls_vip.get(ls_hover_key)), isEmptyObj(_eco.data.data.vips))if (!hover_info_obj)_eco.addHover(); else {
+                                var now = (new Date).getTime(), day = (now - hover_info_obj.last) / 864e5;
+                                if (hover_info_obj.num < 3 && day > 7)_eco.addHover()
+                            }
+                        })
+                    }, _eco.initvLink = function () {
+                        if (bdUser)$main.find(".op-zx-new-tvideo-juhe-curcont .c-numberset li a").each(function (i, e) {
+                            var $e = $(e), nowHref = $e.attr("href");
+                            if ("javascript:;" != nowHref) {
+                                if (nowHref.indexOf("?") < 0)nowHref += "?fm=ala"; else nowHref += "&fm=ala";
+                                $e.attr("href", nowHref)
+                            }
+                        })
+                    }, _eco.eventBind = function () {
+                        $main.delegate(".op-zx-new-tvideo-viptip i", "click", function () {
+                            $(this).parent().hide(), $main.attr("data-notip", "true")
+                        })
+                    }, _eco.getData = function (url) {
+                        var url = _this.data.ecosysUrl + "api/initlist?type=video&pk_url=" + pk_url_val;
+                        $.ajax({
+                            url: url,
+                            dataType: "jsonp",
+                            jsonp: "cb",
+                            timeout: 5e3,
+                            success: _eco.checkGj,
+                            error: function () {
+                            }
+                        })
+                    }, _eco.init = function () {
+                        initDrop($dropDoms, 0), _eco.getData(), _eco.eventBind(), _eco.initvLink()
+                    }, _this.data.ecosysUrl)_eco.init()
+        }, _eco = new ecosys;
+        if (initBind(), !_this.data.ecosysnoUrl)initDrop($dropDoms, 0), initTab();
+        this.dispose = function () {
+            if (!ajaxFinished)ajaxFinished = true;
+            tabs && tabs.dispose && tabs.dispose(), dd && dd.dispose && dd.dispose()
+        }
+    });
+});
+A.merge("right_recommends_merge", function () {
+    A.setup(function () {
+        function bindLayers($btns, a) {
+            if (bds.se && bds.se.tip)$.each($btns, function (i, v) {
+                var $v = $(v), $parent = $v.parents(".opr-recommends-merge-item"), $layer = $parent.find(".opr-recommends-merge-layer-p"), $contentHtml = $layer.find(".opr-recommends-merge-layer"), x = getX($v);
+                $.each($contentHtml.find("img"), function (i, v) {
+                    var $v = $(v);
+                    if ($v.attr("data-img"))$v.attr("src", $v.attr("data-img"))
+                });
+                var tip = new bds.se.tip({
+                    target: v,
+                    align: "right",
+                    content: $contentHtml,
+                    arrow: {offset: x},
+                    offset: {x: x, y: 25}
+                });
+                obj.push({dom: v, tip: tip})
+            })
+        }
+
+        var _this = this, $layerbtns = _this.find(".opr-recommends-merge-layerbtn"), $moreBtn = _this.find(".opr-recommends-merge-more-btn"), $dodgeBtn = _this.find(".opr-recommends-merge-dodge"), $dodgeTip = _this.find(".opr-recommends-merge-dodge-tip"), $content = _this.find(".opr-recommends-merge-content"), obj = [], pageFormat = bds.comm.containerSize, showType = _this.data.showType, getX = function ($o) {
+            $o = $($o);
+            var $container = $(_this.container), x = $container.width() - ($o.offset().left - $container.offset().left) - $o.width(), maxX = 185;
+            if (x < 0)x = 0; else if (x > maxX)x = maxX;
+            return x
+        };
+        if ($dodgeBtn[0] && function () {
+                    $dodgeBtn.click(function () {
+                        var $this = $(this);
+                        if ($content.toggle(), "隐藏信息" == $this.html()) {
+                            if ("1" == showType)$.setCookie("BD_CON_LEVEL", "1", {expires: 15552e6}); else $.removeCookie("BD_CON_LEVEL");
+                            $this.html("继续浏览"), $dodgeTip.html("以下图片可能让您感觉不适，您可以")
+                        } else {
+                            if ($this.html("隐藏信息"), "1" == showType)$.removeCookie("BD_CON_LEVEL"); else $.setCookie("BD_CON_LEVEL", "1", {expires: 15552e6});
+                            $dodgeTip.html("如果以下图片让您感觉不适，您可以")
+                        }
+                    })
+                }(), "pc" == _this.data.platform)bds.event.on("se.window_resize", function () {
+            if (bds.comm.containerSize !== pageFormat)pageFormat = bds.comm.containerSize, $.each(obj, function (i, v) {
+                var tip = v.tip, _x = getX(v.dom);
+                tip.setOffset({x: _x}), tip.setArrow({offset: _x})
+            })
+        }), bds.event.on("se.api_tip_ready", function () {
+            bindLayers($layerbtns)
+        }), bindLayers($layerbtns);
+        $moreBtn.on("click", function () {
+            var $this = $(this), dom_this = $this[0];
+            if ($moreTxt = $this.find("span"), $moreIcon = $this.find(".c-icon"), $panel = $this.parent().next(".opr-recommends-merge-panel"), !dom_this.moreLists && (dom_this.moreLists = []), $this.hasClass("opr-recommends-merge-close"))$moreTxt.text("展开"), $moreIcon.removeClass("c-icon-chevron-top").addClass("c-icon-chevron-bottom"), $(dom_this.moreLists).hide();
+            else if ($moreTxt.text("收起"), $moreIcon.addClass("c-icon-chevron-top").removeClass("c-icon-chevron-bottom"), !dom_this.moreLists.length) {
+                var $textarea = $panel.find(".opr-recommends-merge-more-textarea"), $moreLayerBtns = [];
+                $panel.append($textarea.val()), $textarea.remove(), dom_this.moreLists = $panel.find(".opr-recommends-merge-morelists"), $moreLayerBtns = dom_this.moreLists.find(".opr-recommends-merge-layerbtn");
+                var $_imgs = dom_this.moreLists.find(".opr-recommends-merge-img");
+                if ($.each($_imgs, function (i, v) {
+                            var $v = $(v);
+                            $v.attr("src", $v.attr("data-img"))
+                        }), "pc" == _this.data.platform)bds.event.on("se.api_tip_ready", function () {
+                    bindLayers($moreLayerBtns)
+                }), bindLayers($moreLayerBtns, 1)
+            } else $(dom_this.moreLists).show();
+            $this.toggleClass("opr-recommends-merge-close")
+        })
+    });
+});
+A.merge("right_blackhole", function () {
+    A.setup(function () {
+        var _this = this;
+        $(_this.container).hide(), require.config({paths: {"interface": _this.data.script_url}});
+        var exp;
+        require(["interface"], function (interface) {
+            exp = interface, interface.init()
+        }), _this.dispose = function () {
+            exp.dispose()
+        }
+    });
+});
+bds.comm.resultPage = 1;
+bds._base64 = {domain: "http://b1.bdstatic.com/", b64Exp: -1, pdc: 0};
+if (bds.comm.supportis) {
+    window.__restart_confirm_timeout = true;
+    window.__confirm_timeout = 8000;
+    window.__disable_is_guide = true;
+    window.__disable_swap_to_empty = true;
+}
+initPreload({'isui': true, 'index_form': "#form", 'index_kw': "#kw", 'result_form': "#form", 'result_kw': "#kw"});
+</script>
+
+
+</html>
