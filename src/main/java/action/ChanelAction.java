@@ -10,7 +10,6 @@ import com.opensymphony.xwork2.ActionContext;
 import service.ChanelService;
 import model.Chanel;
 
-//ChanelAction For SiteUpdate
 public class ChanelAction {
 
 	private ChanelService chanelService;
