@@ -1,2 +1,0 @@
-var base = {};
-base.fn={};

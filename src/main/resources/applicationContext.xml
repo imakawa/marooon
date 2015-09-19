@@ -9,27 +9,19 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mongo:mongo host="54.65.145.187" port="27017">
-	    <mongo:options  
-             connect-timeout="10000000"/> 
-             
+	<!-- MongoDBをつながる -->
+	<!-- TODO：后续需要做加密处理 -->
+	<mongo:mongo host="localhost" port="27017">
+		<mongo:options connect-timeout="20000" />
 	</mongo:mongo>
+			
+	<!-- 设置连接的数据库信息 -->
+	<mongo:db-factory dbname="site16" username="root" mongo-ref="mongo" />
 
-<!-- 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg ref="mongo" />
-		<constructor-arg name="databaseName" value="admin" />
-	</bean> -->
-
-	<mongo:db-factory dbname="admin" username="root" password="123456" mongo-ref="mongo" />
-	
-
-	<!-- <mongo:db-factory id="anotherMongoDbFactory" host="localhost"
-		port="27017" dbname="database" username="joe" password="secret" /> -->
-	 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
-	
+
 	<bean id="userDao" class="dao.UserDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
@@ -37,7 +29,7 @@
 	<bean id="userService" class="service.UserService">
 		<property name="userDao" ref="userDao" />
 	</bean>
-	
+
 	<bean id="chanelDao" class="dao.ChanelDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
@@ -45,7 +37,7 @@
 	<bean id="chanelService" class="service.ChanelService">
 		<property name="chanelDao" ref="chanelDao" />
 	</bean>
-	
+
 	<bean id="productDao" class="dao.ProductDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
@@ -70,7 +62,7 @@
 	<bean id="groupService" class="service.GroupService">
 		<property name="groupDao" ref="groupDao" />
 	</bean>
-	
+
 	<bean id="popularProductDao" class="dao.PopularProductDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
@@ -80,7 +72,7 @@
 		<property name="chanelDao" ref="chanelDao" />
 		<property name="productService" ref="productService" />
 	</bean>
-	
+
 	<bean id="exchangeDao" class="dao.ExchangeDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
@@ -88,4 +80,18 @@
 	<bean id="exchangeService" class="service.ExchangeService">
 		<property name="exchangeDao" ref="exchangeDao" />
 	</bean>
+	
+	
+	<!-- 可参考Code -->
+	<!-- 
+		 <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"> 
+		<constructor-arg ref="mongo" /> <constructor-arg name="databaseName" value="admin" 
+		/> </bean>
+
+	 <mongo:db-factory dbname="admin" username="root"
+		password="123456" mongo-ref="mongo" />
+	
+	
+	
+	 -->
 </beans>
