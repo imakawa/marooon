@@ -1,4 +1,4 @@
-package util;
+package foundation.util;
 
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;

@@ -1,12 +1,12 @@
-package service;
+package site16.service;
 
 import java.util.*;
 
-import model.UserInfo;
+import site16.model.UserInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import dao.UserDao;
+import site16.dao.UserDao;
 
 public class UserService {
 

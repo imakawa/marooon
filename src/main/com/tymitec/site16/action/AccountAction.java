@@ -15,8 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionContext;
 
-import service.UserService;
-import model.UserInfo;
+import site16.service.UserService;
+import site16.model.UserInfo;
 
 /**
  * @author bretwang

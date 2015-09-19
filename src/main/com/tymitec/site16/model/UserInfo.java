@@ -1,4 +1,4 @@
-package model;
+package site16.model;
 
 public class UserInfo {
 

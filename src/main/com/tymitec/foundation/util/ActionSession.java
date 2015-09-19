@@ -1,4 +1,4 @@
-package util;
+package foundation.util;
 
 import java.util.Map;
 import com.opensymphony.xwork2.ActionContext;
