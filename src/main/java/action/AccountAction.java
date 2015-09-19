@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tymitec.site16.action;
+package action;
 
 import java.io.PrintWriter;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionContext;
 
-import com.tymitec.site16.service.UserService;
-import com.tymitec.site16.model.UserInfo;
+import service.UserService;
+import model.UserInfo;
 
 /**
  * @author bretwang

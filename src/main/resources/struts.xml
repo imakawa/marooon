@@ -7,7 +7,7 @@
 
 	<package name="basicstruts" extends="struts-default">
 	
-		<action name="userLogin" class="com.tymitec.site16.action.AccountAction" method="CreateAccount"/>
+		<action name="userLogin" class="action.AccountAction" method="CreateAccount"/>
 		
 		<!-- <interceptors>
 			<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>

@@ -1,9 +1,12 @@
-package com.tymitec.site16.service;
+package service;
 
 import java.util.*;
+
+import model.UserInfo;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import com.tymitec.site16.dao.UserDao;
-import com.tymitec.site16.model.UserInfo;
+
+import dao.UserDao;
 
 public class UserService {
 

@@ -1,4 +1,4 @@
-package com.tymitec.site16.Interceptor;
+package Interceptor;
 
 import javax.servlet.http.HttpServletResponse;
 

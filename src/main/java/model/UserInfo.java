@@ -1,4 +1,4 @@
-package com.tymitec.site16.model;
+package model;
 
 public class UserInfo {
 
