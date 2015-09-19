@@ -5,31 +5,28 @@ package site16.action;
 
 import java.io.PrintWriter;
 import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
-
 import net.sf.json.JSONArray;
-
 import org.apache.struts2.StrutsStatics;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import site16.po.Account;
+import site16.service.AccountService;
 import com.opensymphony.xwork2.ActionContext;
 
-import site16.service.UserService;
-import site16.model.UserInfo;
-
 /**
- * @author bretwang
+ * @author bret@tymitec.com
+ * @version beta
+ * @since 2015/09/20
  *
  */
 public class AccountAction {
 
 	@Autowired
-	private UserService userService;
+	private AccountService userService;
 
 	public void CreateAccount() {
 		try {
-			List<UserInfo> users = userService.Read();
+			List<Account> users = userService.Read();
 
 			ActionContext context = ActionContext.getContext();
 			HttpServletResponse response = (HttpServletResponse) context

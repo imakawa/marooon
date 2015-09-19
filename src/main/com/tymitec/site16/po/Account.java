@@ -1,19 +1,28 @@
-package site16.model;
+/**
+ * 
+ */
+package site16.po;
 
-public class UserInfo {
+/**
+ * @author bret@tymitec.com
+ * @version beta
+ * @since 2015/09/20
+ *
+ */
+public class Account {
 
 	private String id;
-	
+
 	private String username;
-	
+
 	private String password;
 
 	private String address;
-	
+
 	private String groupeCode;
-	
+
 	private String type;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -21,7 +30,7 @@ public class UserInfo {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -60,6 +69,5 @@ public class UserInfo {
 
 	public void setType(String type) {
 		this.type = type;
-	}	
+	}
 }
-
