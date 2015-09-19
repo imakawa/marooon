@@ -12,6 +12,7 @@
 		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
 
+ 	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/classes/applicationContext.xml</param-value>

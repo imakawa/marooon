@@ -1,4 +1,4 @@
-package model;
+package com.tymitec.site16.model;
 
 public class UserInfo {
 
@@ -60,6 +60,6 @@ public class UserInfo {
 
 	public void setType(String type) {
 		this.type = type;
-	}
-	
+	}	
 }
+

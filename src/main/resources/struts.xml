@@ -3,13 +3,18 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+<include file="action.xml"></include>
+
 	<package name="basicstruts" extends="struts-default">
-		<interceptors>
+	
+		<action name="userLogin" class="com.tymitec.site16.action.AccountAction" method="CreateAccount"/>
+		
+		<!-- <interceptors>
 			<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>
 			<interceptor name="loginInterceptor" class="Interceptor.LoginInterceptor"></interceptor>
-		</interceptors>
-
-		<action name="userLogin" class="action.UserAction" method="Login">
+		</interceptors> -->
+				
+		<!-- <action name="userLogin" class="action.UserAction" method="Login">
 			<result name="Success">/user/user.jsp</result>
 			<result name="Failure">/user/loginFailure.jsp</result>
 		</action>
@@ -97,7 +102,7 @@
 		
 		<action name="IsHaveUserLogin" class="action.UserAuth" method="isHaveUserLogin" />
 		
-		<action name="clearSession" class="action.UserAuth" method="ClearSession" />
+		<action name="clearSession" class="action.UserAuth" method="ClearSession" /> -->
 	
 	</package>
 </struts>
