@@ -12,7 +12,7 @@
 	<!-- MongoDBをつながる -->
 	<!-- TODO：后续需要做加密处理 -->
 	<mongo:mongo host="localhost" port="27017">
-		<mongo:options connect-timeout="20000" />
+		<mongo:options connect-timeout="200000" />
 	</mongo:mongo>
 			
 	<!-- 设置连接的数据库信息 -->
@@ -28,6 +28,9 @@
 	<bean id="accountDao" class="site16.dao.AccountDao"/>
 	<bean id="accountService" class="site16.service.AccountService"/>
 
+	<bean id="imageContentDao" class="site16.dao.ImageContentDao"/>
+	<bean id="imageContentService" class="site16.service.ImageContentService"/>
+	
 	<!-- <bean id="chanelDao" class="dao.ChanelDao">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>

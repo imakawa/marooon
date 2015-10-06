@@ -1,5 +1,5 @@
 /**
- * 
+ * 网站用户的账户信息
  */
 package site16.po;
 
@@ -7,7 +7,6 @@ package site16.po;
  * @author bret@tymitec.com
  * @version beta
  * @since 2015/09/20
- *
  */
 public class Account {
 
