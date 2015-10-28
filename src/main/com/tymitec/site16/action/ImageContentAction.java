@@ -34,7 +34,8 @@ public class ImageContentAction {
 		for(int i = 2001; i < 3001; i++){
 			ImageContent image = new ImageContent();
 			image.setPath("res/region02/20150912_02001_1000");
-			image.setFileName(i+".jpg");
+			image.setFileName("0" + i +".jpg");
+			image.setOrder(i+"");
 			imageContentService.Insert(image);
 		}
 	}
@@ -53,13 +54,34 @@ public class ImageContentAction {
 			PrintWriter pw = response.getWriter();	
 			List<ImageContent> images = imageContentService.ReadPage(Integer.parseInt(p), 16);
 			String json = JSONArray.fromObject(images).toString();
+			System.out.println("0-1");
 			pw.write(json);
 			pw.flush();
 			pw.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void GetCount(){		
+		ActionContext context = ActionContext.getContext();
+		HttpServletResponse response = (HttpServletResponse) context
+				.get(StrutsStatics.HTTP_RESPONSE);
+		response.setContentType("application/json;charset=utf-8");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Methods","GET");
+		response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type");
+		response.setCharacterEncoding("utf-8");
 		
+		try {
+			PrintWriter pw = response.getWriter();	
+			
+			pw.write(imageContentService.getCount()+"");
+			pw.flush();
+			pw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 }

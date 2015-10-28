@@ -4,6 +4,8 @@ public class ImageContent {
 
 	private String id;
 
+	private String order;
+	
 	private String path;
 	
 	private String fileName;
@@ -14,6 +16,14 @@ public class ImageContent {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getOrder() {
+		return order;
+	}
+
+	public void setOrder(String order) {
+		this.order = order;
 	}
 
 	public String getPath() {

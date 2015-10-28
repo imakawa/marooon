@@ -2,8 +2,8 @@ package site16.dao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.*;
+import org.springframework.data.mongodb.core.query.*;
 import site16.po.ImageContent;
 
 public class ImageContentDao {
@@ -22,5 +22,13 @@ public class ImageContentDao {
 		}else{
 			return mongoTemplate.find(new Query().skip((pageNum - 1) * pageSize).limit(pageSize), ImageContent.class);	
 		}
+	}
+	
+	/**
+	 * 获取总行数（分页用）
+	 * @return 总行数
+	 */
+	public Long getCount(){
+		return mongoTemplate.count(new Query(), ImageContent.class);
 	}
 }

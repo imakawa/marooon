@@ -1,7 +1,10 @@
 package site16.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.query.Query;
+
 import site16.dao.ImageContentDao;
 import site16.po.ImageContent;
 
@@ -16,5 +19,9 @@ public class ImageContentService {
 	
 	public List<ImageContent> ReadPage(int pageNum, int pageSize){
 		return imageContentDao.ReadPage(pageNum, pageSize);
+	}
+	
+	public Long getCount(){
+		return imageContentDao.getCount();
 	}
 }

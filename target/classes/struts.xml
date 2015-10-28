@@ -9,8 +9,9 @@
 	
 		<action name="site16.userLogin" class="site16.action.AccountAction" method="CreateAccount"/>
 		<action name="site16.adminLogin" class="site16.action.AccountAction" method="AdminLogin"/>
-		<action name="site16.InsertImage" class="site16.action.ImageContentAction" method="InsertImageContentsdummy"/>
+		<action name="site16.InsertImage" class="site16.action.ImageContentAction" method="InsertImageContents"/>
 		<action name="site16.g" class="site16.action.ImageContentAction" method="ReadPage"/>
+		<action name="site16.c" class="site16.action.ImageContentAction" method="GetCount"/>
 		
 		<!-- <interceptors>
 			<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>
