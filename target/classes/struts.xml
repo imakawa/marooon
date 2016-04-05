@@ -6,107 +6,19 @@
 <include file="action.xml"></include>
 
 	<package name="basicstruts" extends="struts-default">
-	
-		<action name="site16.userLogin" class="site16.action.AccountAction" method="CreateAccount"/>
+		<!--<action name="site16.userLogin" class="site16.action.AccountAction" method="CreateAccount"/>
 		<action name="site16.adminLogin" class="site16.action.AccountAction" method="AdminLogin"/>
 		<action name="site16.InsertImage" class="site16.action.ImageContentAction" method="InsertImageContents"/>
-		<action name="site16.g" class="site16.action.ImageContentAction" method="ReadPage"/>
-		<action name="site16.c" class="site16.action.ImageContentAction" method="GetCount"/>
 		
-		<!-- <interceptors>
+		<action name="site16.c" class="site16.action.ImageContentAction" method="GetCount"/>
+		<action name="site16.g" class="site16.action.ImageContentAction" method="ReadPage"/>
+		<action name="site16.cm" class="site16.action.ImageCommentAction" method="Execute"/>
+		
+		 <interceptors>
 			<interceptor name="addressInterceptor" class="Interceptor.AddressInterceptor"></interceptor>
 			<interceptor name="loginInterceptor" class="Interceptor.LoginInterceptor"></interceptor>
 		</interceptors> -->
-				
-		<!-- <action name="userLogin" class="action.UserAction" method="Login">
-			<result name="Success">/user/user.jsp</result>
-			<result name="Failure">/user/loginFailure.jsp</result>
-		</action>
-
-		<action name="userLogout" class="action.UserAction" method="Logout">
-			<result name="Success">/userinfo.jsp</result>
-			<result name="Failure">/user/loginFailure.jsp</result>
-		</action>
-
-		<action name="chanelread" class="action.ChanelAction" method="Read">
-			<result name="Success">#</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="index" class="action.IndexAction" method="PageLoad">
-			<interceptor-ref name="addressInterceptor"></interceptor-ref>
-			<result name="Success">/index.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="handbags" class="action.HandbagsAction" method="PageLoad">
-			<result name="Success">/handbags.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="details" class="action.DetailsAction" method="PageLoad">
-			<result name="Success">/details2.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="service" class="action.UserServiceAction" method="PageLoad">
-			<result name="Success">/service.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="userinfo" class="action.UserInfoAction" method="PageLoad">
-			<result name="Success">/userinfo.jsp</result>
-			<result name="Login">/user/user.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="connect" class="action.ConnectUs" method="PageLoad">
-			<result name="Success">/contact.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="productSearch" class="action.ProductSearchAction"
-			method="ProductSearch">
-			<result name="Success">/productSearch/productSearch.jsp</result>
-			<result name="Failure">/failure.jsp</result>
-		</action>
-
-		<action name="adminLogin" class="action.UserAction" method="AdminLogin">
-			<result name="Success">/backend/admin.jsp</result>
-			<result name="Failure">/user/loginFailure.jsp</result>
-		</action>
 		
-		<action name="exchangeJson" class="action.backend.ExchangeAction"
-			method="ReadAllJson" />
-			
-		<action name="createExchange" class="action.backend.ExchangeAction"
-			method="CreateExchange" />
-			
-		<action name="chanelJson" class="action.ChanelAction" method="ReadJson" />
-		
-		<action name="readIndexProducts" class="action.IndexAction"
-			method="ReadIndexProducts" />
-			
-		<action name="readHotProducts" class="action.IndexAction"
-			method="ReadHotProducts" />
-			
-		<action name="readChannelProudcts" class="action.HandbagsAction"
-			method="ReadChannelProudcts" />
-			
-		<action name="readProductJson" class="action.DetailsAction"
-			method="ReadProductJson" />
-			
-		<action name="productSearchJson" class="action.ProductSearchAction"
-			method="ProductSearchJson" />
-			
-		<action name="getAllProducts" class="action.ProductAction"
-			method="GetAllProducts" />
-			
-		<action name="userLoginAuth" class="action.UserAuth" method="UserLoginAuth" />
-		
-		<action name="IsHaveUserLogin" class="action.UserAuth" method="isHaveUserLogin" />
-		
-		<action name="clearSession" class="action.UserAuth" method="ClearSession" /> -->
-	
+		<action name="blog" class="blog.action.MenuInfoAction" method="GetMenuName"/>
 	</package>
 </struts>

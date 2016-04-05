@@ -11,79 +11,29 @@
 
 	<!-- MongoDBをつながる -->
 	<!-- TODO：后续需要做加密处理 -->
-	<mongo:mongo host="localhost" port="27017">
+			
+	<!--<mongo:mongo host="localhost" port="27017">
 		<mongo:options connect-timeout="200000" />
 	</mongo:mongo>
-			
-	<!-- 设置连接的数据库信息 -->
+	
+	 设置连接的数据库信息 
 	<mongo:db-factory dbname="site16" username="root" mongo-ref="mongo" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
-	</bean>
+	</bean>-->
 
-	<!-- 属性自动注入 -->
- 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
- 	
-	<bean id="accountDao" class="site16.dao.AccountDao"/>
+	<!-- <bean id="accountDao" class="site16.dao.AccountDao"/>
 	<bean id="accountService" class="site16.service.AccountService"/>
 
 	<bean id="imageContentDao" class="site16.dao.ImageContentDao"/>
 	<bean id="imageContentService" class="site16.service.ImageContentService"/>
 	
-	<!-- <bean id="chanelDao" class="dao.ChanelDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="chanelService" class="service.ChanelService">
-		<property name="chanelDao" ref="chanelDao" />
-	</bean>
-
-	<bean id="productDao" class="dao.ProductDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="productService" class="service.ProductService">
-		<property name="productDao" ref="productDao" />
-		<property name="exchangeService" ref="exchangeService" />
-	</bean>
-
-	<bean id="shippingDao" class="dao.ShippingDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="shippingService" class="service.ShippingService">
-		<property name="shippingDao" ref="shippingDao" />
-	</bean>
-
-	<bean id="groupDao" class="dao.GroupDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="groupService" class="service.GroupService">
-		<property name="groupDao" ref="groupDao" />
-	</bean>
-
-	<bean id="popularProductDao" class="dao.PopularProductDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="popularProductService" class="service.PopularProductService">
-		<property name="popularProductDao" ref="popularProductDao" />
-		<property name="chanelDao" ref="chanelDao" />
-		<property name="productService" ref="productService" />
-	</bean>
-
-	<bean id="exchangeDao" class="dao.ExchangeDao">
-		<property name="mongoTemplate" ref="mongoTemplate"></property>
-	</bean>
-
-	<bean id="exchangeService" class="service.ExchangeService">
-		<property name="exchangeDao" ref="exchangeDao" />
-	</bean> -->
+	<bean id="imageCommentDao" class="site16.dao.ImageCommentDao"/>
+	<bean id="imageCommentService" class="site16.service.ImageCommentService"/>
 	
-	
-	<!-- 可参考Code -->
+	 可参考Code -->
+	 
 	<!-- 
 		 <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"> 
 		<constructor-arg ref="mongo" /> <constructor-arg name="databaseName" value="admin" 
@@ -95,4 +45,62 @@
 	
 	
 	 -->
-</beans>
+	 
+	 
+	 
+	 
+	<!-- 属性自动注入 -->
+ 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+ 	
+ 	<bean id="home" class="blog.data.MenuinfoHome"/>
+	<bean id="service" class="blog.service.MenuInfoService"/>
+	
+	
+    <!--指定实现JPA的适配器
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">   
+      <property name="dataSource" ref="dataSource"/>  
+      <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>  
+      <property name="packagesToScan" value="cn.ibeans"/>  
+      <property name="jpaProperties">  
+          <props>  
+              <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>  
+              <prop key="hibernate.show_sql">true</prop>  
+              <prop key="hibernate.hbm2ddl.auto">update</prop>  
+          </props>  
+      </property>  
+    </bean>  
+      
+    <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">  
+        <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />  
+    </bean>  
+      
+      <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">  
+            <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />  
+            <property name="url" value="jdbc:mysql://127.0.0.1:3306/tymitecblog" />  
+            <property name="username" value="root" />  
+            <property name="password" value="123" />  
+          
+            <property name="maxActive" value="100" />  
+            <property name="maxIdle" value="100" />  
+            <property name="defaultAutoCommit" value="false" />  
+            <property name="timeBetweenEvictionRunsMillis" value="3600000" />  
+            <property name="minEvictableIdleTimeMillis" value="3600000" />  
+        </bean> -->  
+        
+    <!-- Jpa 事务配置  
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">  
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>  
+    </bean>   -->
+      
+    <!-- Spring Data Jpa配置 -->  
+    <!--  
+    <jpa:repositories base-package="cn.ibeans"  transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>  
+    -->  
+    <!-- 使用annotation定义事务   
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />-->  
+  
+    <!-- JSR303 Validator定义   
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />  
+      -->
+      
+</beans> 

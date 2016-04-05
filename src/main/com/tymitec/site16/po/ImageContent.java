@@ -1,14 +1,26 @@
 package site16.po;
 
+/**
+ * イメージ情報クラス
+ * 
+ * @author bretwang
+ * @since 2015/10/29
+ * @version 1.0
+ */
 public class ImageContent {
 
+	//イメージId
 	private String id;
 
+	//
 	private String order;
 	
+	//Folder
 	private String path;
 	
+	//ファイル名
 	private String fileName;
+	
 	
 	public String getId() {
 		return id;

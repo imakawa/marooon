@@ -1,9 +1,8 @@
-package site16.service;
+package blog.service;
 
 import java.util.*;
-import site16.po.Account;
+import blog.data.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import site16.dao.AccountDao;
 
 /**
  * @author bret@tymitec.com
@@ -11,8 +10,15 @@ import site16.dao.AccountDao;
  * @since 2015/09/20
  *
  */
-public class AccountService {
+public class MenuInfoService {
 
+	@Autowired
+	private MenuinfoHome home;
+	
+	public Menuinfo findById(Integer id) {
+		return home.findById(1);
+	}
+	
 //	@Autowired
 //	private AccountDao accountDao;
 //

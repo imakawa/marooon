@@ -3,8 +3,6 @@ package site16.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Query;
 import site16.po.Account;
 
 /**
@@ -15,7 +13,7 @@ import site16.po.Account;
  */
 public class AccountDao {
 
-	@Autowired
+/*	@Autowired
 	private MongoTemplate mongoTemplate;
 
 	public Integer Create(Account account) {
@@ -25,11 +23,11 @@ public class AccountDao {
 	}
 
 	public Integer Update(Account account) {
-		/*
+		
 		 * getMongoTemplate().updateFirst(new
 		 * Query(Criteria.where("id").is(userInfo.id)), new Update().inc("age",
 		 * 3));
-		 */
+		 
 		return 0;
 	}
 
@@ -40,5 +38,5 @@ public class AccountDao {
 	public Integer Delete(Account account) {
 		mongoTemplate.remove(account);
 		return 0;
-	}
+	}*/
 }
